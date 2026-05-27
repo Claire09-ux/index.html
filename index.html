@@ -581,11 +581,23 @@ box-shadow:
   gap: 14px;
   margin-bottom: 12px;
   padding: 8px 12px;
-  background: linear-gradient(135deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.015) 100%);
-  border-radius: 8px;
-  border: 1px solid rgba(255,255,255,0.06);
   flex-wrap: wrap;
-  box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+  background: linear-gradient(145deg, rgba(255,255,255,0.075) 0%, rgba(255,255,255,0.03) 55%, rgba(255,255,255,0.015) 100%);
+  backdrop-filter: blur(24px) saturate(170%);
+  border: 1px solid rgba(255,255,255,0.10);
+  border-top-color: rgba(255,255,255,0.17);
+  border-radius: 10px;
+  box-shadow: 0 1px 0 rgba(255,255,255,0.12) inset, 0 -1px 0 rgba(0,0,0,0.15) inset, 0 8px 32px rgba(0,0,0,0.32), 0 2px 6px rgba(0,0,0,0.12);
+  position: relative;
+  overflow: hidden;
+}
+.zone-legend::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.22), transparent);
+  pointer-events: none;
 }
 .zone-legend span { display:flex; align-items:center; gap:5px; font-size:10px; color:rgba(255,255,255,0.85); }
 .zone-legend .dot { width:8px; height:8px; border-radius:2px; flex-shrink:0; }
@@ -912,7 +924,7 @@ box-shadow:
       <div id="secJadwal" style="display:none">
         <div class="anim-in d6">
           <div class="flex items-center justify-between mb-5">
-            <h2 class="font-bold text-base">Jadwal &amp; Handicap 26 - 27 Mei 2026</h2>
+            <h2 class="font-bold text-base">Jadwal &amp; Handicap 28 - 29 Mei 2026</h2>
             <span class="text-[11px] text-white/25" id="matchCountLabel">0 pertandingan</span>
           </div>
           <div id="scheduleContainer"></div>
@@ -926,7 +938,7 @@ box-shadow:
       <div id="secPrediksi" style="display:none">
         <div class="flex items-center gap-2 mb-5 anim-in d1">
           <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
-          <h2 class="font-bold text-base">Prediksi Pertandingan 26 - 27 Mei 2026</h2>
+          <h2 class="font-bold text-base">Prediksi Pertandingan 28 - 29 Mei 2026</h2>
         </div>
         <div id="prediksiList"></div>
       </div>
@@ -1155,88 +1167,88 @@ var ST = {
     [20, 'Wolves', 38, 3, 11, 24, 27, 68, -41, 20, 'LDLDD']
   ],
   PD: [
-    [1, 'Barcelona', 38, 31, 1, 6, 95, 36, 59, 94, 'LWLWW'],
-    [2, 'Real Madrid', 38, 27, 5, 6, 77, 35, 42, 86, 'WWWLW'],
-    [3, 'Villarreal', 38, 22, 6, 10, 72, 46, 26, 72, 'WLLDW'],
-    [4, 'Atletico Madrid', 38, 21, 6, 11, 62, 44, 18, 69, 'LWWLW'],
-    [5, 'Real Betis', 38, 15, 15, 8, 59, 48, 11, 60, 'WLWDW'],
-    [6, 'Celta Vigo', 38, 14, 12, 12, 53, 48, 5, 54, 'WDLWW'],
-    [7, 'Getafe', 38, 15, 6, 17, 32, 38, -6, 51, 'WLWDL'],
-    [8, 'Rayo Vallecano', 38, 12, 14, 12, 41, 44, -3, 50, 'WWDDW'],
-    [9, 'Valencia', 38, 13, 10, 15, 46, 55, -9, 49, 'WWDWL'],
-    [10, 'Real Sociedad', 38, 11, 13, 14, 59, 61, -2, 46, 'DLDDL'],
-    [11, 'Espanyol', 38, 12, 10, 16, 43, 55, -12, 46, 'DWWLL'],
-    [12, 'Athletic Bilbao', 38, 13, 6, 19, 43, 58, -15, 45, 'LDLLW'],
-    [13, 'Sevilla', 38, 12, 7, 19, 46, 60, -14, 43, 'LLWWW'],
-    [14, 'Alaves', 38, 11, 10, 17, 44, 56, -12, 43, 'LWWDL'],
-    [15, 'Elche', 38, 10, 13, 15, 49, 57, -8, 43, 'DWLDL'],
+    [1, 'Barcelona', 38, 31, 1, 6, 95, 36, 59, 94, 'WWLWL'],
+    [2, 'Real Madrid', 38, 27, 5, 6, 77, 35, 42, 86, 'WLWWW'],
+    [3, 'Villarreal', 38, 22, 6, 10, 72, 46, 26, 72, 'WDLLW'],
+    [4, 'Atletico Madrid', 38, 21, 6, 11, 62, 44, 18, 69, 'WLWWL'],
+    [5, 'Real Betis', 38, 15, 15, 8, 59, 48, 11, 60, 'WDWLW'],
+    [6, 'Celta Vigo', 38, 14, 12, 12, 53, 48, 5, 54, 'WWDLW'],
+    [7, 'Getafe', 38, 15, 6, 17, 32, 38, -6, 51, 'LDWLW'],
+    [8, 'Rayo Vallecano', 38, 12, 14, 12, 41, 44, -3, 50, 'WDDWW'],
+    [9, 'Valencia', 38, 13, 10, 15, 46, 55, -9, 49, 'LWDWW'],
+    [10, 'Real Sociedad', 38, 11, 13, 14, 59, 61, -2, 46, 'LDDLD'],
+    [11, 'Espanyol', 38, 12, 10, 16, 43, 55, -12, 46, 'LLWWD'],
+    [12, 'Athletic Bilbao', 38, 13, 6, 19, 43, 58, -15, 45, 'WLLDL'],
+    [13, 'Sevilla', 38, 12, 7, 19, 46, 60, -14, 43, 'WWWLL'],
+    [14, 'Alaves', 38, 11, 10, 17, 44, 56, -12, 43, 'LDWWL'],
+    [15, 'Elche', 38, 10, 13, 15, 49, 57, -8, 43, 'LDLWL'],
     [16, 'Levante', 38, 11, 9, 18, 47, 61, -14, 42, 'LWWWL'],
     [17, 'Osasuna', 38, 11, 9, 18, 44, 50, -6, 42, 'LLLLL'],
-    [18, 'Mallorca', 38, 11, 9, 18, 47, 57, -10, 42, 'WLLDW'],
-    [19, 'Girona', 38, 9, 14, 15, 39, 55, -16, 41, 'DLDDL'],
-    [20, 'Real Oviedo', 38, 6, 11, 21, 26, 60, -34, 29, 'LLLDL']
+    [18, 'Mallorca', 38, 11, 9, 18, 47, 57, -10, 42, 'WDLLW'],
+    [19, 'Girona', 38, 9, 14, 15, 39, 55, -16, 41, 'LDDLD'],
+    [20, 'Real Oviedo', 38, 6, 11, 21, 26, 60, -34, 29, 'LDLLL']
   ],
-  BL1: [
+BL1: [
     [1, 'Bayern Munich', 34, 28, 5, 1, 122, 36, 86, 89, 'WWDWW'],
-    [2, 'Borussia Dortmund', 34, 22, 7, 5, 70, 34, 36, 73, 'WWLWL'],
-    [3, 'RB Leipzig', 34, 20, 5, 9, 66, 47, 19, 65, 'LWLWW'],
-    [4, 'VfB Stuttgart', 34, 18, 8, 8, 71, 49, 22, 62, 'DWDDL'],
-    [5, 'Hoffenheim', 34, 18, 7, 9, 65, 52, 13, 61, 'LWDWW'],
-    [6, 'Bayer Leverkusen', 34, 17, 8, 9, 68, 47, 21, 59, 'DLWWL'],
+    [2, 'Borussia Dortmund', 34, 22, 7, 5, 70, 34, 36, 73, 'LWLWW'],
+    [3, 'RB Leipzig', 34, 20, 5, 9, 66, 47, 19, 65, 'WWLWL'],
+    [4, 'VfB Stuttgart', 34, 18, 8, 8, 71, 49, 22, 62, 'LDDWD'],
+    [5, 'Hoffenheim', 34, 18, 7, 9, 65, 52, 13, 61, 'WWDWL'],
+    [6, 'Bayer Leverkusen', 34, 17, 8, 9, 68, 47, 21, 59, 'LWWLD'],
     [7, 'Freiburg', 34, 13, 8, 13, 51, 57, -6, 47, 'WLDLW'],
-    [8, 'Eintracht Frankfurt', 34, 11, 11, 12, 61, 65, -4, 44, 'DLLDL'],
-    [9, 'Augsburg', 34, 12, 7, 15, 45, 61, -16, 43, 'LWWDW'],
-    [10, 'Mainz 05', 34, 10, 10, 14, 44, 53, -9, 40, 'WLWLD'],
-    [11, 'Union Berlin', 34, 10, 9, 15, 44, 58, -14, 39, 'WWDLL'],
-    [12, 'Borussia Moenchengladbach', 34, 9, 11, 14, 42, 53, -11, 38, 'WLWDD'],
-    [13, 'Hamburger SV', 34, 9, 11, 14, 40, 54, -14, 38, 'DWWLL'],
-    [14, 'FC Koeln', 34, 7, 11, 16, 49, 63, -14, 32, 'LLDLD'],
-    [15, 'Werder Bremen', 34, 8, 8, 18, 37, 60, -23, 32, 'LLLDW'],
-    [16, 'Wolfsburg', 34, 7, 8, 19, 45, 69, -24, 29, 'WLDDW'],
+    [8, 'Eintracht Frankfurt', 34, 11, 11, 12, 61, 65, -4, 44, 'LDLLD'],
+    [9, 'Augsburg', 34, 12, 7, 15, 45, 61, -16, 43, 'WDWWL'],
+    [10, 'Mainz 05', 34, 10, 10, 14, 44, 53, -9, 40, 'DLWLW'],
+    [11, 'Union Berlin', 34, 10, 9, 15, 44, 58, -14, 39, 'LLDWW'],
+    [12, 'Borussia Moenchengladbach', 34, 9, 11, 14, 42, 53, -11, 38, 'DDWLW'],
+    [13, 'Hamburger SV', 34, 9, 11, 14, 40, 54, -14, 38, 'LLWWD'],
+    [14, 'FC Koeln', 34, 7, 11, 16, 49, 63, -14, 32, 'DLDLL'],
+    [15, 'Werder Bremen', 34, 8, 8, 18, 37, 60, -23, 32, 'WDLLL'],
+    [16, 'Wolfsburg', 34, 7, 8, 19, 45, 69, -24, 29, 'WDDLW'],
     [17, 'FC Heidenheim', 34, 6, 8, 20, 41, 72, -31, 26, 'LWDWL'],
-    [18, 'St. Pauli', 34, 6, 8, 20, 29, 60, -31, 26, 'LLLLD']
+    [18, 'St. Pauli', 34, 6, 8, 20, 29, 60, -31, 26, 'DLLLL']
   ],
   SA: [
-    [1, 'Inter Milan', 38, 27, 6, 5, 89, 35, 54, 87, 'DDWWD'],
-    [2, 'SSC Napoli', 38, 23, 7, 8, 58, 36, 22, 76, 'WWLDW'],
+    [1, 'Inter Milan', 38, 27, 6, 5, 89, 35, 54, 87, 'DWWDD'],
+    [2, 'SSC Napoli', 38, 23, 7, 8, 58, 36, 22, 76, 'WDLWW'],
     [3, 'AS Roma', 38, 23, 4, 11, 59, 31, 28, 73, 'WWWWW'],
-    [4, 'Como 1907', 38, 20, 11, 7, 65, 29, 36, 71, 'WWWDW'],
-    [5, 'AC Milan', 38, 20, 10, 8, 53, 35, 18, 70, 'LWLLD'],
-    [6, 'Juventus FC', 38, 19, 12, 7, 61, 34, 27, 69, 'DLWDD'],
-    [7, 'Atalanta BC', 38, 15, 14, 9, 51, 36, 15, 59, 'DLWDL'],
-    [8, 'Bologna FC 1909', 38, 16, 8, 14, 49, 46, 3, 56, 'DWWDL'],
-    [9, 'S.S. Lazio', 38, 14, 12, 12, 41, 40, 1, 54, 'WLLWD'],
-    [10, 'Udinese Calcio', 38, 14, 8, 16, 45, 48, -3, 50, 'LLWWD'],
-    [11, 'U.S. Sassuolo Calcio', 38, 14, 7, 17, 46, 50, -4, 49, 'LLLWD'],
+    [4, 'Como 1907', 38, 20, 11, 7, 65, 29, 36, 71, 'WDWWW'],
+    [5, 'AC Milan', 38, 20, 10, 8, 53, 35, 18, 70, 'DLLWL'],
+    [6, 'Juventus FC', 38, 19, 12, 7, 61, 34, 27, 69, 'DDWLD'],
+    [7, 'Atalanta BC', 38, 15, 14, 9, 51, 36, 15, 59, 'LDWLD'],
+    [8, 'Bologna FC 1909', 38, 16, 8, 14, 49, 46, 3, 56, 'LDWWD'],
+    [9, 'S.S. Lazio', 38, 14, 12, 12, 41, 40, 1, 54, 'DWLLW'],
+    [10, 'Udinese Calcio', 38, 14, 8, 16, 45, 48, -3, 50, 'DWWLL'],
+    [11, 'U.S. Sassuolo Calcio', 38, 14, 7, 17, 46, 50, -4, 49, 'DWLLL'],
     [12, 'Torino FC', 38, 12, 9, 17, 44, 63, -19, 45, 'DLWLD'],
     [13, 'Parma Calcio 1913', 38, 11, 12, 15, 28, 46, -18, 45, 'WLLLW'],
-    [14, 'Cagliari Calcio', 38, 11, 10, 17, 40, 53, -13, 43, 'WWLDW'],
-    [15, 'ACF Fiorentina', 38, 9, 15, 14, 41, 50, -9, 42, 'DWDLD'],
-    [16, 'Genoa CFC', 38, 10, 11, 17, 41, 51, -10, 41, 'LLDDL'],
-    [17, 'U.S. Lecce', 38, 10, 8, 20, 28, 50, -22, 38, 'WWLWD'],
-    [18, 'US Cremonese', 38, 8, 10, 20, 32, 57, -25, 34, 'LWWLL'],
-    [19, 'Hellas Verona FC', 38, 3, 12, 23, 25, 61, -36, 21, 'LDLDD'],
+    [14, 'Cagliari Calcio', 38, 11, 10, 17, 40, 53, -13, 43, 'WDLWW'],
+    [15, 'ACF Fiorentina', 38, 9, 15, 14, 41, 50, -9, 42, 'DLDWD'],
+    [16, 'Genoa CFC', 38, 10, 11, 17, 41, 51, -10, 41, 'LDDLL'],
+    [17, 'U.S. Lecce', 38, 10, 8, 20, 28, 50, -22, 38, 'DWLWW'],
+    [18, 'US Cremonese', 38, 8, 10, 20, 32, 57, -25, 34, 'LLWWL'],
+    [19, 'Hellas Verona FC', 38, 3, 12, 23, 25, 61, -36, 21, 'DDLDL'],
     [20, 'Pisa Sporting Club', 38, 2, 12, 24, 26, 71, -45, 18, 'LLLLL']
   ],
   FL1: [
-    [1, 'PSG', 34, 24, 4, 6, 74, 29, 45, 76, 'WDWWL'],
-    [2, 'Lens', 34, 22, 4, 8, 66, 35, 31, 70, 'DDWLW'],
-    [3, 'Lille', 34, 18, 7, 9, 52, 37, 15, 61, 'DWDWL'],
-    [4, 'Lyon', 34, 18, 6, 10, 53, 40, 13, 60, 'WWWLL'],
-    [5, 'Marseille', 34, 18, 5, 11, 63, 45, 18, 59, 'LDLWW'],
-    [6, 'Rennes', 34, 17, 8, 9, 59, 50, 9, 59, 'WWLWL'],
-    [7, 'Monaco', 34, 16, 6, 12, 60, 54, 6, 54, 'DDWLL'],
-    [8, 'Strasbourg', 34, 15, 8, 11, 58, 47, 11, 53, 'WLDWW'],
-    [9, 'Lorient', 34, 11, 12, 11, 48, 51, -3, 45, 'WLDWL'],
-    [10, 'Toulouse', 33, 12, 8, 13, 47, 46, 1, 44, 'LLDWW'],
+    [1, 'PSG', 34, 24, 4, 6, 74, 29, 45, 76, 'LWWDW'],
+    [2, 'Lens', 34, 22, 4, 8, 66, 35, 31, 70, 'WLWDD'],
+    [3, 'Lille', 34, 18, 7, 9, 52, 37, 15, 61, 'LWDWD'],
+    [4, 'Lyon', 34, 18, 6, 10, 53, 40, 13, 60, 'LLWWW'],
+    [5, 'Marseille', 34, 18, 5, 11, 63, 45, 18, 59, 'WWLDL'],
+    [6, 'Rennes', 34, 17, 8, 9, 59, 50, 9, 59, 'LWLWW'],
+    [7, 'Monaco', 34, 16, 6, 12, 60, 54, 6, 54, 'LLWDD'],
+    [8, 'Strasbourg', 34, 15, 8, 11, 58, 47, 11, 53, 'WWDLW'],
+    [9, 'Lorient', 34, 11, 12, 11, 48, 51, -3, 45, 'LWDLW'],
+    [10, 'Toulouse', 33, 12, 8, 13, 47, 46, 1, 44, 'WWDLL'],
     [11, 'Paris FC', 34, 11, 11, 12, 47, 50, -3, 44, 'WLWLW'],
     [12, 'Brest', 34, 10, 9, 15, 43, 55, -12, 39, 'DLLLD'],
-    [13, 'Angers', 34, 9, 9, 16, 29, 48, -19, 36, 'DLLDD'],
-    [14, 'Le Havre', 34, 7, 14, 13, 32, 44, -12, 35, 'DDDLW'],
-    [15, 'Auxerre', 34, 8, 10, 16, 34, 44, -10, 34, 'DLWWW'],
-    [16, 'Nice', 34, 7, 11, 16, 37, 60, -23, 32, 'DDDLD'],
-    [17, 'Nantes', 33, 5, 8, 20, 29, 52, -23, 23, 'DLLWL'],
-    [18, 'Metz', 34, 3, 8, 23, 32, 76, -44, 17, 'LDLLD']
+    [13, 'Angers', 34, 9, 9, 16, 29, 48, -19, 36, 'DDLLD'],
+    [14, 'Le Havre', 34, 7, 14, 13, 32, 44, -12, 35, 'WLDDD'],
+    [15, 'Auxerre', 34, 8, 10, 16, 34, 44, -10, 34, 'WWWLD'],
+    [16, 'Nice', 34, 7, 11, 16, 37, 60, -23, 32, 'DLDDD'],
+    [17, 'Nantes', 33, 5, 8, 20, 29, 52, -23, 23, 'LWLLD'],
+    [18, 'Metz', 34, 3, 8, 23, 32, 76, -44, 17, 'DLLDL']
   ]
 };
 
@@ -1263,8 +1275,8 @@ var ST = {
       if (zone === 'ucl-qualifier') return 'text-violet-400';
       if (zone === 'uel') return 'text-orange-400';
       if (zone === 'uecl') return 'text-green-400';
+      if (zone === 'relegation-playoff') return 'text-yellow-400';
       if (zone === 'relegation') return 'text-red-400';
-      if (zone === 'relegation-playoff') return 'text-orange-400';
       return 'text-white/30';
     }
 
@@ -1330,68 +1342,97 @@ var ST = {
         '</div>' +
         '<div class="w-full overflow-x-auto pb-2">' +
           '<div class="mx-auto" style="min-width: 650px; max-width: 800px;">' +
-            '<div class="stand-row stand-header mb-1" style="opacity:1">' +
-              '<div>RANK</div><div class="cell-crest"></div><div>CLUB</div>' +
-              '<div class="cell-mp text-white">MP</div>' +
-              '<div class="cell-w text-white">W</div>' +
-              '<div class="cell-d text-white">D</div>' +
-              '<div class="cell-l text-white">L</div>' +
-              '<div class="cell-gf">GF</div>' +
-              '<div class="cell-ga">GA</div>' +
-              '<div class="text-center">GD</div>' +
-              '<div class="text-center">PTS</div>' +
-              '<div class="text-center text-white">LAST 5</div>' +
+            /* === KOTAK BESAR PEMBUNGKUS SELURUH KLASEMEN === */
+            '<div class="glass-static p-4" style="border-radius:16px;">' +
+
+              /* === HEADER BAR (bar di atas) === */
+              '<div class="stand-row stand-header" style="opacity:1; padding-bottom:10px;">' +
+                '<div>RANK</div><div class="cell-crest"></div><div>CLUB</div>' +
+                '<div class="cell-mp text-white">MP</div>' +
+                '<div class="cell-w text-white">W</div>' +
+                '<div class="cell-d text-white">D</div>' +
+                '<div class="cell-l text-white">L</div>' +
+                '<div class="cell-gf">GF</div>' +
+                '<div class="cell-ga">GA</div>' +
+                '<div class="text-center">GD</div>' +
+                '<div class="text-center">PTS</div>' +
+                '<div class="text-center text-white">LAST 5</div>' +
+              '</div>' +
+
+              /* === GARIS PEMISAH PUTIH === */
+              '<div style="' +
+                'width:100%;' +
+                'height:2px;' +
+                'margin:-5px 0 10px 0;' +
+                'border-radius:2px;' +
+                'background:white;' +
+              '"></div>' +
+
+              /* === 20 BARIS DATA KLASEMEN === */
+              rows +
+
             '</div>' +
-            rows +
+            /* === AKHIR KOTAK BESAR === */
+
           '</div>' +
         '</div>';
     }
 
 var leagueOrder = [
-  'UEFA CONFERENCE LEAGUE', 'FINLAND YKKOSLIIGA', 'ASEAN CLUB CHAMPIONSHIP',
-  'CZECHIA NATIONAL FOOTBALL LEAGUE PLAYOFF', 'COPA LIBERTADORES', 'COPA SUDAMERICANA',
-  'USL CHAMPIONSHIP'
+  'INTERNATIONAL FRIENDLY', 'EGYPT PREMIER LEAGUE PLAYOFF', 'LIGA PORTUGAL 2 PLAYOFF',
+  'POLAND 1ST LIGA PLAYOFF', 'FINLAND YKKONEN', 'KAZAKHSTAN PREMIER LEAGUE',
+  'UEFA U17 CHAMPIONSHIP 2026 [ IN ESTONIA ]', 'BULGARIA SECOND PROFESSIONAL FOOTBALL LEAGUE PLAYOFF',
+  'COPA LIBERTADORES', 'COPA SUDAMERICANA'
 ];
 
 var matches = [
-  { date:'28/05', time:'02:00', league:'UEFA CONFERENCE LEAGUE', flag:'uefa', home:'Crystal Palace [n]', away:'Rayo Vallecano', handicap:'0 : 1/2' },
-  { date:'27/05', time:'23:00', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'Klubi 04 Helsinki', away:'PK-35 Helsinki', handicap:'1/4 : 0' },
-  { date:'27/05', time:'19:00', league:'ASEAN CLUB CHAMPIONSHIP', flag:'asean', home:'Buriram United', away:'Selangor', handicap:'0 : 1' },
-  { date:'27/05', time:'23:00', league:'CZECHIA NATIONAL FOOTBALL LEAGUE PLAYOFF', flag:'cz', home:'SK Artis Brno', away:'Slovacko', handicap:'1/4 : 0' },
-  { date:'28/05', time:'05:00', league:'COPA LIBERTADORES', flag:'conmebol', home:'Independiente del Valle', away:'Rosario Central', handicap:'0 : 1/2' },
-  { date:'28/05', time:'05:00', league:'COPA LIBERTADORES', flag:'conmebol', home:'Libertad', away:'Universidad Central de Venezuela FC', handicap:'0 : 1 1/4' },
-  { date:'28/05', time:'07:30', league:'COPA LIBERTADORES', flag:'conmebol', home:'Fluminense RJ', away:'Deportivo La Guaira', handicap:'0 : 2 1/4' },
-  { date:'28/05', time:'07:30', league:'COPA LIBERTADORES', flag:'conmebol', home:'Bolivar [n]', away:'Independiente Rivadavia', handicap:'0 : 0' },
-  { date:'28/05', time:'07:30', league:'COPA LIBERTADORES', flag:'conmebol', home:'Penarol', away:'Independiente Santa Fe', handicap:'0 : 1/2' },
-  { date:'28/05', time:'07:30', league:'COPA LIBERTADORES', flag:'conmebol', home:'Corinthians SP', away:'CA Platense', handicap:'0 : 3/4' },
-  { date:'28/05', time:'05:00', league:'COPA SUDAMERICANA', flag:'conmebol', home:'Cienciano', away:'CA Juventud', handicap:'0 : 3/4' },
-  { date:'28/05', time:'05:00', league:'COPA SUDAMERICANA', flag:'conmebol', home:'Racing Club', away:'Independiente Petrolero', handicap:'0 : 2 1/2' },
-  { date:'28/05', time:'07:30', league:'COPA SUDAMERICANA', flag:'conmebol', home:'Vasco da Gama RJ', away:'CA Barracas Central', handicap:'0 : 1 1/4' },
-  { date:'28/05', time:'05:00', league:'COPA SUDAMERICANA', flag:'conmebol', home:'Caracas FC', away:'Botafogo RJ', handicap:'1/4 : 0' },
-  { date:'28/05', time:'05:00', league:'COPA SUDAMERICANA', flag:'conmebol', home:'Atletico Mineiro', away:'Academia Puerto Cabello', handicap:'0 : 1 1/2' },
-  { date:'28/05', time:'07:30', league:'COPA SUDAMERICANA', flag:'conmebol', home:'Olimpia Asuncion [n]', away:'Audax Italiano', handicap:'0 : 3/4' },
-  { date:'28/05', time:'07:30', league:'COPA SUDAMERICANA', flag:'conmebol', home:'Red Bull Bragantino SP', away:'Carabobo', handicap:'0 : 1 1/2' },
-  { date:'28/05', time:'07:30', league:'COPA SUDAMERICANA', flag:'conmebol', home:'CA River Plate', away:'Blooming Santa Cruz', handicap:'0 : 2 1/2' },
-  { date:'28/05', time:'06:30', league:'USL CHAMPIONSHIP', flag:'us', home:'Sporting JAX', away:'San Antonio FC', handicap:'1/4 : 0' }
+  { date:'29/05', time:'01:00', league:'INTERNATIONAL FRIENDLY', flag:'intl', home:'Egypt', away:'Russia', handicap:'0 : 1/4' },
+  { date:'29/05', time:'01:45', league:'INTERNATIONAL FRIENDLY', flag:'intl', home:'Ireland', away:'Qatar', handicap:'0 : 3/4' },
+  { date:'28/05', time:'21:00', league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', home:'Petrojet', away:'El Gouna FC', handicap:'0 : 1/4' },
+  { date:'29/05', time:'00:00', league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', home:'Ismaily', away:'Pharco FC', handicap:'0 : 0' },
+  { date:'29/05', time:'00:00', league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', home:"Tala'ea El Giesh", away:'Wadi Degla', handicap:'0 : 1/4' },
+  { date:'29/05', time:'02:00', league:'LIGA PORTUGAL 2 PLAYOFF', flag:'pt', home:'Casa Pia', away:'SC Uniao Torreense', handicap:'0 : 1/4' },
+  { date:'28/05', time:'22:30', league:'POLAND 1ST LIGA PLAYOFF', flag:'pl', home:'Chrobry Glogow', away:'LKS Lodz', handicap:'1/4 : 0' },
+  { date:'29/05', time:'01:30', league:'POLAND 1ST LIGA PLAYOFF', flag:'pl', home:'KS Wieczysta Krakow', away:'Polonia Warszawa', handicap:'0 : 1/2' },
+  { date:'28/05', time:'22:30', league:'FINLAND YKKONEN', flag:'fi', home:'JJK Jyvaskyla', away:'OLS Oulu', handicap:'0 : 1/4' },
+  { date:'28/05', time:'22:30', league:'FINLAND YKKONEN', flag:'fi', home:'FC Jazz', away:'Salon Palloilijat', handicap:'1/2 : 0' },
+  { date:'28/05', time:'17:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'Okzhetpes Kokshetau', away:'Aktobe', handicap:'0 : 0' },
+  { date:'28/05', time:'18:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'FC Kyzylzhar', away:'Zhetysu Taldykorgan', handicap:'0 : 1/4' },
+  { date:'28/05', time:'21:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'Kaisar Kyzylorda', away:'FC Elimai', handicap:'1/2 : 0' },
+  { date:'28/05', time:'20:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'FK Atyrau', away:'Tobol Kostanay', handicap:'1/4 : 0' },
+  { date:'28/05', time:'21:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'FC Zhenis', away:'Caspiy Aktau', handicap:'0 : 1/2' },
+  { date:'28/05', time:'22:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'Ordabasy Shymkent', away:'Kairat Almaty', handicap:'0 : 1/4' },
+  { date:'28/05', time:'18:30', league:'UEFA U17 CHAMPIONSHIP 2026 [ IN ESTONIA ]', flag:'uefa', home:'Belgium U17', away:'Spain U17', handicap:'1 : 0' },
+  { date:'28/05', time:'23:00', league:'UEFA U17 CHAMPIONSHIP 2026 [ IN ESTONIA ]', flag:'uefa', home:'Estonia U17', away:'Croatia U17', handicap:'2 : 0' },
+  { date:'28/05', time:'21:00', league:'BULGARIA SECOND PROFESSIONAL FOOTBALL LEAGUE PLAYOFF', flag:'bg', home:'PFC Septemvri Sofia', away:'Yantra Gabrovo', handicap:'0 : 1' },
+  { date:'29/05', time:'05:00', league:'COPA LIBERTADORES', flag:'conmebol', home:'Palmeiras SP', away:'Junior Barranquilla', handicap:'0 : 1 3/4' },
+  { date:'29/05', time:'05:00', league:'COPA LIBERTADORES', flag:'conmebol', home:'Cerro Porteno', away:'Sporting Cristal', handicap:'0 : 3/4' },
+  { date:'29/05', time:'07:30', league:'COPA LIBERTADORES', flag:'conmebol', home:'Boca Juniors', away:'CD Universidad Catolica', handicap:'0 : 1 1/4' },
+  { date:'29/05', time:'07:30', league:'COPA LIBERTADORES', flag:'conmebol', home:'Cruzeiro MG', away:'Barcelona SC', handicap:'0 : 1 1/2' },
+  { date:'29/05', time:'07:30', league:'COPA SUDAMERICANA', flag:'conmebol', home:'America de Cali', away:'Macara', handicap:'0 : 3/4' },
+  { date:'29/05', time:'07:30', league:'COPA SUDAMERICANA', flag:'conmebol', home:'Club Atletico Tigre', away:'Alianza Atletico', handicap:'0 : 1 1/2' }
 ];
 
 var predictions = [
-  { league:'UEFA CONFERENCE LEAGUE', flag:'uefa', m:[['Crystal Palace [n]','CRY','Rayo Vallecano','RAY','2-1']] },
-  { league:'FINLAND YKKOSLIIGA', flag:'fi', m:[['Klubi 04 Helsinki','KLU','PK-35 Helsinki','PK3','1-2']] },
-  { league:'ASEAN CLUB CHAMPIONSHIP', flag:'asean', m:[['Buriram United','BUR','Selangor','SEL','2-1']] },
-  { league:'CZECHIA NATIONAL FOOTBALL LEAGUE PLAYOFF', flag:'cz', m:[['SK Artis Brno','ART','Slovacko','SLO','1-2']] },
-  { league:'COPA LIBERTADORES', flag:'conmebol', m:[['Independiente del Valle','IND','Rosario Central','ROS','2-1'],['Libertad','LIB','Universidad Central de Venezuela FC','UNI','3-1'],['Fluminense RJ','FLU','Deportivo La Guaira','DEP','3-0'],['Bolivar [n]','BOL','Independiente Rivadavia','IND','2-1'],['Penarol','PEN','Independiente Santa Fe','IND','2-1'],['Corinthians SP','COR','CA Platense','PLA','2-1']] },
-  { league:'COPA SUDAMERICANA', flag:'conmebol', m:[['Cienciano','CIE','CA Juventud','JUV','2-1'],['Racing Club','RAC','Independiente Petrolero','IND','3-0'],['Vasco da Gama RJ','VAS','CA Barracas Central','BAR','2-0'],['Caracas FC','CAR','Botafogo RJ','BOT','1-2'],['Atletico Mineiro','ATL','Academia Puerto Cabello','ACA','3-1'],['Olimpia Asuncion [n]','OLI','Audax Italiano','AUD','2-1'],['Red Bull Bragantino SP','RED','Carabobo','CAR','3-1'],['CA River Plate','RIV','Blooming Santa Cruz','BLO','3-0']] },
-  { league:'USL CHAMPIONSHIP', flag:'us', m:[['Sporting JAX','SPO','San Antonio FC','SAN','1-2']] }
+  { league:'INTERNATIONAL FRIENDLY', flag:'intl', m:[['Egypt','EGY','Russia','RUS','2 - 1'],['Ireland','IRE','Qatar','QAT','2 - 0']] },
+  { league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', m:[['Petrojet','PET','El Gouna FC','EGO','1 - 0'],['Ismaily','ISM','Pharco FC','PHA','1 - 1'],["Tala'ea El Giesh",'TAL','Wadi Degla','WAD','2 - 1']] },
+  { league:'LIGA PORTUGAL 2 PLAYOFF', flag:'pt', m:[['Casa Pia','CAS','SC Uniao Torreense','UNT','2 - 1']] },
+  { league:'POLAND 1ST LIGA PLAYOFF', flag:'pl', m:[['Chrobry Glogow','CHR','LKS Lodz','LKS','1 - 2'],['KS Wieczysta Krakow','KSW','Polonia Warszawa','POL','2 - 0']] },
+  { league:'FINLAND YKKONEN', flag:'fi', m:[['JJK Jyvaskyla','JJK','OLS Oulu','OLS','2 - 1'],['FC Jazz','JAZ','Salon Palloilijat','SAL','1 - 2']] },
+  { league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', m:[['Okzhetpes Kokshetau','OKZ','Aktobe','AKT','1 - 1'],['FC Kyzylzhar','KYZ','Zhetysu Taldykorgan','ZHE','2 - 1'],['Kaisar Kyzylorda','KAI','FC Elimai','ELI','1 - 2'],['FK Atyrau','ATY','Tobol Kostanay','TOB','1 - 2'],['FC Zhenis','ZHN','Caspiy Aktau','CAA','2 - 1'],['Ordabasy Shymkent','ORD','Kairat Almaty','KAA','2 - 1']] },
+  { league:'UEFA U17 CHAMPIONSHIP 2026 [ IN ESTONIA ]', flag:'uefa', m:[['Belgium U17','BEL','Spain U17','SPA','0 - 2'],['Estonia U17','EST','Croatia U17','CRO','0 - 3']] },
+  { league:'BULGARIA SECOND PROFESSIONAL FOOTBALL LEAGUE PLAYOFF', flag:'bg', m:[['PFC Septemvri Sofia','SEP','Yantra Gabrovo','YAN','2 - 0']] },
+  { league:'COPA LIBERTADORES', flag:'conmebol', m:[['Palmeiras SP','PAL','Junior Barranquilla','JUN','3 - 0'],['Cerro Porteno','CER','Sporting Cristal','CRI','2 - 1'],['Boca Juniors','BOC','CD Universidad Catolica','UCA','3 - 1'],['Cruzeiro MG','CRU','Barcelona SC','BAR','3 - 0']] },
+  { league:'COPA SUDAMERICANA', flag:'conmebol', m:[['America de Cali','AME','Macara','MAC','2 - 0'],['Club Atletico Tigre','TIG','Alianza Atletico','ALI','3 - 0']] }
 ];
 
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'UEFA CONFERENCE LEAGUE', fl:'uefa', h:'Crystal Palace [n]', ha:'CRY', a:'Rayo Vallecano', aa:'RAY', dt:'28 Mei 2026 \u2022 02:00 WIB', hc:'0 : 1/2', sc:'2 - 1' },
-    { lg:'COPA LIBERTADORES', fl:'conmebol', h:'Fluminense RJ', ha:'FLU', a:'Deportivo La Guaira', aa:'DEP', dt:'28 Mei 2026 \u2022 07:30 WIB', hc:'0 : 2 1/4', sc:'3 - 0' },
-    { lg:'COPA SUDAMERICANA', fl:'conmebol', h:'Racing Club', ha:'RAC', a:'Independiente Petrolero', aa:'IND', dt:'28 Mei 2026 \u2022 05:00 WIB', hc:'0 : 2 1/2', sc:'3 - 0' },
-    { lg:'ASEAN CLUB CHAMPIONSHIP', fl:'asean', h:'Buriram United', ha:'BUR', a:'Selangor', aa:'SEL', dt:'27 Mei 2026 \u2022 19:00 WIB', hc:'0 : 1', sc:'2 - 1' }
+    { lg:'INTERNATIONAL FRIENDLY', fl:'intl', h:'Egypt', ha:'EGY', a:'Russia', aa:'RUS', dt:'29 Mei 2026 \u2022 01:00 WIB', hc:'0 : 1/4', sc:'2 - 1' },
+    { lg:'COPA LIBERTADORES', fl:'conmebol', h:'Boca Juniors', ha:'BOC', a:'CD Universidad Catolica', aa:'UCA', dt:'29 Mei 2026 \u2022 07:30 WIB', hc:'0 : 1 1/4', sc:'3 - 1' },
+    { lg:'COPA LIBERTADORES', fl:'conmebol', h:'Palmeiras SP', ha:'PAL', a:'Junior Barranquilla', aa:'JUN', dt:'29 Mei 2026 \u2022 05:00 WIB', hc:'0 : 1 3/4', sc:'3 - 0' },
+    { lg:'UEFA U17 CHAMPIONSHIP 2026 [ IN ESTONIA ]', fl:'uefa', h:'Belgium U17', ha:'BEL', a:'Spain U17', aa:'SPA', dt:'28 Mei 2026 \u2022 18:30 WIB', hc:'1 : 0', sc:'0 - 2' }
   ];
   var h = '';
   sp.forEach(function (s) {
