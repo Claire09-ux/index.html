@@ -834,9 +834,9 @@ box-shadow:
           <i data-lucide="medal" class="w-[18px] h-[18px]"></i> 
           Klasemen
         </button>
-        <button class="nav-item anim-in d5" data-action="favorit">
-          <i data-lucide="star" class="w-[18px] h-[18px]"></i> 
-          Favorit
+        <button class="nav-item anim-in d5" data-action="worldcup">
+          <i data-lucide="trophy" class="w-[18px] h-[18px]"></i> 
+          World Cup 2026
         </button>
       </nav>
 
@@ -924,7 +924,7 @@ box-shadow:
       <div id="secJadwal" style="display:none">
         <div class="anim-in d6">
           <div class="flex items-center justify-between mb-5">
-            <h2 class="font-bold text-base">Jadwal &amp; Handicap 28 - 29 Mei 2026</h2>
+            <h2 class="font-bold text-base">Jadwal &amp; Handicap 29 - 30 Mei 2026</h2>
             <span class="text-[11px] text-white/25" id="matchCountLabel">0 pertandingan</span>
           </div>
           <div id="scheduleContainer"></div>
@@ -938,7 +938,7 @@ box-shadow:
       <div id="secPrediksi" style="display:none">
         <div class="flex items-center gap-2 mb-5 anim-in d1">
           <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
-          <h2 class="font-bold text-base">Prediksi Pertandingan 28 - 29 Mei 2026</h2>
+          <h2 class="font-bold text-base">Prediksi Pertandingan 29 - 30 Mei 2026</h2>
         </div>
         <div id="prediksiList"></div>
       </div>
@@ -1138,7 +1138,7 @@ box-shadow:
     document.querySelectorAll('.nav-item[data-action]').forEach(function (item) {
       item.addEventListener('click', function () {
         var a = this.dataset.action; 
-        if (a === 'favorit') showToast('Fitur favorit segera hadir!', 'star');
+        if (a === 'worldcup') showToast('Fitur world cup segera hadir!', 'trophy');
         if (window.innerWidth < 1023) toggleSidebar();
       });
     });
@@ -1379,60 +1379,91 @@ BL1: [
     }
 
 var leagueOrder = [
-  'INTERNATIONAL FRIENDLY', 'EGYPT PREMIER LEAGUE PLAYOFF', 'LIGA PORTUGAL 2 PLAYOFF',
-  'POLAND 1ST LIGA PLAYOFF', 'FINLAND YKKONEN', 'KAZAKHSTAN PREMIER LEAGUE',
-  'UEFA U17 CHAMPIONSHIP 2026 [ IN ESTONIA ]', 'BULGARIA SECOND PROFESSIONAL FOOTBALL LEAGUE PLAYOFF',
-  'COPA LIBERTADORES', 'COPA SUDAMERICANA'
+  'NORWAY ELITESERIEN', 'SWEDEN ALLSVENSKAN', 'ITALY SERIE B PLAYOFF',
+  'CHINA FOOTBALL SUPER LEAGUE', 'IRELAND PREMIER DIVISION', 'ICELAND PREMIER LEAGUE',
+  'EGYPT PREMIER LEAGUE PLAYOFF', 'FINLAND YKKOSLIIGA', 'ROMANIA SUPERLIGA PLAYOFF',
+  'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', 'SOUTH AUSTRALIA NATIONAL PREMIER LEAGUE',
+  'IRELAND 1ST DIV', 'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE',
+  'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', 'AUSTRALIA VICTORIA PREMIER LEAGUE 1',
+  'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', 'SOUTH AUSTRALIA STATE LEAGUE 1',
+  'CHILE PRIMERA DIVISION', 'BRAZIL SERIE B', 'PERU LIGA 1', 'URUGUAY TORNEO INTERMEDIO'
 ];
 
 var matches = [
-  { date:'29/05', time:'01:00', league:'INTERNATIONAL FRIENDLY', flag:'intl', home:'Egypt', away:'Russia', handicap:'0 : 1/4' },
-  { date:'29/05', time:'01:45', league:'INTERNATIONAL FRIENDLY', flag:'intl', home:'Ireland', away:'Qatar', handicap:'0 : 3/4' },
-  { date:'28/05', time:'21:00', league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', home:'Petrojet', away:'El Gouna FC', handicap:'0 : 1/4' },
-  { date:'29/05', time:'00:00', league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', home:'Ismaily', away:'Pharco FC', handicap:'0 : 0' },
-  { date:'29/05', time:'00:00', league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', home:"Tala'ea El Giesh", away:'Wadi Degla', handicap:'0 : 1/4' },
-  { date:'29/05', time:'02:00', league:'LIGA PORTUGAL 2 PLAYOFF', flag:'pt', home:'Casa Pia', away:'SC Uniao Torreense', handicap:'0 : 1/4' },
-  { date:'28/05', time:'22:30', league:'POLAND 1ST LIGA PLAYOFF', flag:'pl', home:'Chrobry Glogow', away:'LKS Lodz', handicap:'1/4 : 0' },
-  { date:'29/05', time:'01:30', league:'POLAND 1ST LIGA PLAYOFF', flag:'pl', home:'KS Wieczysta Krakow', away:'Polonia Warszawa', handicap:'0 : 1/2' },
-  { date:'28/05', time:'22:30', league:'FINLAND YKKONEN', flag:'fi', home:'JJK Jyvaskyla', away:'OLS Oulu', handicap:'0 : 1/4' },
-  { date:'28/05', time:'22:30', league:'FINLAND YKKONEN', flag:'fi', home:'FC Jazz', away:'Salon Palloilijat', handicap:'1/2 : 0' },
-  { date:'28/05', time:'17:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'Okzhetpes Kokshetau', away:'Aktobe', handicap:'0 : 0' },
-  { date:'28/05', time:'18:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'FC Kyzylzhar', away:'Zhetysu Taldykorgan', handicap:'0 : 1/4' },
-  { date:'28/05', time:'21:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'Kaisar Kyzylorda', away:'FC Elimai', handicap:'1/2 : 0' },
-  { date:'28/05', time:'20:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'FK Atyrau', away:'Tobol Kostanay', handicap:'1/4 : 0' },
-  { date:'28/05', time:'21:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'FC Zhenis', away:'Caspiy Aktau', handicap:'0 : 1/2' },
-  { date:'28/05', time:'22:00', league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', home:'Ordabasy Shymkent', away:'Kairat Almaty', handicap:'0 : 1/4' },
-  { date:'28/05', time:'18:30', league:'UEFA U17 CHAMPIONSHIP 2026 [ IN ESTONIA ]', flag:'uefa', home:'Belgium U17', away:'Spain U17', handicap:'1 : 0' },
-  { date:'28/05', time:'23:00', league:'UEFA U17 CHAMPIONSHIP 2026 [ IN ESTONIA ]', flag:'uefa', home:'Estonia U17', away:'Croatia U17', handicap:'2 : 0' },
-  { date:'28/05', time:'21:00', league:'BULGARIA SECOND PROFESSIONAL FOOTBALL LEAGUE PLAYOFF', flag:'bg', home:'PFC Septemvri Sofia', away:'Yantra Gabrovo', handicap:'0 : 1' },
-  { date:'29/05', time:'05:00', league:'COPA LIBERTADORES', flag:'conmebol', home:'Palmeiras SP', away:'Junior Barranquilla', handicap:'0 : 1 3/4' },
-  { date:'29/05', time:'05:00', league:'COPA LIBERTADORES', flag:'conmebol', home:'Cerro Porteno', away:'Sporting Cristal', handicap:'0 : 3/4' },
-  { date:'29/05', time:'07:30', league:'COPA LIBERTADORES', flag:'conmebol', home:'Boca Juniors', away:'CD Universidad Catolica', handicap:'0 : 1 1/4' },
-  { date:'29/05', time:'07:30', league:'COPA LIBERTADORES', flag:'conmebol', home:'Cruzeiro MG', away:'Barcelona SC', handicap:'0 : 1 1/2' },
-  { date:'29/05', time:'07:30', league:'COPA SUDAMERICANA', flag:'conmebol', home:'America de Cali', away:'Macara', handicap:'0 : 3/4' },
-  { date:'29/05', time:'07:30', league:'COPA SUDAMERICANA', flag:'conmebol', home:'Club Atletico Tigre', away:'Alianza Atletico', handicap:'0 : 1 1/2' }
+  { date:'30/05', time:'00:00', league:'NORWAY ELITESERIEN', flag:'no', home:'Rosenborg', away:'Bodo Glimt', handicap:'1 : 0' },
+  { date:'30/05', time:'00:00', league:'NORWAY ELITESERIEN', flag:'no', home:'Aalesund FK', away:'Ham-Kam', handicap:'0 : 1/4' },
+  { date:'30/05', time:'00:00', league:'NORWAY ELITESERIEN', flag:'no', home:'Valerenga', away:'Kristiansund', handicap:'0 : 1' },
+  { date:'30/05', time:'00:00', league:'NORWAY ELITESERIEN', flag:'no', home:'KFUM Oslo', away:'Tromso', handicap:'1/4 : 0' },
+  { date:'30/05', time:'00:00', league:'NORWAY ELITESERIEN', flag:'no', home:'Fredrikstad', away:'Start IK', handicap:'0 : 3/4' },
+  { date:'30/05', time:'00:00', league:'NORWAY ELITESERIEN', flag:'no', home:'Brann', away:'Sarpsborg 08', handicap:'0 : 3/4' },
+  { date:'30/05', time:'00:00', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'Orgryte', away:'Elfsborg', handicap:'1/2 : 0' },
+  { date:'30/05', time:'01:00', league:'ITALY SERIE B PLAYOFF', flag:'it', home:'Monza', away:'Catanzaro', handicap:'0 : 1/2' },
+  { date:'29/05', time:'18:35', league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', home:'Liaoning Tieren', away:'Shanghai Port FC', handicap:'0 : 1/4' },
+  { date:'30/05', time:'01:45', league:'IRELAND PREMIER DIVISION', flag:'ie', home:'Sligo Rovers', away:'Bohemians', handicap:'1/2 : 0' },
+  { date:'30/05', time:'01:45', league:'IRELAND PREMIER DIVISION', flag:'ie', home:'Dundalk', away:'Derry City', handicap:'0 : 1/4' },
+  { date:'30/05', time:'01:45', league:'IRELAND PREMIER DIVISION', flag:'ie', home:'Shelbourne', away:'Galway United', handicap:'0 : 3/4' },
+  { date:'30/05', time:'01:45', league:'IRELAND PREMIER DIVISION', flag:'ie', home:'Drogheda United', away:'Waterford FC', handicap:'0 : 1/2' },
+  { date:'30/05', time:'02:00', league:'IRELAND PREMIER DIVISION', flag:'ie', home:'Shamrock Rovers', away:'St. Patricks Athletic', handicap:'0 : 1/4' },
+  { date:'30/05', time:'01:15', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'Fram Reykjavik', away:'Breidablik', handicap:'0 : 0' },
+  { date:'30/05', time:'01:15', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'FH Hafnarfjordur', away:'IA Akranes', handicap:'1/4 : 0' },
+  { date:'30/05', time:'00:00', league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', home:'ZED FC', away:'Kahrabaa Ismailia SC', handicap:'0 : 1/4' },
+  { date:'30/05', time:'00:00', league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', home:'National Bank of Egypt SC', away:'Al Ittihad Alexandria', handicap:'0 : 1/2' },
+  { date:'30/05', time:'00:00', league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', home:'Arab Contractors', away:'Modern Sport FC', handicap:'0 : 1/4' },
+  { date:'30/05', time:'00:00', league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', home:'Ghazl El Mahallah', away:'Haras El Hodood', handicap:'0 : 1/4' },
+  { date:'29/05', time:'22:30', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'Haka', away:'JIPPO Joensuu', handicap:'0 : 1/2' },
+  { date:'29/05', time:'22:30', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'FC KTP', away:'Seinajoen JK Akatemia', handicap:'0 : 1 1/2' },
+  { date:'29/05', time:'23:00', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'KaPa Helsinki', away:'JaPS', handicap:'0 : 1/4' },
+  { date:'30/05', time:'00:30', league:'ROMANIA SUPERLIGA PLAYOFF', flag:'ro', home:'Dinamo Bucuresti', away:'FCSB', handicap:'0 : 1/4' },
+  { date:'29/05', time:'16:30', league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Sydney FC [Youth]', away:'Western Sydney Wanderers [Youth]', handicap:'0 : 1/4' },
+  { date:'29/05', time:'17:30', league:'SOUTH AUSTRALIA NATIONAL PREMIER LEAGUE', flag:'au', home:'West Torrens Birkalla', away:'Adelaide Comets', handicap:'0 : 3/4' },
+  { date:'30/05', time:'01:45', league:'IRELAND 1ST DIV', flag:'ie', home:'Cobh Ramblers', away:'Kerry FC', handicap:'0 : 1/4' },
+  { date:'30/05', time:'01:45', league:'IRELAND 1ST DIV', flag:'ie', home:'Cork City', away:'Finn Harps', handicap:'0 : 1 1/2' },
+  { date:'30/05', time:'01:45', league:'IRELAND 1ST DIV', flag:'ie', home:'UC Dublin', away:'Athlone Town', handicap:'0 : 3/4' },
+  { date:'30/05', time:'01:45', league:'IRELAND 1ST DIV', flag:'ie', home:'Bray Wanderers', away:'Wexford FC', handicap:'0 : 1/4' },
+  { date:'30/05', time:'01:45', league:'IRELAND 1ST DIV', flag:'ie', home:'Longford Town', away:'Treaty United', handicap:'0 : 1/4' },
+  { date:'29/05', time:'16:30', league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', home:'Wynnum Wolves FC', away:'Brisbane Roar FC B', handicap:'0 : 3/4' },
+  { date:'29/05', time:'17:15', league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', home:'North Star FC', away:'Brisbane Strikers', handicap:'1 : 0' },
+  { date:'29/05', time:'16:30', league:'AUSTRALIA VICTORIA PREMIER LEAGUE 1', flag:'au', home:'Brunswick City SC', away:'Manningham United Blues', handicap:'1/4 : 0' },
+  { date:'29/05', time:'17:15', league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', home:'Blacktown Spartans', away:'Western City Rangers FC', handicap:'0 : 1 1/2' },
+  { date:'29/05', time:'17:00', league:'SOUTH AUSTRALIA STATE LEAGUE 1', flag:'au', home:'Adelaide Olympic', away:'Fulham United FC', handicap:'0 : 0' },
+  { date:'30/05', time:'05:00', league:'CHILE PRIMERA DIVISION', flag:'cl', home:'Cobresal', away:'Nublense', handicap:'1/4 : 0' },
+  { date:'30/05', time:'07:30', league:'CHILE PRIMERA DIVISION', flag:'cl', home:'Universidad de Concepcion', away:'Union La Calera', handicap:'0 : 1/4' },
+  { date:'30/05', time:'07:00', league:'BRAZIL SERIE B', flag:'br', home:'Juventude RS', away:'America Mineiro', handicap:'0 : 1/2' },
+  { date:'30/05', time:'03:00', league:'PERU LIGA 1', flag:'pe', home:'Atletico Grau', away:'Deportivo Moquegua', handicap:'0 : 3/4' },
+  { date:'30/05', time:'05:30', league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', home:'Cerro Largo', away:'CA Cerro', handicap:'0 : 1/2' }
 ];
 
 var predictions = [
-  { league:'INTERNATIONAL FRIENDLY', flag:'intl', m:[['Egypt','EGY','Russia','RUS','2 - 1'],['Ireland','IRE','Qatar','QAT','2 - 0']] },
-  { league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', m:[['Petrojet','PET','El Gouna FC','EGO','1 - 0'],['Ismaily','ISM','Pharco FC','PHA','1 - 1'],["Tala'ea El Giesh",'TAL','Wadi Degla','WAD','2 - 1']] },
-  { league:'LIGA PORTUGAL 2 PLAYOFF', flag:'pt', m:[['Casa Pia','CAS','SC Uniao Torreense','UNT','2 - 1']] },
-  { league:'POLAND 1ST LIGA PLAYOFF', flag:'pl', m:[['Chrobry Glogow','CHR','LKS Lodz','LKS','1 - 2'],['KS Wieczysta Krakow','KSW','Polonia Warszawa','POL','2 - 0']] },
-  { league:'FINLAND YKKONEN', flag:'fi', m:[['JJK Jyvaskyla','JJK','OLS Oulu','OLS','2 - 1'],['FC Jazz','JAZ','Salon Palloilijat','SAL','1 - 2']] },
-  { league:'KAZAKHSTAN PREMIER LEAGUE', flag:'kz', m:[['Okzhetpes Kokshetau','OKZ','Aktobe','AKT','1 - 1'],['FC Kyzylzhar','KYZ','Zhetysu Taldykorgan','ZHE','2 - 1'],['Kaisar Kyzylorda','KAI','FC Elimai','ELI','1 - 2'],['FK Atyrau','ATY','Tobol Kostanay','TOB','1 - 2'],['FC Zhenis','ZHN','Caspiy Aktau','CAA','2 - 1'],['Ordabasy Shymkent','ORD','Kairat Almaty','KAA','2 - 1']] },
-  { league:'UEFA U17 CHAMPIONSHIP 2026 [ IN ESTONIA ]', flag:'uefa', m:[['Belgium U17','BEL','Spain U17','SPA','0 - 2'],['Estonia U17','EST','Croatia U17','CRO','0 - 3']] },
-  { league:'BULGARIA SECOND PROFESSIONAL FOOTBALL LEAGUE PLAYOFF', flag:'bg', m:[['PFC Septemvri Sofia','SEP','Yantra Gabrovo','YAN','2 - 0']] },
-  { league:'COPA LIBERTADORES', flag:'conmebol', m:[['Palmeiras SP','PAL','Junior Barranquilla','JUN','3 - 0'],['Cerro Porteno','CER','Sporting Cristal','CRI','2 - 1'],['Boca Juniors','BOC','CD Universidad Catolica','UCA','3 - 1'],['Cruzeiro MG','CRU','Barcelona SC','BAR','3 - 0']] },
-  { league:'COPA SUDAMERICANA', flag:'conmebol', m:[['America de Cali','AME','Macara','MAC','2 - 0'],['Club Atletico Tigre','TIG','Alianza Atletico','ALI','3 - 0']] }
+  { league:'NORWAY ELITESERIEN', flag:'no', m:[['Rosenborg','ROS','Bodo Glimt','BOD','1 - 2'],['Aalesund FK','AAL','Ham - Kam','HAM','1 - 1'],['Valerenga','VAL','Kristiansund','KRI','2 - 0'],['KFUM Oslo','KFU','Tromso','TRO','1 - 2'],['Fredrikstad','FRE','Start IK','STA','2 - 0'],['Brann','BRA','Sarpsborg 08','SAR','3 - 1']] },
+  { league:'SWEDEN ALLSVENSKAN', flag:'se', m:[['Orgryte','ORG','Elfsborg','ELF','1 - 2']] },
+  { league:'ITALY SERIE B PLAYOFF', flag:'it', m:[['Monza','MON','Catanzaro','CAT','2 - 0']] },
+  { league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', m:[['Liaoning Tieren','LIA','Shanghai Port FC','SHA','0 - 3']] },
+  { league:'IRELAND PREMIER DIVISION', flag:'ie', m:[['Sligo Rovers','SLI','Bohemians','BOH','1 - 2'],['Dundalk','DUN','Derry City','DER','0 - 1'],['Shelbourne','SHE','Galway United','GAL','2 - 0'],['Drogheda United','DRO','Waterford FC','WAT','1 - 1'],['Shamrock Rovers','SHA','St. Patricks Athletic','STP','2 - 1']] },
+  { league:'ICELAND PREMIER LEAGUE', flag:'is', m:[['Fram Reykjavik','FRA','Breidablik','BRE','1 - 2'],['FH Hafnarfjordur','FHH','IA Akranes','IAA','2 - 1']] },
+  { league:'EGYPT PREMIER LEAGUE PLAYOFF', flag:'eg', m:[['ZED FC','ZED','Kahrabaa Ismailia SC','KAH','2 - 0'],['National Bank of Egypt SC','NAT','Al Ittihad Alexandria','ALI','1 - 1'],['Arab Contractors','ARA','Modern Sport FC','MOD','1 - 1'],['Ghazl El Mahallah','GHA','Haras El Hodood','HAR','1 - 0']] },
+  { league:'FINLAND YKKOSLIIGA', flag:'fi', m:[['Haka','HAK','JIPPO Joensuu','JIP','2 - 1'],['FC KTP','KTP','Seinajoen JK Akatemia','SEI','3 - 0'],['KaPa Helsinki','KAP','JaPS','JAP','1 - 2']] },
+  { league:'ROMANIA SUPERLIGA PLAYOFF', flag:'ro', m:[['Dinamo Bucuresti','DIN','FCSB','FCS','1 - 2']] },
+  { league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', m:[['Sydney FC [Youth]','SYD','Western Sydney Wanderers [Youth]','WSW','2 - 2']] },
+  { league:'SOUTH AUSTRALIA NATIONAL PREMIER LEAGUE', flag:'au', m:[['West Torrens Birkalla','WES','Adelaide Comets','ADE','1 - 3']] },
+  { league:'IRELAND 1ST DIV', flag:'ie', m:[['Cobh Ramblers','COB','Kerry FC','KER','2 - 1'],['Cork City','COR','Finn Harps','FIN','3 - 0'],['UC Dublin','UCD','Athlone Town','ATH','2 - 1'],['Bray Wanderers','BRA','Wexford FC','WEX','1 - 1'],['Longford Town','LON','Treaty United','TRE','1 - 2']] },
+  { league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', m:[['Wynnum Wolves FC','WYN','Brisbane Roar FC B','BRI','2 - 1']] },
+  { league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', m:[['North Star FC','NOR','Brisbane Strikers','BRI','1 - 2']] },
+  { league:'AUSTRALIA VICTORIA PREMIER LEAGUE 1', flag:'au', m:[['Brunswick City SC','BRU','Manningham United Blues','MAN','2 - 1']] },
+  { league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', m:[['Blacktown Spartans','BLA','Western City Rangers FC','WES','3 - 1']] },
+  { league:'SOUTH AUSTRALIA STATE LEAGUE 1', flag:'au', m:[['Adelaide Olympic','ADE','Fulham United FC','FUL','1 - 1']] },
+  { league:'CHILE PRIMERA DIVISION', flag:'cl', m:[['Cobresal','COB','Nublense','NUB','1 - 1'],['Universidad de Concepcion','UNI','Union La Calera','UNI','2 - 1']] },
+  { league:'BRAZIL SERIE B', flag:'br', m:[['Juventude RS','JUV','America Mineiro','AME','1 - 1']] },
+  { league:'PERU LIGA 1', flag:'pe', m:[['Atletico Grau','ATL','Deportivo Moquegua','DEP','2 - 0']] },
+  { league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', m:[['Cerro Largo','CER','CA Cerro','CAC','2 - 1']] }
 ];
 
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'INTERNATIONAL FRIENDLY', fl:'intl', h:'Egypt', ha:'EGY', a:'Russia', aa:'RUS', dt:'29 Mei 2026 \u2022 01:00 WIB', hc:'0 : 1/4', sc:'2 - 1' },
-    { lg:'COPA LIBERTADORES', fl:'conmebol', h:'Boca Juniors', ha:'BOC', a:'CD Universidad Catolica', aa:'UCA', dt:'29 Mei 2026 \u2022 07:30 WIB', hc:'0 : 1 1/4', sc:'3 - 1' },
-    { lg:'COPA LIBERTADORES', fl:'conmebol', h:'Palmeiras SP', ha:'PAL', a:'Junior Barranquilla', aa:'JUN', dt:'29 Mei 2026 \u2022 05:00 WIB', hc:'0 : 1 3/4', sc:'3 - 0' },
-    { lg:'UEFA U17 CHAMPIONSHIP 2026 [ IN ESTONIA ]', fl:'uefa', h:'Belgium U17', ha:'BEL', a:'Spain U17', aa:'SPA', dt:'28 Mei 2026 \u2022 18:30 WIB', hc:'1 : 0', sc:'0 - 2' }
+    { lg:'ITALY SERIE B PLAYOFF', fl:'it', h:'Monza', ha:'MON', a:'Catanzaro', aa:'CAT', dt:'30 Mei 2026 \u2022 01:00 WIB', hc:'0 : 1/2', sc:'2 - 0' },
+    { lg:'CHINA FOOTBALL SUPER LEAGUE', fl:'cn', h:'Liaoning Tieren', ha:'LIA', a:'Shanghai Port FC', aa:'SHA', dt:'29 Mei 2026 \u2022 18:35 WIB', hc:'0 : 1/4', sc:'0 - 3' },
+    { lg:'NORWAY ELITESERIEN', fl:'no', h:'Rosenborg', ha:'ROS', a:'Bodo Glimt', aa:'BOD', dt:'30 Mei 2026 \u2022 00:00 WIB', hc:'1 : 0', sc:'1 - 2' },
+    { lg:'BRAZIL SERIE B', fl:'br', h:'Juventude RS', ha:'JUV', a:'America Mineiro', aa:'AME', dt:'30 Mei 2026 \u2022 07:00 WIB', hc:'0 : 1/2', sc:'1 - 1' }
   ];
   var h = '';
   sp.forEach(function (s) {
