@@ -678,7 +678,7 @@ box-shadow:
   .team-crest { width:20px; height:20px; border-radius:5px; font-size:7px; }
 }
 
-/* ── Spotlight Flag (negara) ──────────────────────────────────── */
+/* ── Spotlight Flag (negara) — ukuran besar ────────────────────── */
 .spotlight-flag {
   width: 44px;
   height: 44px;
@@ -688,6 +688,18 @@ box-shadow:
   box-shadow: 
     0 4px 12px rgba(0,0,0,0.35), 
     inset 0 1px 0 rgba(255,255,255,0.22);
+  border: 1px solid rgba(255,255,255,0.12);
+  background: rgba(255,255,255,0.04);
+}
+
+/* ── Team Flag Small — ukuran kecil untuk jadwal & prediksi ────── */
+.team-flag-sm {
+  width: 34px;
+  height: 34px;
+  border-radius: 9px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.30), inset 0 1px 0 rgba(255,255,255,0.20);
   border: 1px solid rgba(255,255,255,0.12);
   background: rgba(255,255,255,0.04);
 }
@@ -764,9 +776,9 @@ box-shadow:
 
   background: linear-gradient(
     180deg,
-    #00e5ff,   /* orange atas */
-    #000000,   /* kuning tengah */
-    #00e5ff    /* orange bawah */
+    #00e5ff,
+    #000000,
+    #00e5ff
   );
 
   box-shadow:
@@ -938,7 +950,7 @@ box-shadow:
       <div id="secJadwal" style="display:none">
         <div class="anim-in d6">
           <div class="flex items-center justify-between mb-5">
-            <h2 class="font-bold text-base">Jadwal &amp; Handicap 30 - 31 Mei 2026</h2>
+            <h2 class="font-bold text-base">Jadwal &amp; Handicap 03 - 04 Juni 2026</h2>
             <span class="text-[11px] text-white/25" id="matchCountLabel">0 pertandingan</span>
           </div>
           <div id="scheduleContainer"></div>
@@ -952,7 +964,7 @@ box-shadow:
       <div id="secPrediksi" style="display:none">
         <div class="flex items-center gap-2 mb-5 anim-in d1">
           <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
-          <h2 class="font-bold text-base">Prediksi Pertandingan 30 - 31 Mei 2026</h2>
+          <h2 class="font-bold text-base">Prediksi Pertandingan 03 - 04 Juni 2026</h2>
         </div>
         <div id="prediksiList"></div>
       </div>
@@ -1031,7 +1043,7 @@ box-shadow:
     // Init Lucide Icons
     lucide.createIcons();
 
-    // Map of country codes for flag CDN
+    // Map of country codes for flag CDN (dipakai flagImg → header liga kecil)
     var flagMap = {
       'gb-eng':'gb-eng','es':'es','it':'it','de':'de','fr':'fr','au':'au','jp':'jp',
       'no':'no','se':'se','fi':'fi','pt':'pt','ch':'ch','be':'be','tr':'tr','ru':'ru',
@@ -1051,6 +1063,167 @@ box-shadow:
         return '<img src="https://flagcdn.com/w20/' + c + '.png" class="' + cls + '" alt="" loading="lazy" onerror="this.style.display=\'none\'">';
       }
       return '<div class="cl-badge" style="width:14px;height:14px;border-radius:2px"></div>';
+    }
+
+    /* ═══════════════════════════════════════════════════════════════
+       TEAM FLAG MAP — Mapping nama tim → kode negara
+       Dipakai oleh teamVisual() untuk jadwal, prediksi, spotlight
+       ═══════════════════════════════════════════════════════════════ */
+var teamFlagMap = {
+  /* ═══════════════════════════════════════════════════════════
+     UEFA — 55 asosiasi (Eropa)
+     ═══════════════════════════════════════════════════════════ */
+  'Albania':'al','Andorra':'ad','Armenia':'am','Austria':'at','Azerbaijan':'az',
+  'Belarus':'by','Belgium':'be','Bosnia and Herzegovina':'ba','Bulgaria':'bg',
+  'Croatia':'hr','Cyprus':'cy','Czechia':'cz','Denmark':'dk','England':'gb-eng',
+  'Estonia':'ee','Faroe Islands':'fo','Finland':'fi','France':'fr','Georgia':'ge',
+  'Germany':'de','Gibraltar':'gi','Greece':'gr','Hungary':'hu','Iceland':'is',
+  'Israel':'il','Italy':'it','Kazakhstan':'kz','Kosovo':'xk','Latvia':'lv',
+  'Liechtenstein':'li','Lithuania':'lt','Luxembourg':'lu','Malta':'mt',
+  'Moldova':'md','Montenegro':'me','Netherlands':'nl','North Macedonia':'mk',
+  'Northern Ireland':'gb-nir','Norway':'no','Poland':'pl','Portugal':'pt',
+  'Republic of Ireland':'ie','Romania':'ro','Russia':'ru','San Marino':'sm',
+  'Scotland':'gb-sct','Serbia':'rs','Slovakia':'sk','Slovenia':'si',
+  'Spain':'es','Sweden':'se','Switzerland':'ch','Turkey':'tr','Ukraine':'ua',
+  'Wales':'gb-wls',
+
+  /* ═══════════════════════════════════════════════════════════
+     CONMEBOL — 10 asosiasi (Amerika Selatan)
+     ═══════════════════════════════════════════════════════════ */
+  'Argentina':'ar','Bolivia':'bo','Brazil':'br','Chile':'cl','Colombia':'co',
+  'Ecuador':'ec','Paraguay':'py','Peru':'pe','Uruguay':'uy','Venezuela':'ve',
+
+  /* ═══════════════════════════════════════════════════════════
+     CONCACAF — 41 asosiasi (Amerika Utara, Tengah & Karibia)
+     ═══════════════════════════════════════════════════════════ */
+  'Antigua and Barbuda':'ag','Bahamas':'bs','Barbados':'bb','Belize':'bz',
+  'Bermuda':'bm','British Virgin Islands':'vg','Canada':'ca','Costa Rica':'cr',
+  'Cuba':'cu','Cura\u00e7ao':'cw','Dominican Republic':'do','El Salvador':'sv',
+  'Grenada':'gd','Guatemala':'gt','Guyana':'gy','Haiti':'ht','Honduras':'hn',
+  'Jamaica':'jm','Mexico':'mx','Nicaragua':'ni','Panama':'pa','Puerto Rico':'pr',
+  'Saint Kitts and Nevis':'kn','Saint Lucia':'lc',
+  'Saint Vincent and the Grenadines':'vc','Suriname':'sr',
+  'Trinidad and Tobago':'tt','United States':'us','US Virgin Islands':'vi',
+
+  /* ═══════════════════════════════════════════════════════════
+     CAF — 54 asosiasi (Afrika)
+     ═══════════════════════════════════════════════════════════ */
+  'Algeria':'dz','Angola':'ao','Benin':'bj','Botswana':'bw',
+  'Burkina Faso':'bf','Burundi':'bi','Cameroon':'cm','Cape Verde':'cv',
+  'Central African Republic':'cf','Chad':'td','Comoros':'km','Congo':'cg',
+  'DR Congo':'cd','Egypt':'eg','Equatorial Guinea':'gq','Eritrea':'er',
+  'Eswatini':'sz','Ethiopia':'et','Gabon':'ga','Gambia':'gm','Ghana':'gh',
+  'Guinea':'gn','Guinea-Bissau':'gw','Ivory Coast':'ci','Kenya':'ke',
+  'Lesotho':'ls','Liberia':'lr','Libya':'ly','Madagascar':'mg','Malawi':'mw',
+  'Mali':'ml','Mauritania':'mr','Mauritius':'mu','Morocco':'ma','Mozambique':'mz',
+  'Namibia':'na','Nigeria':'ng','Rwanda':'rw','Senegal':'sn',
+  'Sierra Leone':'sl','Somalia':'so','South Africa':'za','South Sudan':'ss',
+  'Sudan':'sd','Tanzania':'tz','Togo':'tg','Tunisia':'tn','Uganda':'ug',
+  'Zambia':'zm','Zimbabwe':'zw',
+
+  /* ═══════════════════════════════════════════════════════════
+     AFC — 47 asosiasi (Asia)
+     ═══════════════════════════════════════════════════════════ */
+  'Afghanistan':'af','Australia':'au','Bahrain':'bh','Bangladesh':'bd',
+  'Cambodia':'kh','China':'cn','Chinese Taipei':'tw','Guam':'gu','India':'in',
+  'Indonesia':'id','Iraq':'iq','Iran':'ir','Japan':'jp','Jordan':'jo',
+  'Korea DPR':'kp','Korea Republic':'kr','Kuwait':'kw','Kyrgyzstan':'kg',
+  'Laos':'la','Lebanon':'lb','Macau':'mo','Malaysia':'my','Maldives':'mv',
+  'Mongolia':'mn','Myanmar':'mm','Nepal':'np','Northern Mariana Islands':'mp',
+  'Oman':'om','Pakistan':'pk','Palestine':'ps','Philippines':'ph','Qatar':'qa',
+  'Saudi Arabia':'sa','Singapore':'sg','Sri Lanka':'lk','Syria':'sy',
+  'Tajikistan':'tj','Thailand':'th','Timor-Leste':'tl','Turkmenistan':'tm',
+  'United Arab Emirates':'ae','Uzbekistan':'uz','Vietnam':'vn','Yemen':'ye',
+
+  /* ═══════════════════════════════════════════════════════════
+     OFC — 11 asosiasi (Oseania)
+     ═══════════════════════════════════════════════════════════ */
+  'American Samoa':'as','Cook Islands':'ck','Fiji':'fj','New Caledonia':'nc',
+  'New Zealand':'nz','Papua New Guinea':'pg','Samoa':'ws',
+  'Solomon Islands':'sb','Tahiti':'pf','Tonga':'to','Vanuatu':'vu',
+
+  /* ═══════════════════════════════════════════════════════════
+     VARIAN SUFFIX — Tim nasional U19/U20/U21/U23 / [n] / [w]
+     Fallback ke bendera negara induk
+     ═══════════════════════════════════════════════════════════ */
+  'Australia U19':'au','Australia U20':'au','Australia U23':'au',
+  'Belgium U19':'be','Belgium U20':'be','Belgium U21':'be','Belgium U23':'be',
+  'Brazil U19':'br','Brazil U20':'br','Brazil U21':'br','Brazil U23':'br',
+  'Colombia U19':'co','Colombia U20':'co','Colombia U21':'co','Colombia U23':'co',
+  'Croatia U19':'hr','Croatia U20':'hr','Croatia U21':'hr','Croatia U23':'hr',
+  'Denmark U19':'dk','Denmark U20':'dk','Denmark U21':'dk','Denmark U23':'dk',
+  'Denmark [n]':'dk',
+  'England U19':'gb-eng','England U20':'gb-eng','England U21':'gb-eng','England U23':'gb-eng',
+  'France U19':'fr','France U20':'fr','France U21':'fr','France U23':'fr',
+  'Germany U19':'de','Germany U20':'de','Germany U21':'de','Germany U23':'de',
+  'Ghana U19':'gh','Ghana U20':'gh','Ghana U21':'gh','Ghana U23':'gh',
+  'Iran U19':'ir','Iran U20':'ir','Iran U21':'ir','Iran U23':'ir',
+  'Ireland U19':'ie','Ireland U20':'ie','Ireland U21':'ie','Ireland U23':'ie',
+  'Ivory Coast U19':'ci','Ivory Coast U20':'ci','Ivory Coast U23':'ci',
+  'Italy U19':'it','Italy U20':'it','Italy U21':'it','Italy U23':'it',
+  'Japan U19':'jp','Japan U20':'jp','Japan U21':'jp','Japan U23':'jp',
+  'Korea Republic [n]':'kr','Korea Republic U19':'kr','Korea Republic U20':'kr','Korea Republic U23':'kr',
+  'Malaysia U19':'my','Malaysia U20':'my','Malaysia U23':'my',
+  'Mexico U19':'mx','Mexico U20':'mx','Mexico U21':'mx','Mexico U23':'mx',
+  'Morocco U19':'ma','Morocco U20':'ma','Morocco U21':'ma','Morocco U23':'ma',
+  'Netherlands U19':'nl','Netherlands U20':'nl','Netherlands U21':'nl','Netherlands U23':'nl',
+  'Nigeria U19':'ng','Nigeria U20':'ng','Nigeria U21':'ng','Nigeria U23':'ng',
+  'Northern Ireland U21':'gb-nir',
+  'Norway U19':'no','Norway U20':'no','Norway U21':'no','Norway U23':'no',
+  'Norway [w] U23':'no',
+  'Panama U19':'pa','Panama U20':'pa','Panama U21':'pa','Panama U23':'pa',
+  'Peru U19':'pe','Peru U20':'pe','Peru U21':'pe','Peru U23':'pe',
+  'Philippines U19':'ph','Philippines U20':'ph','Philippines U23':'ph',
+  'Poland U19':'pl','Poland U20':'pl','Poland U21':'pl','Poland U23':'pl',
+  'Portugal U19':'pt','Portugal U20':'pt','Portugal U21':'pt','Portugal U23':'pt',
+  'Saudi Arabia U19':'sa','Saudi Arabia U20':'sa','Saudi Arabia U23':'sa',
+  'Senegal U19':'sn','Senegal U20':'sn','Senegal U21':'sn','Senegal U23':'sn',
+  'Singapore U19':'sg','Singapore U20':'sg','Singapore U23':'sg',
+  'South Korea U19':'kr','South Korea U20':'kr','South Korea U23':'kr',
+  'Spain U19':'es','Spain U20':'es','Spain U21':'es','Spain U23':'es',
+  'Sweden U19':'se','Sweden U20':'se','Sweden U21':'se','Sweden U23':'se',
+  'Sweden [w] U23':'se',
+  'Switzerland U19':'ch','Switzerland U20':'ch','Switzerland U21':'ch','Switzerland U23':'ch',
+  'Turkey U19':'tr','Turkey U20':'tr','Turkey U21':'tr','Turkey U23':'tr',
+  'Ukraine U19':'ua','Ukraine U20':'ua','Ukraine U21':'ua','Ukraine U23':'ua',
+  'United States U19':'us','United States U20':'us','United States U23':'us',
+  'Uruguay U19':'uy','Uruguay U20':'uy','Uruguay U21':'uy','Uruguay U23':'uy',
+  'Venezuela U19':'ve','Venezuela U20':'ve','Venezuela U23':'ve',
+  'Wales U19':'gb-wls','Wales U20':'gb-wls','Wales U21':'gb-wls','Wales U23':'gb-wls',
+  'Kosovo U19':'xk','Kosovo U20':'xk','Kosovo U21':'xk','Kosovo U23':'xk',
+  'Algeria U19':'dz','Algeria U20':'dz','Algeria U21':'dz','Algeria U23':'dz',
+  'Tunisia U19':'tn','Tunisia U20':'tn','Tunisia U21':'tn','Tunisia U23':'tn',
+  'Egypt U19':'eg','Egypt U20':'eg','Egypt U21':'eg','Egypt U23':'eg',
+  'China U19':'cn','China U20':'cn','China U23':'cn',
+  'Thailand U19':'th','Thailand U23':'th',
+  'Indonesia U19':'id','Indonesia U23':'id',
+  'Iraq U19':'iq','Iraq U20':'iq','Iraq U23':'iq',
+  'UAE U19':'ae','UAE U23':'ae',
+  'Oman U19':'om','Oman U23':'om',
+  'Jordan U19':'jo','Jordan U23':'jo',
+  'Syria U19':'sy','Syria U23':'sy',
+  'Guam U19':'gu'
+};
+
+    /* ═══════════════════════════════════════════════════════════════
+       teamVisual() — Fungsi tunggal untuk semua section
+       size: 'lg' → spotlight (44px), 'sm' → jadwal/prediksi (34px)
+       Jika nama tim ada di teamFlagMap → tampilkan bendera
+       Jika tidak → fallback ke team-badge berwarna
+       ═══════════════════════════════════════════════════════════════ */
+    function teamVisual(name, abbr, size) {
+      var code = teamFlagMap[name];
+      if (code) {
+        if (size === 'lg') {
+          return '<img src="https://flagcdn.com/w80/' + code + '.png" class="spotlight-flag" alt="' + name + '" loading="lazy" onerror="this.outerHTML=\'<div class=team-badge bg-gradient-to-br from-gray-600 to-gray-800>' + abbr + '</div>\'">';
+        }
+        return '<img src="https://flagcdn.com/w40/' + code + '.png" class="team-flag-sm" alt="' + name + '" loading="lazy" onerror="this.outerHTML=\'<div class=team-badge team-badge-sm bg-gradient-to-br from-gray-600 to-gray-800>' + abbr + '</div>\'">';
+      }
+      var c = gc(name);
+      if (size === 'lg') {
+        return '<div class="team-badge bg-gradient-to-br ' + c[0] + ' ' + c[1] + '">' + abbr + '</div>';
+      }
+      return '<div class="team-badge team-badge-sm bg-gradient-to-br ' + c[0] + ' ' + c[1] + ' text-white">' + abbr + '</div>';
     }
 
     function showToast(msg, icon) {
@@ -1500,10 +1673,7 @@ function wcFlag(name) {
         '</div>' +
         '<div class="w-full overflow-x-auto pb-2">' +
           '<div class="mx-auto" style="min-width: 650px; max-width: 800px;">' +
-            /* === KOTAK BESAR PEMBUNGKUS SELURUH KLASEMEN === */
             '<div class="glass-static p-4" style="border-radius:16px;">' +
-
-              /* === HEADER BAR (bar di atas) === */
               '<div class="stand-row stand-header" style="opacity:1; padding-bottom:10px;">' +
                 '<div>RANK</div><div class="cell-crest"></div><div>CLUB</div>' +
                 '<div class="cell-mp text-white">MP</div>' +
@@ -1516,22 +1686,9 @@ function wcFlag(name) {
                 '<div class="text-center">PTS</div>' +
                 '<div class="text-center text-white">LAST 5</div>' +
               '</div>' +
-
-              /* === GARIS PEMISAH PUTIH === */
-              '<div style="' +
-                'width:100%;' +
-                'height:2px;' +
-                'margin:-5px 0 10px 0;' +
-                'border-radius:2px;' +
-                'background:white;' +
-              '"></div>' +
-
-              /* === 20 BARIS DATA KLASEMEN === */
+              '<div style="width:100%;height:2px;margin:-5px 0 10px 0;border-radius:2px;background:white;"></div>' +
               rows +
-
             '</div>' +
-            /* === AKHIR KOTAK BESAR === */
-
           '</div>' +
         '</div>';
     }
@@ -1629,84 +1786,77 @@ function renderWCGroup(group) {
 }
 
 var leagueOrder = [
-  'UEFA CHAMPIONS LEAGUE', 'JAPAN J1 100 YEAR VISION LEAGUE PLAYOFF', 'JAPAN J2/J3 100 YEAR VISION LEAGUE PLAYOFF',
-  'NORWAY ELITESERIEN', 'SWEDEN ALLSVENSKAN', 'FINLAND VEIKKAUSLIIGA', 'INTERNATIONAL FRIENDLY',
-  'SPAIN LA LIGA 2', 'SWEDEN SUPERETTAN', 'CHINA FOOTBALL SUPER LEAGUE', 'KOREA K-LEAGUE 2',
-  'NORWAY 1ST DIV', 'AUSTRALIA VICTORIA NATIONAL PREMIER LEAGUE', 'DENMARK 1ST DIV PLAYOFF',
-  'THE UNITY CUP [ IN ENGLAND ]', 'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', 'SOUTH AUSTRALIA NATIONAL PREMIER LEAGUE',
-  'WESTERN AUSTRALIA NATIONAL PREMIER LEAGUE', 'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE',
-  'SPAIN PRIMERA FEDERATION PLAYOFF', 'BELARUS PREMIER LEAGUE', 'LITHUANIA A LEAGUE',
-  'AUSTRALIA NORTHERN TERRITORY PREMIER LEAGUE', 'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE',
-  'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', 'LATVIA VIRSLIGA', 'AUSTRALIA VICTORIA PREMIER LEAGUE 1',
-  'CZECHIA NATIONAL FOOTBALL LEAGUE PLAYOFF', 'SWEDEN ETTAN NORTH', 'SWEDEN ETTAN SOUTH',
-  'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', 'LIGA PORTUGAL 3 PLAYOFF', 'ESTONIA PREMIUM LIGA',
-  'SOUTH AUSTRALIA STATE LEAGUE 1', 'POLAND 2ND LIGA', 'BRAZIL SERIE A', 'CONCACAF CHAMPIONS CUP',
-  'CONCACAF CHAMPIONS CUP - WINNER', 'CHILE PRIMERA DIVISION', 'BRAZIL SERIE B', 'MEXICO LIGA DE EXPANSION PLAYOFF',
-  'ECUADOR LIGA PRO SERIE A', 'PERU LIGA 1', 'URUGUAY TORNEO INTERMEDIO', 'ARGENTINA PRIMERA NACIONAL',
-  'BRAZIL SERIE C', 'CHILE PRIMERA B', 'PARAGUAY DIVISION INTERMEDIA', 'USL CHAMPIONSHIP',
-  'URUGUAY SEGUNDA DIVISION', 'CANADIAN PREMIER LEAGUE', 'AUSTRALIA TASMANIA NATIONAL PREMIER LEAGUE',
-  'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE'
+  'INTERNATIONAL FRIENDLY', 'THREE NATIONS TOURNAMENT [ IN PHILIPPINES ]', 'ASEAN U19 CHAMPIONSHIP [ IN INDONESIA ]',
+  'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', 'INTERNATIONAL FRIENDLY U21', 'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE',
+  'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', 'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', 'SWEDEN ETTAN NORTH',
+  'SWEDEN ETTAN SOUTH', 'INTERNATIONAL FRIENDLY WOMEN U23', 'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE',
+  'MOROCCO BOTOLA PRO', 'USL CHAMPIONSHIP'
 ];
 
 var matches = [
-  { date:'02/06', time:'23:00', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Croatia', away:'Belgium', handicap:'0 : 0' },
-  { date:'03/06', time:'00:00', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Georgia', away:'Romania', handicap:'0 : 1/4' },
-  { date:'03/06', time:'00:00', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Morocco', away:'Madagascar', handicap:'0 : 2 1/4' },
-  { date:'03/06', time:'01:45', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Wales', away:'Ghana', handicap:'0 : 1/4' },
-  { date:'03/06', time:'07:00', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Haiti [n]', away:'New Zealand', handicap:'1/4 : 0' },
-  { date:'02/06', time:'20:00', league:'ASEAN U19 CHAMPIONSHIP [ IN INDONESIA ]', flag:'id', home:'Malaysia U19', away:'Singapore U19', handicap:'0 : 1 3/4' },
-  { date:'02/06', time:'19:15', league:'ASEAN CHAMPIONSHIP QUALIFIERS', flag:'un', home:'Brunei Darussalam', away:'Timor Leste', handicap:'0 : 1/2' },
-  { date:'02/06', time:'22:30', league:'FINLAND YKKONEN', flag:'fi', home:'JJK Jyvaskyla', away:'VJS Vantaan', handicap:'0 : 0' },
-  { date:'02/06', time:'23:00', league:'FINLAND YKKONEN', flag:'fi', home:'RoPS Rovaniemi', away:'OLS Oulu', handicap:'0 : 1/4' },
-  { date:'02/06', time:'16:30', league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', home:'Wynnum Wolves FC', away:'Brisbane Roar FC B', handicap:'0 : 1' },
-  { date:'02/06', time:'17:15', league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', home:'North Star FC', away:'Brisbane Strikers', handicap:'1 : 0' },
-  { date:'03/06', time:'01:00', league:'PORTUGAL REVELACAO CUP U23', flag:'pt', home:'Santa Clara U23', away:'Gil Vicente U23', handicap:'1/2 : 0' },
-  { date:'03/06', time:'00:30', league:'SWEDEN ETTAN NORTH', flag:'se', home:'Assyriska FF', away:'Enkopings SK', handicap:'0 : 0' },
-  { date:'03/06', time:'00:00', league:'SWEDEN ETTAN SOUTH', flag:'se', home:'FC Rosengard', away:'Angelholms FF', handicap:'0 : 1/2' },
-  { date:'02/06', time:'18:00', league:'POLAND 2ND LIGA PLAYOFF', flag:'pl', home:'Podbeskidzie Bielsko-Biala', away:'Slask Wroclaw II', handicap:'0 : 3/4' },
-  { date:'02/06', time:'21:00', league:'POLAND 2ND LIGA PLAYOFF', flag:'pl', home:'Olimpia Grudziadz', away:'Sandecja Nowy Sacz', handicap:'0 : 1/2' },
-  { date:'03/06', time:'07:30', league:'COLOMBIA PRIMERA A PLAYOFF', flag:'co', home:'Junior Barranquilla', away:'Atletico Nacional', handicap:'0 : 0' },
-  { date:'03/06', time:'06:00', league:'COLOMBIA CUP', flag:'co', home:'Independiente Medellin', away:'Cucuta Deportivo', handicap:'0 : 1' }
+  { date:'03/06', time:'23:00', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Gibraltar', away:'British Virgin Islands', handicap:'0 : 1 1/2' },
+  { date:'04/06', time:'00:00', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Denmark [n]', away:'DR Congo', handicap:'0 : 1' },
+  { date:'04/06', time:'00:00', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Albania', away:'Israel', handicap:'0 : 1/4' },
+  { date:'04/06', time:'01:45', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Netherlands', away:'Algeria', handicap:'0 : 1 1/4' },
+  { date:'04/06', time:'01:45', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Luxembourg', away:'Italy', handicap:'1 : 0' },
+  { date:'04/06', time:'01:45', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Poland', away:'Nigeria', handicap:'0 : 1/4' },
+  { date:'04/06', time:'07:45', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Panama', away:'Dominican Republic', handicap:'0 : 1 1/2' },
+  { date:'04/06', time:'08:00', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Korea Republic [n]', away:'El Salvador', handicap:'0 : 2' },
+  { date:'03/06', time:'18:30', league:'THREE NATIONS TOURNAMENT [ IN PHILIPPINES ]', flag:'ph', home:'Philippines', away:'Guam', handicap:'0 : 2 3/4' },
+  { date:'03/06', time:'20:00', league:'ASEAN U19 CHAMPIONSHIP [ IN INDONESIA ]', flag:'id', home:'Philippines U19', away:'Australia U19', handicap:'4 1/4 : 0' },
+  { date:'03/06', time:'20:00', league:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', flag:'fr', home:'Japan U19', away:'Portugal U20', handicap:'1/2 : 0' },
+  { date:'03/06', time:'23:30', league:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', flag:'fr', home:'Ivory Coast U23', away:'Venezuela U20', handicap:'0 : 3/4' },
+  { date:'03/06', time:'23:00', league:'INTERNATIONAL FRIENDLY U21', flag:'un', home:'Turkey U21', away:'Kosovo U21', handicap:'0 : 1' },
+  { date:'04/06', time:'01:30', league:'INTERNATIONAL FRIENDLY U21', flag:'un', home:'Portugal U21', away:'Northern Ireland U21', handicap:'0 : 2' },
+  { date:'03/06', time:'16:30', league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', home:'Rochedale Rovers', away:'Magic United TFA', handicap:'0 : 1' },
+  { date:'03/06', time:'16:30', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Belconnen United FC', away:'Tuggeranong United FC', handicap:'0 : 1/4' },
+  { date:'03/06', time:'16:30', league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', home:'Sunshine Coast Wanderers', away:'St George FC Willawong', handicap:'0 : 1' },
+  { date:'04/06', time:'00:30', league:'SWEDEN ETTAN NORTH', flag:'se', home:'Vasalunds IF', away:'FC Jarfalla', handicap:'0 : 3/4' },
+  { date:'04/06', time:'00:00', league:'SWEDEN ETTAN SOUTH', flag:'se', home:'BK Olympic', away:'Lunds BK', handicap:'0 : 0' },
+  { date:'03/06', time:'23:30', league:'INTERNATIONAL FRIENDLY WOMEN U23', flag:'un', home:'Sweden [w] U23', away:'Norway [w] U23', handicap:'0 : 3/4' },
+  { date:'04/06', time:'05:00', league:'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', flag:'bo', home:'GV Deportivo San Jose de Oruro', away:'CD Real Tomayapo', handicap:'0 : 1/2' },
+  { date:'04/06', time:'07:00', league:'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', flag:'bo', home:'Real Potosi', away:'Academia del Balompie Boliviano', handicap:'0 : 3/4' },
+  { date:'03/06', time:'23:00', league:'MOROCCO BOTOLA PRO', flag:'ma', home:'Renaissance Zemamra', away:'US Yacoub El Mansour', handicap:'0 : 1/4' },
+  { date:'04/06', time:'01:00', league:'MOROCCO BOTOLA PRO', flag:'ma', home:'IR Tanger', away:'Wydad Casablanca', handicap:'1/2 : 0' },
+  { date:'04/06', time:'03:00', league:'MOROCCO BOTOLA PRO', flag:'ma', home:'Raja Casablanca', away:'RS Berkane', handicap:'0 : 1/2' },
+  { date:'04/06', time:'07:00', league:'USL CHAMPIONSHIP', flag:'us', home:'Birmingham Legion', away:'Louisville City FC', handicap:'1/2 : 0' }
 ];
 
 var predictions = [
-  { league:'INTERNATIONAL FRIENDLY', flag:'un', m:[['Croatia','CRO','Belgium','BEL','1 - 1'],['Georgia','GEO','Romania','ROM','1 - 2'],['Morocco','MOR','Madagascar','MAD','3 - 0'],['Wales','WAL','Ghana','GHA','2 - 1'],['Haiti [n]','HAI','New Zealand','NEW','1 - 2']] },
-  { league:'ASEAN U19 CHAMPIONSHIP [ IN INDONESIA ]', flag:'id', m:[['Malaysia U19','MAL','Singapore U19','SIN','3 - 0']] },
-  { league:'ASEAN CHAMPIONSHIP QUALIFIERS', flag:'un', m:[['Brunei Darussalam','BRU','Timor Leste','TIM','2 - 1']] },
-  { league:'FINLAND YKKONEN', flag:'fi', m:[['JJK Jyvaskyla','JJK','VJS Vantaan','VJS','1 - 1'],['RoPS Rovaniemi','ROP','OLS Oulu','OLS','2 - 1']] },
-  { league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', m:[['Wynnum Wolves FC','WYN','Brisbane Roar FC B','BRI','1 - 3']] },
-  { league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', m:[['North Star FC','NOR','Brisbane Strikers','BRI','1 - 2']] },
-  { league:'PORTUGAL REVELACAO CUP U23', flag:'pt', m:[['Santa Clara U23','SAN','Gil Vicente U23','GIL','1 - 2']] },
-  { league:'SWEDEN ETTAN NORTH', flag:'se', m:[['Assyriska FF','ASS','Enkopings SK','ENK','1 - 1']] },
-  { league:'SWEDEN ETTAN SOUTH', flag:'se', m:[['FC Rosengard','FCR','Angelholms FF','ANG','2 - 1']] },
-  { league:'POLAND 2ND LIGA PLAYOFF', flag:'pl', m:[['Podbeskidzie Bielsko - Biala','POD','Slask Wroclaw II','SLA','2 - 0'],['Olimpia Grudziadz','OLI','Sandecja Nowy Sacz','SAN','2 - 1']] },
-  { league:'COLOMBIA PRIMERA A PLAYOFF', flag:'co', m:[['Junior Barranquilla','JUN','Atletico Nacional','ATL','1 - 1']] },
-  { league:'COLOMBIA CUP', flag:'co', m:[['Independiente Medellin','IND','Cucuta Deportivo','CUC','2 - 0']] }
+  { league:'INTERNATIONAL FRIENDLY', flag:'un', m:[['Gibraltar','GIB','British Virgin Islands','BRI','2 - 0'],['Denmark [n]','DEN','DR Congo','DRC','2 - 0'],['Albania','ALB','Israel','ISR','1 - 1'],['Netherlands','NET','Algeria','ALG','3 - 1'],['Luxembourg','LUX','Italy','ITA','0 - 2'],['Poland','POL','Nigeria','NIG','2 - 1'],['Panama','PAN','Dominican Republic','DOM','3 - 0'],['Korea Republic [n]','KOR','El Salvador','ELS','3 - 0']] },
+  { league:'THREE NATIONS TOURNAMENT [ IN PHILIPPINES ]', flag:'ph', m:[['Philippines','PHI','Guam','GUA','4 - 0']] },
+  { league:'ASEAN U19 CHAMPIONSHIP [ IN INDONESIA ]', flag:'id', m:[['Philippines U19','PHI','Australia U19','AUS','0 - 5']] },
+  { league:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', flag:'fr', m:[['Japan U19','JAP','Portugal U20','POR','1 - 2'],['Ivory Coast U23','IVO','Venezuela U20','VEN','2 - 1']] },
+  { league:'INTERNATIONAL FRIENDLY U21', flag:'un', m:[['Turkey U21','TUR','Kosovo U21','KOS','2 - 0'],['Portugal U21','POR','Northern Ireland U21','NOR','3 - 0']] },
+  { league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', m:[['Rochedale Rovers','ROC','Magic United TFA','MAG','1 - 2']] },
+  { league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', m:[['Belconnen United FC','BEL','Tuggeranong United FC','TUG','2 - 1']] },
+  { league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', m:[['Sunshine Coast Wanderers','SUN','St George FC Willawong','STG','1 - 2']] },
+  { league:'SWEDEN ETTAN NORTH', flag:'se', m:[['Vasalunds IF','VAS','FC Jarfalla','FCJ','2 - 0']] },
+  { league:'SWEDEN ETTAN SOUTH', flag:'se', m:[['BK Olympic','BKO','Lunds BK','LUN','1 - 1']] },
+  { league:'INTERNATIONAL FRIENDLY WOMEN U23', flag:'un', m:[['Sweden [w] U23','SWE','Norway [w] U23','NOR','2 - 1']] },
+  { league:'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', flag:'bo', m:[['GV Deportivo San Jose de Oruro','GVD','CD Real Tomayapo','CDR','2 - 1'],['Real Potosi','REA','Academia del Balompie Boliviano','ACA','2 - 0']] },
+  { league:'MOROCCO BOTOLA PRO', flag:'ma', m:[['Renaissance Zemamra','REN','US Yacoub El Mansour','USY','2 - 1'],['IR Tanger','IRT','Wydad Casablanca','WYD','1 - 2'],['Raja Casablanca','RAJ','RS Berkane','RSB','2 - 1']] },
+  { league:'USL CHAMPIONSHIP', flag:'us', m:[['Birmingham Legion','BIR','Louisville City FC','LOU','1 - 2']] }
 ];
 
+/* ═══════════════════════════════════════════════════════════════
+   renderSpotlight — Pakai teamVisual() global, size 'lg'
+   ═══════════════════════════════════════════════════════════════ */
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'INTERNATIONAL FRIENDLY', fl:'un', h:'Croatia', ha:'CRO', hf:'hr', a:'Belgium', aa:'BEL', af:'be', dt:'02 Jun 2026 \u2022 23:00 WIB', hc:'0 : 0', sc:'1 - 1' },
-    { lg:'INTERNATIONAL FRIENDLY', fl:'un', h:'Wales', ha:'WAL', hf:'gb-wls', a:'Ghana', aa:'GHA', af:'gh', dt:'03 Jun 2026 \u2022 01:45 WIB', hc:'0 : 1/4', sc:'2 - 1' },
-    { lg:'COLOMBIA PRIMERA A PLAYOFF', fl:'co', h:'Junior Barranquilla', ha:'JUN', hf:null, a:'Atletico Nacional', aa:'ATL', af:null, dt:'03 Jun 2026 \u2022 07:30 WIB', hc:'0 : 0', sc:'1 - 1' },
-    { lg:'COLOMBIA CUP', fl:'co', h:'Independiente Medellin', ha:'IND', hf:null, a:'Cucuta Deportivo', aa:'CUC', af:null, dt:'03 Jun 2026 \u2022 06:00 WIB', hc:'0 : 1', sc:'2 - 0' }
+    { lg:'INTERNATIONAL FRIENDLY', fl:'un', h:'Netherlands', ha:'NET', a:'Algeria', aa:'ALG', dt:'04 Jun 2026 \u2022 01:45 WIB', hc:'0 : 1 1/4', sc:'3 - 1' },
+    { lg:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', fl:'fr', h:'Japan U19', ha:'JAP', a:'Portugal U20', aa:'POR', dt:'03 Jun 2026 \u2022 20:00 WIB', hc:'1/2 : 0', sc:'1 - 2' },
+    { lg:'INTERNATIONAL FRIENDLY WOMEN U23', fl:'un', h:'Sweden [w] U23', ha:'SWE', a:'Norway [w] U23', aa:'NOR', dt:'03 Jun 2026 \u2022 23:30 WIB', hc:'0 : 3/4', sc:'2 - 1' },
+    { lg:'MOROCCO BOTOLA PRO', fl:'ma', h:'Raja Casablanca', ha:'RAJ', a:'RS Berkane', aa:'RSB', dt:'04 Jun 2026 \u2022 03:00 WIB', hc:'0 : 1/2', sc:'2 - 1' }
   ];
-
-  function teamVisual(name, abbr, flagCode) {
-    if (flagCode) {
-      return '<img src="https://flagcdn.com/w80/' + flagCode + '.png" class="spotlight-flag" alt="' + name + '" loading="lazy" onerror="this.outerHTML=\'<div class=team-badge bg-gradient-to-br from-gray-600 to-gray-800>' + abbr + '</div>\'">';
-    }
-    var c = gc(name);
-    return '<div class="team-badge bg-gradient-to-br ' + c[0] + ' ' + c[1] + '">' + abbr + '</div>';
-  }
 
   var h = '';
   sp.forEach(function (s) {
     var scC = scoreClass(s.sc);
     var rt = resultTag(s.sc), rtC = resultTagClass(s.sc);
-    var homeVis = teamVisual(s.h, s.ha, s.hf);
-    var awayVis = teamVisual(s.a, s.aa, s.af);
+    var homeVis = teamVisual(s.h, s.ha, 'lg');
+    var awayVis = teamVisual(s.a, s.aa, 'lg');
     h +=
       '<div class="hero-card p-6">' +
         '<div class="flex items-center justify-between mb-5">' +
@@ -1736,6 +1886,9 @@ function updateStats() {
   document.getElementById('statDate2Label').textContent = ds[1] ? dateLabel(ds[1]).replace(' 2026', '') : '\u2014';
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   renderSchedule — Pakai teamVisual() global, size 'sm'
+   ═══════════════════════════════════════════════════════════════ */
 function renderSchedule(data) {
   var c = document.getElementById('scheduleContainer');
   c.innerHTML = '';
@@ -1765,13 +1918,13 @@ function renderSchedule(data) {
     ms.forEach(function (m) {
       var v  = parseHC(m.handicap);
       var z  = isZeroHC(v);
-      var hc = gc(m.home);
-      var ac = gc(m.away);
       var ha = getAbbr(m.home);
       var aa = getAbbr(m.away);
+      var homeVis = teamVisual(m.home, ha, 'sm');
+      var awayVis = teamVisual(m.away, aa, 'sm');
       var ds = dateShort(m.date);
       if (ds !== prevDate) { rows += '<div class="date-sep"><span class="date-sep-text">' + dateLabel(m.date) + '</span><div class="date-sep-line"></div></div>'; prevDate = ds; }
-      rows += '<div class="match-row p-3.5 flex items-center gap-3 mb-1.5"><div class="flex-shrink-0 w-[64px]"><div class="text-xs font-bold text-white/70">' + m.time + '</div><div class="text-[9px] text-white/20 font-medium">WIB</div></div><div class="flex items-center gap-2.5 flex-1 min-w-0"><div class="team-badge team-badge-sm bg-gradient-to-br ' + hc[0] + ' ' + hc[1] + ' text-white">' + ha + '</div><span class="text-[13px] font-semibold truncate">' + m.home + '</span></div><div class="handicap-badge ' + (z ? 'handicap-zero' : '') + ' flex-shrink-0 text-center">' + v.home + ' : ' + v.away + '</div><div class="flex items-center gap-2.5 flex-1 min-w-0 justify-end"><span class="text-[13px] font-semibold truncate text-right">' + m.away + '</span><div class="team-badge team-badge-sm bg-gradient-to-br ' + ac[0] + ' ' + ac[1] + ' text-white">' + aa + '</div></div></div>';
+      rows += '<div class="match-row p-3.5 flex items-center gap-3 mb-1.5"><div class="flex-shrink-0 w-[64px]"><div class="text-xs font-bold text-white/70">' + m.time + '</div><div class="text-[9px] text-white/20 font-medium">WIB</div></div><div class="flex items-center gap-2.5 flex-1 min-w-0">' + homeVis + '<span class="text-[13px] font-semibold truncate">' + m.home + '</span></div><div class="handicap-badge ' + (z ? 'handicap-zero' : '') + ' flex-shrink-0 text-center">' + v.home + ' : ' + v.away + '</div><div class="flex items-center gap-2.5 flex-1 min-w-0 justify-end"><span class="text-[13px] font-semibold truncate text-right">' + m.away + '</span>' + awayVis + '</div></div>';
     });
     w.innerHTML = headerHTML + rows;
     c.appendChild(w);
@@ -1779,6 +1932,9 @@ function renderSchedule(data) {
   document.getElementById('matchCountLabel').textContent = total + ' pertandingan';
 }
 
+/* ═══════════════════════════════════════════════════════════════
+   renderPrediksi — Pakai teamVisual() global, size 'sm'
+   ═══════════════════════════════════════════════════════════════ */
 function renderPrediksi() {
   var c = document.getElementById('prediksiList');
   c.innerHTML = '';
@@ -1791,11 +1947,11 @@ function renderPrediksi() {
     var rows = '';
     lg.m.forEach(function (m) {
       var sc = scoreClass(m[4]);
-      var hc = gc(m[0]);
-      var ac = gc(m[2]);
       var rt = resultTag(m[4]);
       var rc = resultTagClass(m[4]);
-      rows += '<div class="match-row p-3.5 flex items-center gap-3 mb-1.5"><div class="flex items-center gap-2.5 flex-1 min-w-0"><div class="team-badge team-badge-sm bg-gradient-to-br ' + hc[0] + ' ' + hc[1] + ' text-white">' + m[1] + '</div><span class="text-[13px] font-semibold truncate">' + m[0] + '</span></div><div class="flex-shrink-0 flex flex-col items-center gap-1"><div class="text-lg font-black ' + sc + '">' + m[4] + '</div><span class="result-tag ' + rc + '">' + rt + '</span></div><div class="flex items-center gap-2.5 flex-1 min-w-0 justify-end"><span class="text-[13px] font-semibold truncate text-right">' + m[2] + '</span><div class="team-badge team-badge-sm bg-gradient-to-br ' + ac[0] + ' ' + ac[1] + ' text-white">' + m[3] + '</div></div></div>';
+      var homeVis = teamVisual(m[0], m[1], 'sm');
+      var awayVis = teamVisual(m[2], m[3], 'sm');
+      rows += '<div class="match-row p-3.5 flex items-center gap-3 mb-1.5"><div class="flex items-center gap-2.5 flex-1 min-w-0">' + homeVis + '<span class="text-[13px] font-semibold truncate">' + m[0] + '</span></div><div class="flex-shrink-0 flex flex-col items-center gap-1"><div class="text-lg font-black ' + sc + '">' + m[4] + '</div><span class="result-tag ' + rc + '">' + rt + '</span></div><div class="flex items-center gap-2.5 flex-1 min-w-0 justify-end"><span class="text-[13px] font-semibold truncate text-right">' + m[2] + '</span>' + awayVis + '</div></div>';
     });
     w.innerHTML = '<div class="league-card-header"><div class="flex items-center gap-2">' + flagImg(lg.flag, 'flag-icon-lg') + '<span class="league-tag">' + lg.league + '</span></div><span class="text-[10px] text-white/15">' + lg.m.length + ' match</span></div>' + rows;
     c.appendChild(w);
