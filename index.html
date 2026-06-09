@@ -816,6 +816,450 @@ box-shadow:
   display:flex; align-items:center; justify-content:center;
 }
 
+/* ══════════════════════════════════════════════════════════════════
+   LIGHT MODE — Soft Glass · Cool-Tinted · Glow Preserved
+   ══════════════════════════════════════════════════════════════════ */
+
+/* ── Toggle Button ─────────────────────────────────────────────── */
+.theme-toggle {
+  width: 40px; height: 40px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: all 0.3s;
+  border: 1px solid rgba(255,255,255,0.10);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  flex-shrink: 0;
+}
+.theme-toggle:hover {
+  background: rgba(255,255,255,0.10);
+  border-color: rgba(255,255,255,0.18);
+}
+
+/* ── Base ──────────────────────────────────────────────────────── */
+body.light { color: #1e1b3a; }
+body.light::after { opacity: 0.02; }
+
+/* ── Background — soft blue-gray tint, bukan putih polos ─────── */
+body.light .bg-scene {
+  filter: blur(14px) brightness(1.6) saturate(0.25) hue-rotate(10deg);
+}
+body.light .bg-scene::before {
+  background: radial-gradient(ellipse 120% 120% at 50% 50%,
+    rgba(220,225,240,0.45) 30%,
+    rgba(235,238,248,0.88) 100%);
+}
+body.light .bg-grid {
+  background-image:
+    linear-gradient(rgba(99,102,241,0.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(99,102,241,0.035) 1px, transparent 1px);
+}
+
+/* ── Glass — soft tinted, visible edge, subtle inner glow ────── */
+body.light .glass {
+  background: linear-gradient(135deg,
+    rgba(240,242,250,0.78) 0%,
+    rgba(230,233,245,0.58) 60%,
+    rgba(222,226,240,0.48) 100%);
+  border: 2px solid rgba(99,102,241,0.18);
+  border-top-color: rgba(99,102,241,0.28);
+  border-left-color: rgba(99,102,241,0.22);
+  box-shadow:
+    0 0 8px rgba(99,102,241,0.06),
+    0 0 18px rgba(99,102,241,0.03),
+    0 1px 0 rgba(255,255,255,0.9) inset,
+    0 -1px 0 rgba(0,0,0,0.05) inset,
+    0 2px 4px rgba(0,0,0,0.04),
+    0 8px 24px rgba(0,0,0,0.08);
+}
+body.light .glass::before {
+  background: linear-gradient(90deg,
+    transparent 0%, rgba(255,255,255,0.7) 35%,
+    rgba(255,255,255,0.25) 65%, transparent 100%);
+}
+body.light .glass::after {
+  background: linear-gradient(135deg, rgba(255,255,255,0.5) 0%, transparent 60%);
+}
+body.light .glass:hover {
+  background: linear-gradient(135deg,
+    rgba(248,249,252,0.92) 0%,
+    rgba(238,240,248,0.82) 60%,
+    rgba(230,233,245,0.72) 100%);
+  border: 2px solid rgba(99,102,241,0.55);
+  border-top-color: rgba(99,102,241,0.65);
+  border-left-color: rgba(99,102,241,0.60);
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 8px rgba(99,102,241,0.25),
+    0 0 20px rgba(99,102,241,0.12),
+    0 0 35px rgba(99,102,241,0.06),
+    0 -1px 0 rgba(0,0,0,0.03) inset,
+    0 4px 8px rgba(0,0,0,0.06),
+    0 16px 40px rgba(0,0,0,0.10);
+}
+
+/* ── Glass Static ───────────────────────────────────────────────── */
+body.light .glass-static {
+  background: linear-gradient(145deg,
+    rgba(238,240,248,0.72) 0%,
+    rgba(228,231,242,0.52) 55%,
+    rgba(220,224,238,0.42) 100%);
+  border: 1px solid rgba(99,102,241,0.10);
+  border-top-color: rgba(99,102,241,0.18);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.8) inset,
+    0 -1px 0 rgba(0,0,0,0.04) inset,
+    0 0 6px rgba(99,102,241,0.03),
+    0 4px 16px rgba(0,0,0,0.06),
+    0 1px 3px rgba(0,0,0,0.04);
+}
+body.light .glass-static::before {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+}
+body.light .glass-static::after {
+  background: linear-gradient(130deg, rgba(255,255,255,0.4) 0%, transparent 60%);
+}
+
+/* ── Glass Sidebar ─────────────────────────────────────────────── */
+body.light .glass-sidebar {
+  background: linear-gradient(175deg,
+    rgba(235,238,248,0.82) 0%,
+    rgba(225,228,240,0.62) 60%,
+    rgba(218,222,236,0.50) 100%);
+  border-right: 1px solid rgba(99,102,241,0.10);
+  box-shadow:
+    2px 0 20px rgba(0,0,0,0.06),
+    inset -1px 0 0 rgba(255,255,255,0.5),
+    inset 1px 0 0 rgba(255,255,255,0.3);
+}
+body.light .glass-sidebar::before {
+  background: linear-gradient(to bottom,
+    transparent 0%,
+    rgba(99,102,241,0.20) 30%,
+    rgba(34,211,238,0.14) 70%,
+    transparent 100%);
+}
+
+/* ── Navigation ─────────────────────────────────────────────────── */
+body.light .nav-item {
+  color: rgba(30,27,58,0.65);
+  border: 2px solid rgba(99,102,241,0.08);
+}
+body.light .nav-item::before {
+  background: linear-gradient(135deg, rgba(99,102,241,0.03) 0%, transparent 55%);
+}
+body.light .nav-item:hover {
+  color: rgba(30,27,58,0.88);
+  background: rgba(99,102,241,0.05);
+  border-color: rgba(99,102,241,0.15);
+  box-shadow: 0 0 8px rgba(99,102,241,0.06), 0 2px 8px rgba(0,0,0,0.05);
+}
+body.light .nav-item.active {
+  color: #4338ca;
+  background: rgba(99,102,241,0.10);
+  border: 2px solid rgba(99,102,241,0.65);
+  box-shadow:
+    0 0 10px rgba(99,102,241,0.30),
+    0 0 22px rgba(99,102,241,0.15),
+    0 0 14px rgba(99,102,241,0.12) inset,
+    0 2px 8px rgba(0,0,0,0.06);
+}
+body.light .nav-item.active i {
+  color: #4f46e5;
+  filter: drop-shadow(0 0 4px rgba(99,102,241,0.40));
+}
+body.light .theme-toggle {
+  border-color: rgba(99,102,241,0.15);
+  background: rgba(238,240,248,0.65);
+  box-shadow: 0 0 6px rgba(99,102,241,0.06);
+}
+body.light .theme-toggle:hover {
+  background: rgba(238,240,248,0.85);
+  border-color: rgba(99,102,241,0.25);
+  box-shadow: 0 0 10px rgba(99,102,241,0.12);
+}
+
+/* ── Match Rows ─────────────────────────────────────────────────── */
+body.light .match-row {
+  background: linear-gradient(135deg,
+    rgba(240,242,250,0.60) 0%,
+    rgba(228,231,242,0.35) 100%);
+  border: 1px solid rgba(99,102,241,0.08);
+  border-top-color: rgba(99,102,241,0.14);
+  box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset;
+}
+body.light .match-row::before {
+  background: linear-gradient(90deg,
+    transparent 0%, rgba(99,102,241,0.08) 40%,
+    rgba(99,102,241,0.03) 70%, transparent 100%);
+}
+body.light .match-row:hover {
+  background: linear-gradient(135deg,
+    rgba(240,242,250,0.82) 0%,
+    rgba(228,231,242,0.55) 100%);
+  border-color: rgba(99,102,241,0.16);
+  border-top-color: rgba(99,102,241,0.24);
+  transform: translateX(4px);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.6) inset,
+    0 0 8px rgba(99,102,241,0.06),
+    0 2px 8px rgba(0,0,0,0.06);
+}
+
+/* ── Hero Cards ─────────────────────────────────────────────────── */
+body.light .hero-card {
+  background: linear-gradient(135deg,
+    rgba(240,242,250,0.75) 0%,
+    rgba(228,231,242,0.52) 55%,
+    rgba(220,224,238,0.40) 100%);
+  border: 1px solid rgba(99,102,241,0.12);
+  border-top-color: rgba(99,102,241,0.22);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.8) inset,
+    0 -1px 0 rgba(0,0,0,0.04) inset,
+    0 0 8px rgba(99,102,241,0.04),
+    0 4px 16px rgba(0,0,0,0.06),
+    0 1px 4px rgba(0,0,0,0.04);
+}
+body.light .hero-card::before {
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(99,102,241,0.70) 25%,
+    rgba(34,211,238,0.60) 60%,
+    rgba(234,88,12,0.35) 85%,
+    transparent 100%);
+  filter: blur(0.5px);
+}
+body.light .hero-card::after {
+  background: linear-gradient(130deg, rgba(255,255,255,0.5) 0%, transparent 55%);
+}
+body.light .hero-card:hover {
+  border-color: rgba(99,102,241,0.30);
+  border-top-color: rgba(99,102,241,0.50);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.8) inset,
+    0 -1px 0 rgba(0,0,0,0.04) inset,
+    0 0 18px rgba(99,102,241,0.15),
+    0 0 36px rgba(34,211,238,0.08),
+    0 8px 32px rgba(0,0,0,0.08);
+  transform: translateY(-5px);
+}
+
+/* ── Handicap Badges — dark glass + cyan glow di light mode ── */
+body.light .handicap-badge {
+  background: linear-gradient(135deg,
+    rgba(12,12,22,0.92) 0%, rgba(12,12,22,0.84) 60%,
+    rgba(12,12,22,0.76) 100%);
+  border-color: rgba(99,102,241,0.30);
+  color: #eeeef4;
+  box-shadow:
+    0 0 10px rgba(99,102,241,0.22),
+    0 0 22px rgba(99,102,241,0.10),
+    0 0 4px rgba(99,102,241,0.15) inset,
+    0 2px 6px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  text-shadow: 0 0 8px rgba(255,255,255,0.25);
+}
+body.light .handicap-zero {
+  background: linear-gradient(135deg,
+    rgba(12,12,22,0.90) 0%, rgba(12,12,22,0.82) 60%,
+    rgba(12,12,22,0.74) 100%);
+  border-color: rgba(99,102,241,0.25);
+  color: rgba(34,211,238,0.88);
+  box-shadow:
+    0 0 8px rgba(99,102,241,0.18),
+    0 0 18px rgba(99,102,241,0.09),
+    0 0 4px rgba(34,211,238,0.12) inset,
+    0 2px 6px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.06);
+  text-shadow: 0 0 6px rgba(34,211,238,0.35);
+}
+
+/* ── Scores — tetap bold, tanpa glow tapi saturasi tinggi ──── */
+body.light .score-home { color: #15803d; text-shadow: none; }
+body.light .score-away { color: #dc2626; text-shadow: none; }
+body.light .score-draw { color: #b45309; text-shadow: none; }
+
+body.light .result-home {
+  background: rgba(22,163,74,0.10); color: #15803d;
+  border-color: rgba(22,163,74,0.25);
+  box-shadow: 0 0 8px rgba(22,163,74,0.10), inset 0 1px 0 rgba(255,255,255,0.3);
+  text-shadow: none;
+}
+body.light .result-away {
+  background: rgba(220,38,38,0.10); color: #dc2626;
+  border-color: rgba(220,38,38,0.25);
+  box-shadow: 0 0 8px rgba(220,38,38,0.10), inset 0 1px 0 rgba(255,255,255,0.3);
+  text-shadow: none;
+}
+body.light .result-draw {
+  background: rgba(217,119,6,0.10); color: #b45309;
+  border-color: rgba(217,119,6,0.25);
+  box-shadow: 0 0 8px rgba(217,119,6,0.08), inset 0 1px 0 rgba(255,255,255,0.3);
+  text-shadow: none;
+}
+
+/* ── Form Dots — keep glow tapi kurangi ────────────────────────── */
+body.light .form-w { background: #16a34a; box-shadow: 0 0 5px rgba(22,163,74,0.45); }
+body.light .form-d { background: rgba(99,102,241,0.25); box-shadow: 0 0 3px rgba(99,102,241,0.15); }
+body.light .form-l { background: #dc2626; box-shadow: 0 0 5px rgba(220,38,38,0.45); }
+
+/* ── Klasemen Tabs ─────────────────────────────────────────────── */
+body.light .klasemen-tab {
+  color: rgba(30,27,58,0.45);
+  border: 1px solid rgba(99,102,241,0.08);
+  background: rgba(238,240,248,0.40);
+}
+body.light .klasemen-tab:hover {
+  color: rgba(30,27,58,0.75);
+  background: rgba(238,240,248,0.60);
+  border-color: rgba(99,102,241,0.15);
+  box-shadow: 0 0 6px rgba(99,102,241,0.06);
+}
+body.light .klasemen-tab.active {
+  color: #4338ca;
+  background: rgba(99,102,241,0.10);
+  border: 2px solid rgba(99,102,241,0.60);
+  box-shadow:
+    0 0 8px rgba(99,102,241,0.25),
+    0 0 18px rgba(99,102,241,0.12),
+    0 0 10px rgba(99,102,241,0.10) inset,
+    0 2px 8px rgba(0,0,0,0.06);
+  text-shadow: 0 0 8px rgba(99,102,241,0.15);
+}
+
+/* ── Stand Rows ─────────────────────────────────────────────────── */
+body.light .stand-row:not(.stand-header):hover {
+  background: linear-gradient(135deg, rgba(99,102,241,0.05) 0%, rgba(238,240,248,0.03) 100%);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.5), 0 0 6px rgba(99,102,241,0.04), 0 2px 8px rgba(0,0,0,0.04);
+}
+body.light .stand-header { color: rgba(79,70,229,0.80); }
+
+/* ── Zone Borders — keep color, subtle glow ────────────────────── */
+body.light .ucl           { box-shadow: -2px 0 8px rgba(129,140,248,0.12) inset; }
+body.light .uel           { box-shadow: -2px 0 8px rgba(249,115,22,0.12) inset; }
+body.light .uecl          { box-shadow: -2px 0 8px rgba(34,197,94,0.12) inset; }
+body.light .ucl-qualifier  { box-shadow: -2px 0 8px rgba(168,85,247,0.12) inset; }
+body.light .relegation    { box-shadow: -2px 0 8px rgba(239,68,68,0.12) inset; }
+body.light .relegation-playoff { box-shadow: -2px 0 8px rgba(251,146,60,0.12) inset; }
+
+/* ── Zone Legend ────────────────────────────────────────────────── */
+body.light .zone-legend {
+  background: linear-gradient(145deg,
+    rgba(238,240,248,0.72) 0%, rgba(228,231,242,0.52) 55%,
+    rgba(220,224,238,0.42) 100%);
+  border: 1px solid rgba(99,102,241,0.10);
+  border-top-color: rgba(99,102,241,0.18);
+  box-shadow:
+    0 1px 0 rgba(255,255,255,0.6) inset,
+    0 -1px 0 rgba(0,0,0,0.04) inset,
+    0 0 4px rgba(99,102,241,0.03),
+    0 4px 16px rgba(0,0,0,0.05);
+}
+body.light .zone-legend::before {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+}
+body.light .zone-legend span { color: rgba(30,27,58,0.70); }
+
+/* ── Date Separator ─────────────────────────────────────────────── */
+body.light .date-sep-line {
+  background: linear-gradient(90deg, rgba(99,102,241,0.18), rgba(34,211,238,0.04));
+}
+body.light .date-sep-text { color: rgba(79,70,229,0.75); text-shadow: none; }
+
+/* ── League Tag ─────────────────────────────────────────────────── */
+body.light .league-tag { color: rgba(30,27,58,0.45); }
+body.light .league-card-header { border-bottom-color: rgba(99,102,241,0.08); }
+
+/* ── Team Visuals ───────────────────────────────────────────────── */
+body.light .team-badge, body.light .team-badge-sm {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+body.light .team-crest {
+  box-shadow: 0 1px 3px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.4);
+}
+body.light .spotlight-flag, body.light .team-flag-sm {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.10), inset 0 1px 0 rgba(255,255,255,0.3);
+  border-color: rgba(99,102,241,0.12);
+}
+body.light .flag-icon, body.light .flag-icon-lg {
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.15));
+}
+
+/* ── League Bars ─────────────────────────────────────────────────── */
+body.light .league-bar {
+  box-shadow: 0 0 4px currentColor;
+  filter: brightness(0.9) saturate(1.2);
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────── */
+body.light ::-webkit-scrollbar-track { background: #e8ebf2; }
+body.light ::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #6366f1, #22d3ee, #6366f1);
+  box-shadow: 0 0 8px rgba(99,102,241,0.35);
+}
+body.light ::-webkit-scrollbar-thumb:hover {
+  box-shadow: 0 0 14px rgba(99,102,241,0.55), 0 0 24px rgba(34,211,238,0.35);
+}
+
+/* ── Separator Lines ─────────────────────────────────────────────── */
+body.light .glass-static div[style*="background:white"] {
+  background: linear-gradient(90deg, transparent, rgba(99,102,241,0.15), transparent) !important;
+}
+
+/* ── Sidebar Overlay ──────────────────────────────────────────── */
+body.light .sidebar-overlay { background: rgba(30,27,58,0.25); backdrop-filter: blur(6px); }
+
+/* ══════════════════════════════════════════════════════════════════
+   TAILWIND TEXT OVERRIDES
+   ══════════════════════════════════════════════════════════════════ */
+body.light .text-white         { color: #1e1b3a !important; }
+body.light .text-white\/80    { color: rgba(30,27,58,0.80) !important; }
+body.light .text-white\/70    { color: rgba(30,27,58,0.70) !important; }
+body.light .text-white\/60    { color: rgba(30,27,58,0.60) !important; }
+body.light .text-white\/50    { color: rgba(30,27,58,0.50) !important; }
+body.light .text-white\/40    { color: rgba(30,27,58,0.40) !important; }
+body.light .text-white\/35    { color: rgba(30,27,58,0.35) !important; }
+body.light .text-white\/30    { color: rgba(30,27,58,0.30) !important; }
+body.light .text-white\/25    { color: rgba(30,27,58,0.25) !important; }
+body.light .text-white\/20    { color: rgba(30,27,58,0.20) !important; }
+body.light .text-white\/15    { color: rgba(30,27,58,0.15) !important; }
+body.light .text-white\/10    { color: rgba(30,27,58,0.10) !important; }
+
+body.light .placeholder-white\/25::placeholder { color: rgba(30,27,58,0.30) !important; }
+
+/* ── BG Overrides ───────────────────────────────────────────────── */
+body.light .bg-green-500\/12  { background: rgba(22,163,74,0.08) !important; }
+body.light .bg-cyan-500\/12   { background: rgba(99,102,241,0.08) !important; }
+body.light .bg-amber-400\/10  {
+  background: rgba(12,12,22,0.88) !important;
+  border-color: rgba(99,102,241,0.22) !important;
+  box-shadow: 0 0 8px rgba(99,102,241,0.12);
+}
+body.light .bg-cyan-400\/10   { background: rgba(99,102,241,0.08) !important; }
+
+/* ── Text Glow — convert to subtle color boost ─────────────────── */
+body.light .text-indigo-400  { text-shadow: none; color: #6366f1 !important; }
+body.light .text-green-400   { text-shadow: none; color: #16a34a !important; }
+body.light .text-red-400     { text-shadow: none; color: #dc2626 !important; }
+body.light .text-orange-400  { text-shadow: none; color: #ea580c !important; }
+body.light .text-violet-400  { text-shadow: none; color: #8b5cf6 !important; }
+body.light .text-cyan-400    { text-shadow: none; color: #0891b2 !important; }
+body.light .text-amber-400   { text-shadow: 0 0 8px rgba(255,255,255,0.25) !important; color: #eeeef4 !important; }
+
+/* ── Misc ──────────────────────────────────────────────────────── */
+body.light .border-white\/5       { border-color: rgba(99,102,241,0.06) !important; }
+body.light .ring-indigo-500\/30  { --tw-ring-color: rgba(99,102,241,0.20) !important; }
+body.light .hover\:bg-white\/5:hover { background: rgba(99,102,241,0.04) !important; }
+body.light #searchInput { color: #1e1b3a; }
+body.light footer { color: rgba(30,27,58,0.30) !important; }
+
+/* ── Smooth Transition ─────────────────────────────────────────── */
+body, .bg-scene, .glass, .glass-static, .glass-sidebar,
+.hero-card, .match-row, .nav-item, .klasemen-tab,
+.theme-toggle, .zone-legend {
+  transition: background 0.4s ease, border-color 0.4s ease,
+    box-shadow 0.4s ease, color 0.3s ease, transform 0.4s ease;
+}
 
   </style>
 </head>
@@ -887,7 +1331,11 @@ box-shadow:
             <p class="text-sm text-white/35 mt-1" id="headerDesc">Ringkasan Pertandingan &amp; Spotlight Liga Top</p>
           </div>
         </div>
-        <div class="flex items-center gap-3" id="searchWrapper" style="display:none">
+       <div class="flex items-center gap-3">
+          <button class="theme-toggle" onclick="toggleTheme()" title="Ganti Tema" aria-label="Toggle theme">
+            <i data-lucide="sun" class="w-[18px] h-[18px] text-white/60" id="themeIcon"></i>
+          </button>
+          <div id="searchWrapper" style="display:none">
           <div class="hidden md:flex items-center gap-2 glass-static px-4 py-2.5 rounded-xl">
             <i data-lucide="search" class="w-4 h-4 text-white/25"></i>
             <input type="text" placeholder="Cari tim atau liga..." class="bg-transparent border-none outline-none text-sm text-white placeholder-white/25 w-40" id="searchInput" oninput="filterMatches()" />
@@ -1040,8 +1488,29 @@ box-shadow:
 
   <script>
     
+    // ── Theme Init (sebelum createIcons agar icon benar) ──
+    (function() {
+      if (localStorage.getItem('kapsul4d-theme') === 'light') {
+        document.body.classList.add('light');
+        var ic = document.getElementById('themeIcon');
+        if (ic) ic.setAttribute('data-lucide', 'moon');
+      }
+    })();
+
     // Init Lucide Icons
     lucide.createIcons();
+
+    // ── Theme Toggle ──
+    function toggleTheme() {
+      document.body.classList.toggle('light');
+      var isLight = document.body.classList.contains('light');
+      localStorage.setItem('kapsul4d-theme', isLight ? 'light' : 'dark');
+      var ic = document.getElementById('themeIcon');
+      if (ic) {
+        ic.setAttribute('data-lucide', isLight ? 'moon' : 'sun');
+        lucide.createIcons();
+      }
+    }
 
     // Map of country codes for flag CDN (dipakai flagImg → header liga kecil)
     var flagMap = {
@@ -1181,7 +1650,7 @@ var teamFlagMap = {
   'Philippines U19':'ph','Philippines U20':'ph','Philippines U23':'ph',
   'Poland U19':'pl','Poland U20':'pl','Poland U21':'pl','Poland U23':'pl',
   'Portugal U19':'pt','Portugal U20':'pt','Portugal U21':'pt','Portugal U23':'pt',
-  'Saudi Arabia U19':'sa','Saudi Arabia U20':'sa','Saudi Arabia U23':'sa',
+  'Saudi Arabia U19':'sa','Saudi Arabia U20':'sa','Saudi Arabia U23':'sa', 'Saudi Arabia U21':'sa',
   'Senegal U19':'sn','Senegal U20':'sn','Senegal U21':'sn','Senegal U23':'sn',
   'Singapore U19':'sg','Singapore U20':'sg','Singapore U23':'sg',
   'South Korea U19':'kr','South Korea U20':'kr','South Korea U23':'kr',
@@ -1208,7 +1677,7 @@ var teamFlagMap = {
   'Oman U19':'om','Oman U23':'om',
   'Jordan U19':'jo','Jordan U23':'jo',
   'Syria U19':'sy','Syria U23':'sy',
-  'Guam U19':'gu',
+  'Guam U19':'gu','DR Congo U23':'cd',
   'Bolivia [n]':'bo','Argentina [n]':'ar','Netherlands [n]':'nl', 'Peru [n]':'pe'
 };
 
