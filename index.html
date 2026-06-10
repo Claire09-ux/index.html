@@ -1398,7 +1398,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secJadwal" style="display:none">
         <div class="anim-in d6">
           <div class="flex items-center justify-between mb-5">
-            <h2 class="font-bold text-base">Jadwal &amp; Handicap 10 - 11 Juni 2026</h2>
+            <h2 class="font-bold text-base">Jadwal &amp; Handicap 11 - 13 Juni 2026</h2>
             <span class="text-[11px] text-white/25" id="matchCountLabel">0 pertandingan</span>
           </div>
           <div id="scheduleContainer"></div>
@@ -1412,7 +1412,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secPrediksi" style="display:none">
         <div class="flex items-center gap-2 mb-5 anim-in d1">
           <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
-          <h2 class="font-bold text-base">Prediksi Pertandingan 10 - 11 Juni 2026</h2>
+          <h2 class="font-bold text-base">Prediksi Pertandingan 11 - 13 Juni 2026</h2>
         </div>
         <div id="prediksiList"></div>
       </div>
@@ -2252,62 +2252,37 @@ function renderWCGroup(group) {
 }
 
 var leagueOrder = [
-  'INTERNATIONAL FRIENDLY', 'SPAIN LA LIGA 2 PLAYOFF', 'SWEDEN SUPERETTAN', 
-  'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', 'ICELAND CUP', 'FINLAND CUP', 
-  'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', 'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', 'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', 
-  'DIAMOND JUBILEE INTERNATIONAL FOOTBALL TOURNAMENT [ IN MALDIVES ]', 'BRAZIL SERIE B', 'ECUADOR LIGA PRO SERIE B', 
-  'USL CHAMPIONSHIP', 'CANADIAN PREMIER LEAGUE'
+  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', 'ASEAN U19 CHAMPIONSHIP [ IN INDONESIA ]',
+  'SWEDEN SUPERETTAN', 'FINLAND YKKOSLIIGA', 'IRELAND 1ST DIV',
+  'CHILE PRIMERA DIVISION'
 ];
 
 var matches = [
-  { date:'11/06', time:'02:45', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'Portugal', away:'Nigeria', handicap:'0 : 1 1/2' },
-  { date:'11/06', time:'03:00', league:'INTERNATIONAL FRIENDLY', flag:'un', home:'England [n]', away:'Costa Rica', handicap:'0 : 2' },
-  { date:'11/06', time:'02:00', league:'SPAIN LA LIGA 2 PLAYOFF', flag:'es', home:'Malaga CF', away:'UD Las Palmas', handicap:'0 : 1/4' },
-  { date:'11/06', time:'00:00', league:'SWEDEN SUPERETTAN', flag:'se', home:'Orebro', away:'GIF Sundsvall', handicap:'0 : 1/2' },
-  { date:'11/06', time:'00:00', league:'SWEDEN SUPERETTAN', flag:'se', home:'Varbergs BoIS', away:'Norrby IF', handicap:'0 : 3/4' },
-  { date:'10/06', time:'18:30', league:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', flag:'un', home:'DR Congo U23', away:'Saudi Arabia U21', handicap:'0 : 1/4' },
-  { date:'11/06', time:'00:00', league:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', flag:'un', home:'Colombia U19', away:'Tunisia U23', handicap:'1/2 : 0' },
-  { date:'11/06', time:'02:30', league:'ICELAND CUP', flag:'is', home:'Afturelding', away:'Stjarnan Gardabaer', handicap:'3/4 : 0' },
-  { date:'10/06', time:'21:00', league:'FINLAND CUP', flag:'fi', home:'KuPS', away:'Vaasa VPS', handicap:'0 : 1/2' },
-  { date:'10/06', time:'22:00', league:'FINLAND CUP', flag:'fi', home:'Ilves Tampere', away:'Lahti', handicap:'0 : 1/4' },
-  { date:'10/06', time:'22:00', league:'FINLAND CUP', flag:'fi', home:'Seinajoen JK [n]', away:'Inter Turku', handicap:'1/2 : 0' },
-  { date:'10/06', time:'16:30', league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Sydney Olympic', away:'SD Raiders FC', handicap:'1/4 : 0' },
-  { date:'10/06', time:'16:30', league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', home:'Wynnum Wolves FC', away:'Eastern Suburbs', handicap:'1/4 : 0' },
-  { date:'10/06', time:'16:30', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Tuggeranong United FC', away:'Monaro Panthers FC', handicap:'1 : 0' },
-  { date:'10/06', time:'16:30', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Canberra Olympic FC', away:'Canberra Juventus FC', handicap:'0 : 0' },
-  { date:'10/06', time:'16:30', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Canberra Croatia FC', away:'Queanbeyan City FC', handicap:'0 : 1 1/4' },
-  { date:'10/06', time:'16:30', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Belconnen United FC', away:'Canberra White Eagles', handicap:'0 : 1 1/2' },
-  { date:'10/06', time:'16:30', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'O\'Connor Knights', away:'Tigers FC Canberra', handicap:'1 3/4 : 0' },
-  { date:'10/06', time:'23:00', league:'DIAMOND JUBILEE INTERNATIONAL FOOTBALL TOURNAMENT [ IN MALDIVES ]', flag:'un', home:'Pakistan', away:'Afghanistan', handicap:'1/4 : 0' },
-  { date:'11/06', time:'06:00', league:'BRAZIL SERIE B', flag:'br', home:'Goias GO', away:'Gremio Novorizontino SP', handicap:'0 : 1/4' },
-  { date:'11/06', time:'06:00', league:'BRAZIL SERIE B', flag:'br', home:'Ceara CE', away:'Avai SC', handicap:'0 : 3/4' },
-  { date:'11/06', time:'07:00', league:'BRAZIL SERIE B', flag:'br', home:'Sport Club do Recife PE', away:'Athletic Club MG', handicap:'0 : 3/4' },
-  { date:'11/06', time:'03:30', league:'ECUADOR LIGA PRO SERIE B', flag:'ec', home:'Gualaceo SC', away:'Cumbaya FC', handicap:'0 : 1/4' },
-  { date:'11/06', time:'03:30', league:'ECUADOR LIGA PRO SERIE B', flag:'ec', home:'CD Independiente Juniors', away:'CD Cuenca Juniors', handicap:'0 : 1/2' },
-  { date:'11/06', time:'07:00', league:'ECUADOR LIGA PRO SERIE B', flag:'ec', home:'El Nacional', away:'Deportivo Santo Domingo', handicap:'0 : 1/4' },
-  { date:'11/06', time:'06:00', league:'USL CHAMPIONSHIP', flag:'us', home:'FC Tampa Bay Rowdies', away:'Charleston Battery', handicap:'0 : 3/4' },
-  { date:'11/06', time:'06:30', league:'USL CHAMPIONSHIP', flag:'us', home:'Detroit City', away:'El Paso Locomotive FC', handicap:'0 : 1/2' },
-  { date:'11/06', time:'09:00', league:'USL CHAMPIONSHIP', flag:'us', home:'Monterey Bay FC', away:'Sporting JAX', handicap:'0 : 1/2' },
-  { date:'11/06', time:'09:30', league:'USL CHAMPIONSHIP', flag:'us', home:'Phoenix Rising FC', away:'Louisville City FC', handicap:'1/4 : 0' },
-  { date:'11/06', time:'06:00', league:'CANADIAN PREMIER LEAGUE', flag:'ca', home:'Forge FC', away:'HFX Wanderers FC', handicap:'0 : 1 1/4' },
-  { date:'11/06', time:'06:30', league:'CANADIAN PREMIER LEAGUE', flag:'ca', home:'Inter Toronto FC', away:'Cavalry FC', handicap:'1/2 : 0' }
+  { date:'12/06', time:'02:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Mexico', away:'South Africa', handicap:'0 : 1 1/4' },
+  { date:'12/06', time:'09:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Czechia', away:'Korea Republic', handicap:'0 : 0' },
+  { date:'13/06', time:'02:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Canada', away:'Bosnia and Herzegovina', handicap:'0 : 1/2' },
+  { date:'13/06', time:'08:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'USA', away:'Paraguay', handicap:'0 : 1/2' },
+  { date:'11/06', time:'18:30', league:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', flag:'un', home:'Venezuela U20', away:'Japan U19', handicap:'1 : 0' },
+  { date:'12/06', time:'00:00', league:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', flag:'un', home:'Portugal U20', away:'Canada U20', handicap:'0 : 1 1/4' },
+  { date:'11/06', time:'16:00', league:'ASEAN U19 CHAMPIONSHIP [ IN INDONESIA ]', flag:'id', home:'Thailand U19', away:'Cambodia U19', handicap:'0 : 1 3/4' },
+  { date:'11/06', time:'20:15', league:'ASEAN U19 CHAMPIONSHIP [ IN INDONESIA ]', flag:'id', home:'Indonesia U19', away:'Australia U19', handicap:'3/4 : 0' },
+  { date:'12/06', time:'00:00', league:'SWEDEN SUPERETTAN', flag:'se', home:'Helsingborgs', away:'Landskrona BoIS', handicap:'0 : 0' },
+  { date:'12/06', time:'22:30', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'JaPS', away:'PK-35 Helsinki', handicap:'1/4 : 0' },
+  { date:'13/06', time:'01:45', league:'IRELAND 1ST DIV', flag:'ie', home:'Kerry FC', away:'Athlone Town', handicap:'0 : 1/4' },
+  { date:'13/06', time:'01:45', league:'IRELAND 1ST DIV', flag:'ie', home:'Wexford FC', away:'Cork City', handicap:'3/4 : 0' },
+  { date:'13/06', time:'01:45', league:'IRELAND 1ST DIV', flag:'ie', home:'Finn Harps', away:'UC Dublin', handicap:'1/2 : 0' },
+  { date:'13/06', time:'01:45', league:'IRELAND 1ST DIV', flag:'ie', home:'Treaty United', away:'Bray Wanderers', handicap:'1/2 : 0' },
+  { date:'13/06', time:'07:00', league:'CHILE PRIMERA DIVISION', flag:'cl', home:'Audax Italiano', away:'Deportes La Serena', handicap:'0 : 1/2' }
 ];
 
 var predictions = [
-  { league:'INTERNATIONAL FRIENDLY', flag:'un', m:[['Portugal','POR','Nigeria','NIG','3 - 1'],['England [n]','ENG','Costa Rica','COS','4 - 1']] },
-  { league:'SPAIN LA LIGA 2 PLAYOFF', flag:'es', m:[['Malaga CF','MAL','UD Las Palmas','LAS','2 - 1']] },
-  { league:'SWEDEN SUPERETTAN', flag:'se', m:[['Orebro','ORE','GIF Sundsvall','GIF','2 - 1'],['Varbergs BoIS','VAR','Norrby IF','NOR','3 - 1']] },
-  { league:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', flag:'un', m:[['DR Congo U23','DRC','Saudi Arabia U21','SAU','1 - 2'],['Colombia U19','COL','Tunisia U23','TUN','1 - 2']] },
-  { league:'ICELAND CUP', flag:'is', m:[['Afturelding','AFT','Stjarnan Gardabaer','STJ','1 - 2']] },
-  { league:'FINLAND CUP', flag:'fi', m:[['KuPS','KUP','Vaasa VPS','VAA','2 - 1'],['Ilves Tampere','ILV','Lahti','LAH','2 - 1'],['Seinajoen JK [n]','SEI','Inter Turku','INT','1 - 2']] },
-  { league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', m:[['Sydney Olympic','SYD','SD Raiders FC','SDR','1 - 2']] },
-  { league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', m:[['Wynnum Wolves FC','WYN','Eastern Suburbs','EAS','1 - 2']] },
-  { league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', m:[['Tuggeranong United FC','TUG','Monaro Panthers FC','MON','1 - 2'],['Canberra Olympic FC','CAN','Canberra Juventus FC','CAN','1 - 1'],['Canberra Croatia FC','CAN','Queanbeyan City FC','QUE','3 - 1'],['Belconnen United FC','BEL','Canberra White Eagles','CAN','4 - 1'],['O\'Connor Knights','OCO','Tigers FC Canberra','TIG','1 - 3']] },
-  { league:'DIAMOND JUBILEE INTERNATIONAL FOOTBALL TOURNAMENT [ IN MALDIVES ]', flag:'un', m:[['Pakistan','PAK','Afghanistan','AFG','1 - 2']] },
-  { league:'BRAZIL SERIE B', flag:'br', m:[['Goias GO','GOI','Gremio Novorizontino SP','GRE','2 - 1'],['Ceara CE','CEA','Avai SC','AVA','2 - 0'],['Sport Club do Recife PE','SPO','Athletic Club MG','ATH','2 - 0']] },
-  { league:'ECUADOR LIGA PRO SERIE B', flag:'ec', m:[['Gualaceo SC','GUA','Cumbaya FC','CUM','2 - 1'],['CD Independiente Juniors','CDI','CD Cuenca Juniors','CDC','2 - 0'],['El Nacional','ELN','Deportivo Santo Domingo','DEP','2 - 1']] },
-  { league:'USL CHAMPIONSHIP', flag:'us', m:[['FC Tampa Bay Rowdies','FCT','Charleston Battery','CHA','2 - 0'],['Detroit City','DET','El Paso Locomotive FC','ELP','2 - 1'],['Monterey Bay FC','MON','Sporting JAX','SPO','2 - 1'],['Phoenix Rising FC','PHO','Louisville City FC','LOU','1 - 2']] },
-  { league:'CANADIAN PREMIER LEAGUE', flag:'ca', m:[['Forge FC','FOR','HFX Wanderers FC','HFX','3 - 1'],['Inter Toronto FC','INT','Cavalry FC','CAV','1 - 2']] }
+  { league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', m:[['Mexico','MEX','South Africa','SOU','2-0'],['Czechia','CZE','Korea Republic','KOR','1-1'],['Canada','CAN','Bosnia and Herzegovina','BOS','2-1'],['USA','USA','Paraguay','PAR','2-1']] },
+  { league:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', flag:'un', m:[['Venezuela U20','VEN','Japan U19','JAP','1-2'],['Portugal U20','POR','Canada U20','CAN','3-1']] },
+  { league:'ASEAN U19 CHAMPIONSHIP [ IN INDONESIA ]', flag:'id', m:[['Thailand U19','THA','Cambodia U19','CAM','3-0'],['Indonesia U19','IND','Australia U19','AUS','1-2']] },
+  { league:'SWEDEN SUPERETTAN', flag:'se', m:[['Helsingborgs','HEL','Landskrona BoIS','LAN','1-1']] },
+  { league:'FINLAND YKKOSLIIGA', flag:'fi', m:[['JaPS','JAP','PK-35 Helsinki','PK','1-2']] },
+  { league:'IRELAND 1ST DIV', flag:'ie', m:[['Kerry FC','KER','Athlone Town','ATH','1-2'],['Wexford FC','WEX','Cork City','COR','1-2'],['Finn Harps','FIN','UC Dublin','UCD','1-2'],['Treaty United','TRE','Bray Wanderers','BRA','1-2']] },
+  { league:'CHILE PRIMERA DIVISION', flag:'cl', m:[['Audax Italiano','AUD','Deportes La Serena','DEP','2-1']] }
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -2316,10 +2291,10 @@ var predictions = [
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'INTERNATIONAL FRIENDLY', fl:'un', h:'Portugal', ha:'POR', a:'Nigeria', aa:'NIG', dt:'11 Jun 2026 \u2022 02:45 WIB', hc:'0 : 1 1/2', sc:'3 - 1' },
-    { lg:'INTERNATIONAL FRIENDLY', fl:'un', h:'England [n]', ha:'ENG', a:'Costa Rica', aa:'COS', dt:'11 Jun 2026 \u2022 03:00 WIB', hc:'0 : 2', sc:'4 - 1' },
-    { lg:'SPAIN LA LIGA 2 PLAYOFF', fl:'es', h:'Malaga CF', ha:'MAL', a:'UD Las Palmas', aa:'LAS', dt:'11 Jun 2026 \u2022 02:00 WIB', hc:'0 : 1/4', sc:'2 - 1' },
-    { lg:'BRAZIL SERIE B', fl:'br', h:'Goias GO', ha:'GOI', a:'Gremio Novorizontino SP', aa:'GRE', dt:'11 Jun 2026 \u2022 06:00 WIB', hc:'0 : 1/4', sc:'2 - 1' }
+    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Mexico', ha:'MEX', a:'South Africa', aa:'SOU', dt:'12 Jun 2026 \u2022 02:00 WIB', hc:'0 : 1 1/4', sc:'2 - 0' },
+    { lg:'ASEAN U19 CHAMPIONSHIP [ IN INDONESIA ]', fl:'id', h:'Indonesia U19', ha:'IND', a:'Australia U19', aa:'AUS', dt:'11 Jun 2026 \u2022 20:15 WIB', hc:'3/4 : 0', sc:'1 - 2' },
+    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'USA', ha:'USA', a:'Paraguay', aa:'PAR', dt:'13 Jun 2026 \u2022 08:00 WIB', hc:'0 : 1/2', sc:'2 - 1' },
+    { lg:'MAURICE REVELLO TOURNAMENT [ IN FRANCE ]', fl:'un', h:'Portugal U20', ha:'POR', a:'Canada U20', aa:'CAN', dt:'12 Jun 2026 \u2022 00:00 WIB', hc:'0 : 1 1/4', sc:'3 - 1' }
   ];
 
   var h = '';
