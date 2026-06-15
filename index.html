@@ -1974,25 +1974,25 @@ var WCGroups = {
   ],
   E: [
     [1, 'Germany', 1, 1, 0, 0, 7, 1, 6, 3, 'W'],
-    [2, 'Ivory Coast', 0, 0, 0, 0, 0, 0, 0, 0, ''],
-    [3, 'Ecuador', 0, 0, 0, 0, 0, 0, 0, 0, ''],
+    [2, 'Ivory Coast', 1, 1, 0, 0, 1, 0, 1, 3, 'W'],
+    [3, 'Ecuador', 1, 0, 0, 1, 0, 1, -1, 0, 'L'],
     [4, 'Curaçao', 1, 0, 0, 1, 1, 7, -6, 0, 'L']
   ],
   F: [
-    [1, 'Japan', 1, 0, 1, 0, 2, 2, 0, 1, 'D'],
-    [2, 'Netherlands', 1, 0, 1, 0, 2, 2, 0, 1, 'D'],
-    [3, 'Sweden', 0, 0, 0, 0, 0, 0, 0, 0, ''],
-    [4, 'Tunisia', 0, 0, 0, 0, 0, 0, 0, 0, '']
+    [1, 'Sweden', 1, 1, 0, 0, 5, 1, 4, 3, 'W'],
+    [2, 'Japan', 1, 0, 1, 0, 2, 2, 0, 1, 'D'],
+    [3, 'Netherlands', 1, 0, 1, 0, 2, 2, 0, 1, 'D'],
+    [4, 'Tunisia', 1, 0, 0, 1, 1, 5, -4, 0, 'L']
   ],
   G: [
-    [1, 'Belgium', 0, 0, 0, 0, 0, 0, 0, 0, ''],
-    [2, 'Egypt', 0, 0, 0, 0, 0, 0, 0, 0, ''],
+    [1, 'Belgium', 1, 0, 1, 0, 1, 1, 0, 1, 'D'],
+    [2, 'Egypt', 1, 0, 1, 0, 1, 1, 0, 1, 'D'],
     [3, 'Iran', 0, 0, 0, 0, 0, 0, 0, 0, ''],
     [4, 'New Zealand', 0, 0, 0, 0, 0, 0, 0, 0, '']
   ],
   H: [
-    [1, 'Spain', 0, 0, 0, 0, 0, 0, 0, 0, ''],
-    [2, 'Cape Verde', 0, 0, 0, 0, 0, 0, 0, 0, ''],
+    [1, 'Spain', 1, 0, 1, 0, 0, 0, 0, 1, 'D'],
+    [2, 'Cape Verde', 1, 0, 1, 0, 0, 0, 0, 1, 'D'],
     [3, 'Saudi Arabia', 0, 0, 0, 0, 0, 0, 0, 0, ''],
     [4, 'Uruguay', 0, 0, 0, 0, 0, 0, 0, 0, '']
   ],
@@ -2252,33 +2252,26 @@ function renderWCGroup(group) {
 }
 
 var leagueOrder = [
-  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'SWEDEN SUPERETTAN', 'ICELAND PREMIER LEAGUE',
-  'FINLAND YKKOSLIIGA', 'BRAZIL SERIE B', 'BRAZIL SERIE C'
+  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'ICELAND PREMIER LEAGUE', 'BRAZIL SERIE B'
 ];
 
 var matches = [
-  { date:'15/06', time:'23:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Spain', away:'Cape Verde', handicap:'0 : 2 1/2' },
-  { date:'16/06', time:'02:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Belgium', away:'Egypt', handicap:'0 : 3/4' },
   { date:'16/06', time:'05:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Uruguay', away:'Saudi Arabia', handicap:'0 : 1 1/4' },
   { date:'16/06', time:'08:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Iran', away:'New Zealand', handicap:'0 : 1/2' },
-  { date:'16/06', time:'00:00', league:'SWEDEN SUPERETTAN', flag:'se', home:'GIF Sundsvall', away:'Osters', handicap:'1/4 : 0' },
-  { date:'16/06', time:'00:05', league:'SWEDEN SUPERETTAN', flag:'se', home:'IFK Norrkoping', away:'Varbergs BoIS', handicap:'0 : 1/4' },
-  { date:'16/06', time:'01:00', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'KA Akureyri', away:'Fram Reykjavik', handicap:'1/4 : 0' },
-  { date:'15/06', time:'22:30', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'Seinajoen JK Akatemia', away:'Haka', handicap:'3/4 : 0' },
-  { date:'16/06', time:'07:00', league:'BRAZIL SERIE B', flag:'br', home:'Londrina PR', away:'Avai SC', handicap:'0 : 1/4' },
-  { date:'16/06', time:'07:00', league:'BRAZIL SERIE B', flag:'br', home:'Criciuma EC SC', away:'Ceara CE', handicap:'0 : 1/2' },
-  { date:'16/06', time:'04:30', league:'BRAZIL SERIE C', flag:'br', home:'Maringa FC', away:'Maranhao MA', handicap:'0 : 3/4' },
-  { date:'16/06', time:'06:30', league:'BRAZIL SERIE C', flag:'br', home:'Ferroviaria SP', away:'Barra SC', handicap:'0 : 1/2' },
-  { date:'16/06', time:'06:30', league:'BRAZIL SERIE C', flag:'br', home:'Ypiranga RS', away:'Botafogo PB', handicap:'0 : 1/4' }
+  { date:'17/06', time:'02:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'France', away:'Senegal', handicap:'0 : 1' },
+  { date:'17/06', time:'05:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Norway', away:'Iraq', handicap:'0 : 2' },
+  { date:'17/06', time:'08:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Argentina', away:'Algeria', handicap:'0 : 1 1/4' },
+  { date:'17/06', time:'11:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Austria', away:'Jordan', handicap:'0 : 1 1/2' },
+  { date:'17/06', time:'02:15', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'IA Akranes', away:'Valur Reykjavik', handicap:'0 : 1/4' },
+  { date:'17/06', time:'02:15', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'Stjarnan Gardabaer', away:'Breidablik', handicap:'1/4 : 0' },
+  { date:'17/06', time:'02:15', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'Vikingur Reykjavik', away:'KR Reykjavik', handicap:'0 : 1 1/4' },
+  { date:'17/06', time:'06:00', league:'BRAZIL SERIE B', flag:'br', home:'Fortaleza CE', away:'America Mineiro', handicap:'0 : 1' }
 ];
 
 var predictions = [
-  { league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', m:[['Spain','SPA','Cape Verde','CAP','3-0'],['Belgium','BEL','Egypt','EGY','2-1'],['Uruguay','URU','Saudi Arabia','SAU','2-0'],['Iran','IRA','New Zealand','NEW','1-1']] },
-  { league:'SWEDEN SUPERETTAN', flag:'se', m:[['GIF Sundsvall','GIF','Osters','OST','1-2'],['IFK Norrkoping','IFK','Varbergs BoIS','VAR','2-1']] },
-  { league:'ICELAND PREMIER LEAGUE', flag:'is', m:[['KA Akureyri','KAA','Fram Reykjavik','FRA','2-2']] },
-  { league:'FINLAND YKKOSLIIGA', flag:'fi', m:[['Seinajoen JK Akatemia','SJK','Haka','HAK','1-3']] },
-  { league:'BRAZIL SERIE B', flag:'br', m:[['Londrina PR','LON','Avai SC','AVA','1-0'],['Criciuma EC SC','CRI','Ceara CE','CEA','2-0']] },
-  { league:'BRAZIL SERIE C', flag:'br', m:[['Maringa FC','MAR','Maranhao MA','MNO','2-0'],['Ferroviaria SP','FER','Barra SC','BAR','1-1'],['Ypiranga RS','YPI','Botafogo PB','BOT','0-1']] }
+  { league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', m:[['Uruguay','URU','Saudi Arabia','SAU','3 - 1'],['Iran','IRA','New Zealand','NEW','2 - 0'],['France','FRA','Senegal','SEN','2 - 0'],['Norway','NOR','Iraq','IRQ','4 - 1'],['Argentina','ARG','Algeria','ALG','3 - 0'],['Austria','AUS','Jordan','JOR','2 - 0']] },
+  { league:'ICELAND PREMIER LEAGUE', flag:'is', m:[['IA Akranes','IAA','Valur Reykjavik','VAL','1 - 2'],['Stjarnan Gardabaer','STJ','Breidablik','BRE','2 - 2'],['Vikingur Reykjavik','VIK','KR Reykjavik','KRR','3 - 1']] },
+  { league:'BRAZIL SERIE B', flag:'br', m:[['Fortaleza CE','FOR','America Mineiro','AME','1 - 0']] }
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -2287,10 +2280,10 @@ var predictions = [
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Spain', ha:'SPA', a:'Cape Verde', aa:'CAP', dt:'15 Jun 2026 \u2022 23:00 WIB', hc:'0 : 2 1/2', sc:'3 - 0' },
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Belgium', ha:'BEL', a:'Egypt', aa:'EGY', dt:'16 Jun 2026 \u2022 02:00 WIB', hc:'0 : 3/4', sc:'2 - 1' },
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Uruguay', ha:'URU', a:'Saudi Arabia', aa:'SAU', dt:'16 Jun 2026 \u2022 05:00 WIB', hc:'0 : 1 1/4', sc:'2 - 0' },
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Iran', ha:'IRA', a:'New Zealand', aa:'NEW', dt:'16 Jun 2026 \u2022 08:00 WIB', hc:'0 : 1/2', sc:'1 - 1' }
+    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'France', ha:'FRA', a:'Senegal', aa:'SEN', dt:'17 Jun 2026 \u2022 02:00 WIB', hc:'0 : 1', sc:'2 - 0' },
+    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Argentina', ha:'ARG', a:'Algeria', aa:'ALG', dt:'17 Jun 2026 \u2022 08:00 WIB', hc:'0 : 1 1/4', sc:'3 - 0' },
+    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Uruguay', ha:'URU', a:'Saudi Arabia', aa:'SAU', dt:'16 Jun 2026 \u2022 05:00 WIB', hc:'0 : 1 1/4', sc:'3 - 1' },
+    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Norway', ha:'NOR', a:'Iraq', aa:'IRQ', dt:'17 Jun 2026 \u2022 05:00 WIB', hc:'0 : 2', sc:'4 - 1' }
   ];
 
   var h = '';
