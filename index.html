@@ -1262,6 +1262,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
 }
 
   </style>
+<base target="_blank">
 </head>
 <body class="min-h-screen text-white">
 
@@ -1307,6 +1308,10 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
         <button class="nav-item anim-in d5" data-section="worldcup">
           <i data-lucide="trophy" class="w-[18px] h-[18px]"></i> 
           World Cup 2026
+        </button>
+        <button class="nav-item anim-in d6" data-section="bracket">
+          <i data-lucide="git-branch" class="w-[18px] h-[18px]"></i> 
+          Bracket WC 2026
         </button>
       </nav>
 
@@ -1398,7 +1403,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secJadwal" style="display:none">
         <div class="anim-in d6">
           <div class="flex items-center justify-between mb-5">
-            <h2 class="font-bold text-base">Jadwal &amp; Handicap 23 - 24 Juni 2026</h2>
+            <h2 class="font-bold text-base">Jadwal &amp; Handicap 06 - 07 Juli 2026</h2>
             <span class="text-[11px] text-white/25" id="matchCountLabel">0 pertandingan</span>
           </div>
           <div id="scheduleContainer"></div>
@@ -1412,7 +1417,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secPrediksi" style="display:none">
         <div class="flex items-center gap-2 mb-5 anim-in d1">
           <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
-          <h2 class="font-bold text-base">Prediksi Pertandingan 23 - 24 Juni 2026</h2>
+          <h2 class="font-bold text-base">Prediksi Pertandingan 06 - 07 Juli 2026</h2>
         </div>
         <div id="prediksiList"></div>
       </div>
@@ -1480,6 +1485,242 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
         </div>
       </div> 
 
+      <!-- ═══════════════ BRACKET WORLD CUP 2026 ═══════════════ -->
+      <div id="secBracket" style="display:none">
+        <div class="glass-static p-5 mb-5 anim-in">
+          <div class="flex items-center gap-3 mb-1">
+            <i data-lucide="git-branch" class="w-5 h-5 text-cyan-400"></i>
+            <h2 class="text-lg font-bold tracking-tight">Bracket World Cup 2026</h2>
+          </div>
+          <p class="text-xs text-white/30 ml-8">Bagan turnamen dari Round of 32 hingga Final</p>
+        </div>
+
+        <div class="bracket-scroll">
+          <div class="bracket-mobile-hint">← Geser untuk melihat bracket lengkap →</div>
+
+          <div class="bracket-grid" style="height:900px;">
+
+            <!-- ════════ ROUND OF 32 ════════ -->
+            <div class="bracket-round">
+              <div class="round-header">Round of 32</div>
+              <div class="round-body">
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ca.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Canada</span></div><span class="team-score">1</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/za.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">South Africa</span></div><span class="team-score">0</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ma.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Morocco</span></div><span class="team-score">1 (3)</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/nl.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Netherlands</span></div><span class="team-score">1 (2)</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/py.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Paraguay</span></div><span class="team-score">1 (4)</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/de.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Germany</span></div><span class="team-score">1 (3)</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/fr.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">France</span></div><span class="team-score">3</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/se.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Sweden</span></div><span class="team-score">0</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/br.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Brazil</span></div><span class="team-score">2</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/jp.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Japan</span></div><span class="team-score">1</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/no.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Norway</span></div><span class="team-score">2</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ci.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Ivory Coast</span></div><span class="team-score">1</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/mx.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Mexico</span></div><span class="team-score">2</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ec.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Ecuador</span></div><span class="team-score">0</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score">2</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/cd.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">DR Congo</span></div><span class="team-score">1</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/pt.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Portugal</span></div><span class="team-score">2</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/hr.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Croatia</span></div><span class="team-score">1</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/es.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Spain</span></div><span class="team-score">3</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/at.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Austria</span></div><span class="team-score">0</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/us.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">USA</span></div><span class="team-score">2</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ba.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Bosnia & Herz.</span></div><span class="team-score">0</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/be.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Belgium</span></div><span class="team-score">3</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/sn.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Senegal</span></div><span class="team-score">2</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score">3</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/cv.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Cabo Verde</span></div><span class="team-score">2</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/eg.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Egypt</span></div><span class="team-score">1 (4)</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/au.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Australia</span></div><span class="team-score">1 (2)</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ch.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Switzerland</span></div><span class="team-score">2</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/dz.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Algeria</span></div><span class="team-score">0</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/co.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Colombia</span></div><span class="team-score">1</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/gh.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Ghana</span></div><span class="team-score">0</span></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ════════ ROUND OF 16 ════════ -->
+            <div class="bracket-round">
+              <div class="round-header">Round of 16</div>
+              <div class="round-body">
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ca.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Canada</span></div><span class="team-score">0</span></div>
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ma.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Morocco</span></div><span class="team-score">3</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/py.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Paraguay</span></div><span class="team-score">0</span></div>
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/fr.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">France</span></div><span class="team-score">1</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/br.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Brazil</span></div><span class="team-score">1</span></div>
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/no.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Norway</span></div><span class="team-score">2</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/mx.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Mexico</span></div><span class="team-score">2</span></div>
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score">3</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/pt.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Portugal</span></div><span class="team-score">0</span></div>
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/es.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Spain</span></div><span class="team-score">1</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/us.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">USA</span></div><span class="team-score">1</span></div>
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/be.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Belgium</span></div><span class="team-score">4</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score">3</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/eg.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Egypt</span></div><span class="team-score">2</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ch.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Switzerland</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/co.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Colombia</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ════════ QUARTER-FINALS ════════ -->
+            <div class="bracket-round">
+              <div class="round-header">Quarter-Finals</div>
+              <div class="round-body">
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ma.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Morocco</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/fr.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">France</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/no.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Norway</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                  </div>
+                </div>
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/es.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Spain</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/be.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Belgium</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row tbd-row"><span>TBD</span></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ════════ SEMI-FINALS ════════ -->
+            <div class="bracket-round">
+              <div class="round-header">Semi-Finals</div>
+              <div class="round-body">
+
+                <div class="match-pair">
+                  <div class="bracket-match">
+                    <div class="team-row tbd-row"><span>TBD</span></div>
+                    <div class="team-row tbd-row"><span>TBD</span></div>
+                  </div>
+                  <div class="bracket-match">
+                    <div class="team-row tbd-row"><span>TBD</span></div>
+                    <div class="team-row tbd-row"><span>TBD</span></div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <!-- ════════ FINAL ════════ -->
+            <div class="bracket-round round-final-col">
+              <div class="round-header">Final</div>
+              <div class="round-body final-body-center">
+                <div class="champion-float">
+                  <div class="champion-box">
+                    <div class="champion-trophy">🏆</div>
+                    <div class="champion-label">Champion</div>
+                    <div class="champion-team">TBD</div>
+                  </div>
+                  <div class="champion-connector"></div>
+                </div>
+                <div class="match-pair single">
+                  <div class="bracket-match">
+                    <div class="team-row tbd-row"><span>TBD</span></div>
+                    <div class="team-row tbd-row"><span>TBD</span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      
       <footer class="text-center text-[11px] text-white/55 pb-4 mt-6">
         &copy; 2026 KAPSUL4D. All right reserved.
       </footer>
@@ -1580,7 +1821,7 @@ var teamFlagMap = {
      CAF — 54 asosiasi (Afrika)
      ═══════════════════════════════════════════════════════════ */
   'Algeria':'dz','Angola':'ao','Benin':'bj','Botswana':'bw',
-  'Burkina Faso':'bf','Burundi':'bi','Cameroon':'cm','Cape Verde':'cv',
+  'Burkina Faso':'bf','Burundi':'bi','Cameroon':'cm','Cabo Verde':'cv',
   'Central African Republic':'cf','Chad':'td','Comoros':'km','Congo':'cg',
   'DR Congo':'cd','Egypt':'eg','Equatorial Guinea':'gq','Eritrea':'er',
   'Eswatini':'sz','Ethiopia':'et','Gabon':'ga','Gambia':'gm','Ghana':'gh',
@@ -1949,76 +2190,76 @@ BL1: [
 
 var WCGroups = {
   A: [
-    [1, 'Mexico', 2, 2, 0, 0, 3, 0, 3, 6, 'WW'],
-    [2, 'South Korea', 2, 1, 0, 1, 2, 2, 0, 3, 'WL'],
-    [3, 'Czechia', 2, 0, 1, 1, 2, 3, -1, 1, 'LD'],
-    [4, 'South Africa', 2, 0, 1, 1, 1, 3, -2, 1, 'LD']
+    [1, 'Mexico', 3, 3, 0, 0, 6, 0, 6, 9, 'WWW'],
+    [2, 'South Africa', 3, 1, 1, 1, 2, 3, -1, 4, 'LDW'],
+    [3, 'South Korea', 3, 1, 0, 2, 2, 3, -1, 3, 'WLL'],
+    [4, 'Czechia', 3, 0, 1, 2, 2, 6, -4, 1, 'LDL']
   ],
   B: [
-    [1, 'Canada', 2, 1, 1, 0, 7, 1, 6, 4, 'DW'],
-    [2, 'Switzerland', 2, 1, 1, 0, 5, 2, 3, 4, 'DW'],
-    [3, 'Bosnia and Herzegovina', 2, 0, 1, 1, 2, 5, -3, 1, 'DL'],
-    [4, 'Qatar', 2, 0, 1, 1, 1, 7, -6, 1, 'DL']
+    [1, 'Switzerland', 3, 2, 1, 0, 7, 3, 4, 7, 'DWW'],
+    [2, 'Canada', 3, 1, 1, 1, 8, 3, 5, 4, 'DWL'],
+    [3, 'Bosnia and Herzegovina', 3, 1, 1, 1, 5, 6, -1, 4, 'DLW'],
+    [4, 'Qatar', 3, 0, 1, 2, 2, 10, -8, 1, 'DLL']
   ],
   C: [
-    [1, 'Brazil', 2, 1, 1, 0, 4, 1, 3, 4, 'DW'],
-    [2, 'Morocco', 2, 1, 1, 0, 2, 1, 1, 4, 'DW'],
-    [3, 'Scotland', 2, 1, 0, 1, 1, 1, 0, 3, 'WL'],
-    [4, 'Haiti', 2, 0, 0, 2, 0, 4, -4, 0, 'LL']
+    [1, 'Brazil', 3, 2, 1, 0, 7, 1, 6, 7, 'DWW'],
+    [2, 'Morocco', 3, 2, 1, 0, 6, 3, 3, 7, 'DWW'],
+    [3, 'Scotland', 3, 1, 0, 2, 1, 4, -3, 3, 'WLL'],
+    [4, 'Haiti', 3, 0, 0, 3, 2, 8, -6, 0, 'LLL']
   ],
   D: [
-    [1, 'USA', 2, 2, 0, 0, 6, 1, 5, 6, 'WW'],
-    [2, 'Australia', 2, 1, 0, 1, 2, 2, 0, 3, 'WL'],
-    [3, 'Paraguay', 2, 1, 0, 1, 2, 4, -2, 3, 'LW'],
-    [4, 'Türkiye', 2, 0, 0, 2, 0, 3, -3, 0, 'LL']
+    [1, 'USA', 3, 2, 0, 1, 8, 4, 4, 6, 'WWL'],
+    [2, 'Australia', 3, 1, 1, 1, 2, 2, 0, 4, 'WLD'],
+    [3, 'Paraguay', 3, 1, 1, 1, 2, 4, -2, 4, 'LWD'],
+    [4, 'Türkiye', 3, 1, 0, 2, 3, 5, -2, 3, 'LLW']
   ],
   E: [
-    [1, 'Germany', 2, 2, 0, 0, 9, 2, 7, 6, 'WW'],
-    [2, 'Ivory Coast', 2, 1, 0, 1, 2, 2, 0, 3, 'WL'],
-    [3, 'Ecuador', 2, 0, 1, 1, 0, 1, -1, 1, 'LD'],
-    [4, 'Curaçao', 2, 0, 1, 1, 1, 7, -6, 1, 'LD']
+    [1, 'Germany', 3, 2, 0, 1, 10, 4, 6, 6, 'WWL'],
+    [2, 'Ivory Coast', 3, 2, 0, 1, 4, 2, 2, 6, 'WLW'],
+    [3, 'Ecuador', 3, 1, 1, 1, 2, 2, 0, 4, 'LDW'],
+    [4, 'Curaçao', 3, 0, 1, 2, 1, 9, -8, 1, 'LDL']
   ],
   F: [
-    [1, 'Netherlands', 2, 1, 1, 0, 7, 3, 4, 4, 'DW'],
-    [2, 'Japan', 2, 1, 1, 0, 6, 2, 4, 4, 'DW'],
-    [3, 'Sweden', 2, 1, 0, 1, 6, 6, 0, 3, 'WL'],
-    [4, 'Tunisia', 2, 0, 0, 2, 1, 9, -8, 0, 'LL']
+    [1, 'Netherlands', 3, 2, 1, 0, 10, 4, 6, 7, 'DWW'],
+    [2, 'Japan', 3, 1, 2, 0, 7, 3, 4, 5, 'DWD'],
+    [3, 'Sweden', 3, 1, 1, 1, 7, 7, 0, 4, 'WLD'],
+    [4, 'Tunisia', 3, 0, 0, 3, 2, 12, -10, 0, 'LLL']
   ],
   G: [
-    [1, 'Egypt', 2, 1, 1, 0, 4, 2, 2, 4, 'DW'],
-    [2, 'Iran', 2, 0, 2, 0, 2, 2, 0, 2, 'DD'],
-    [3, 'Belgium', 2, 0, 2, 0, 1, 1, 0, 2, 'DD'],
-    [4, 'New Zealand', 2, 0, 1, 1, 3, 5, -2, 1, 'DL']
+    [1, 'Belgium', 3, 1, 2, 0, 6, 2, 4, 5, 'DDW'],
+    [2, 'Egypt', 3, 1, 2, 0, 5, 3, 2, 5, 'DWD'],
+    [3, 'Iran', 3, 0, 3, 0, 3, 3, 0, 3, 'DDD'],
+    [4, 'New Zealand', 3, 0, 1, 2, 4, 10, -6, 1, 'DLL']
   ],
   H: [
-    [1, 'Spain', 2, 1, 1, 0, 4, 0, 4, 4, 'DW'],
-    [2, 'Uruguay', 2, 0, 2, 0, 3, 3, 0, 2, 'DD'],
-    [3, 'Cape Verde', 2, 0, 2, 0, 2, 2, 0, 2, 'DD'],
-    [4, 'Saudi Arabia', 2, 0, 1, 1, 1, 5, -4, 1, 'DL']
+    [1, 'Spain', 3, 2, 1, 0, 5, 0, 5, 7, 'DWW'],
+    [2, 'Cabo Verde', 3, 0, 3, 0, 2, 2, 0, 3, 'DDD'],
+    [3, 'Uruguay', 3, 0, 2, 1, 3, 4, -1, 2, 'DDL'],
+    [4, 'Saudi Arabia', 3, 0, 2, 1, 1, 5, -4, 2, 'DLD']
   ],
   I: [
-    [1, 'France', 2, 2, 0, 0, 4, 1, 3, 6, 'WW'],
-    [2, 'Norway', 1, 1, 0, 0, 4, 1, 3, 3, 'W'],
-    [3, 'Senegal', 1, 0, 0, 1, 1, 3, -2, 0, 'L'],
-    [4, 'Iraq', 2, 0, 0, 2, 1, 5, -4, 0, 'LL']
+    [1, 'France', 3, 3, 0, 0, 10, 2, 8, 9, 'WWW'],
+    [2, 'Norway', 3, 2, 0, 1, 8, 7, 1, 6, 'WWL'],
+    [3, 'Senegal', 3, 1, 0, 2, 8, 6, 2, 3, 'LLW'],
+    [4, 'Iraq', 3, 0, 0, 3, 1, 12, -11, 0, 'LLL']
   ],
   J: [
-    [1, 'Argentina', 2, 2, 0, 0, 5, 0, 5, 6, 'WW'],
-    [2, 'Austria', 2, 1, 0, 1, 3, 3, 0, 3, 'WL'],
-    [3, 'Jordan', 1, 0, 0, 1, 1, 3, -2, 0, 'L'],
-    [4, 'Algeria', 1, 0, 0, 1, 0, 3, -3, 0, 'L']
+    [1, 'Argentina', 3, 3, 0, 0, 8, 1, 7, 9, 'WWW'],
+    [2, 'Austria', 3, 1, 1, 1, 6, 6, 0, 4, 'WLD'],
+    [3, 'Algeria', 3, 1, 1, 1, 5, 7, -2, 4, 'LWD'],
+    [4, 'Jordan', 3, 0, 0, 3, 3, 8, -5, 0, 'LLL']
   ],
   K: [
-    [1, 'Colombia', 1, 1, 0, 0, 3, 1, 2, 3, 'W'],
-    [2, 'DR Congo', 1, 0, 1, 0, 1, 1, 0, 1, 'D'],
-    [3, 'Portugal', 1, 0, 1, 0, 1, 1, 0, 1, 'D'],
-    [4, 'Uzbekistan', 1, 0, 0, 1, 1, 3, -2, 0, 'L']
+    [1, 'Colombia', 3, 2, 1, 0, 4, 1, 3, 7, 'WWD'],
+    [2, 'Portugal', 3, 1, 2, 0, 6, 1, 5, 5, 'DWD'],
+    [3, 'DR Congo', 3, 1, 1, 1, 4, 3, 1, 4, 'DLW'],
+    [4, 'Uzbekistan', 3, 0, 0, 3, 2, 11, -9, 0, 'LLL']
   ],
   L: [
-    [1, 'England', 1, 1, 0, 0, 4, 2, 2, 3, 'W'],
-    [2, 'Ghana', 1, 1, 0, 0, 1, 0, 1, 3, 'W'],
-    [3, 'Panama', 1, 0, 0, 1, 0, 1, -1, 0, 'L'],
-    [4, 'Croatia', 1, 0, 0, 1, 2, 4, -2, 0, 'L']
+    [1, 'England', 3, 2, 1, 0, 6, 2, 4, 7, 'WDW'],
+    [2, 'Croatia', 3, 2, 0, 1, 5, 5, 0, 6, 'LWW'],
+    [3, 'Ghana', 3, 1, 1, 1, 2, 2, 0, 4, 'WDL'],
+    [4, 'Panama', 3, 0, 0, 3, 0, 4, -4, 0, 'LLL']
   ]
 };
 
@@ -2030,7 +2271,7 @@ var wcFlagMap = {
   'Germany': 'de', 'Cura\u00e7ao': 'cw', 'Ivory Coast': 'ci', 'Ecuador': 'ec',
   'Netherlands': 'nl', 'Japan': 'jp', 'Sweden': 'se', 'Tunisia': 'tn',
   'Belgium': 'be', 'Egypt': 'eg', 'Iran': 'ir', 'New Zealand': 'nz',
-  'Spain': 'es', 'Cape Verde': 'cv', 'Saudi Arabia': 'sa', 'Uruguay': 'uy',
+  'Spain': 'es', 'Cabo Verde': 'cv', 'Saudi Arabia': 'sa', 'Uruguay': 'uy',
   'France': 'fr', 'Senegal': 'sn', 'Iraq': 'iq', 'Norway': 'no',
   'Argentina': 'ar', 'Algeria': 'dz', 'Austria': 'at', 'Jordan': 'jo',
   'Portugal': 'pt', 'DR Congo': 'cd', 'Uzbekistan': 'uz', 'Colombia': 'co',
@@ -2252,50 +2493,27 @@ function renderWCGroup(group) {
 }
 
 var leagueOrder = [
-  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'SWEDEN SUPERETTAN', 'ICELAND PREMIER LEAGUE', 'BRAZIL SERIE B',
-  'BRAZIL SERIE C'
-];
-
-var leagueOrder = [
-  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'FINLAND VEIKKAUSLIIGA', 'GEORGIA EROVNULI LIGA', 'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE',
-  'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', 'BRAZIL SERIE B', 'CHILE CUP', 'ARGENTINA PRIMERA NACIONAL',
-  'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE'
+  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', 'SOUTH AUSTRALIA STATE LEAGUE 1', 'BRAZIL SERIE B',
+  'ECUADOR LIGA PRO SERIE A', 'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE'
 ];
 
 var matches = [
-  { date:'24/06', time:'00:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Portugal', away:'Uzbekistan', handicap:'0 : 2' },
-  { date:'24/06', time:'03:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'England', away:'Ghana', handicap:'0 : 1 3/4' },
-  { date:'24/06', time:'06:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Croatia', away:'Panama', handicap:'0 : 1' },
-  { date:'24/06', time:'09:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Colombia', away:'DR Congo', handicap:'0 : 1' },
-  { date:'23/06', time:'22:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'[6] Vaasa VPS', away:'[2] AC Oulu', handicap:'0 : 1/4' },
-  { date:'23/06', time:'22:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'[3] KuPS', away:'[8] Ilves Tampere', handicap:'0 : 3/4' },
-  { date:'23/06', time:'22:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'[9] Lahti', away:'[7] TPS Turku', handicap:'0 : 3/4' },
-  { date:'23/06', time:'23:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'[1] Inter Turku', away:'[10] Seinajoen JK', handicap:'0 : 1' },
-  { date:'23/06', time:'23:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'[11] Jaro', away:'[5] Gnistan Helsinki', handicap:'1/4 : 0' },
-  { date:'24/06', time:'00:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'[12] IFK Mariehamn', away:'[4] HJK Helsinki', handicap:'1 1/2 : 0' },
-  { date:'23/06', time:'22:00', league:'GEORGIA EROVNULI LIGA', flag:'ge', home:'[2] FC Iberia 1999', away:'[10] FC Meshakhte Tkibuli', handicap:'0 : 1 1/4' },
-  { date:'24/06', time:'00:00', league:'GEORGIA EROVNULI LIGA', flag:'ge', home:'[3] FC Dinamo Tbilisi', away:'[4] FC Dinamo Batumi', handicap:'0 : 3/4' },
-  { date:'23/06', time:'16:30', league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', home:'[6] Gold Coast Knights', away:'[4] Eastern Suburbs', handicap:'0 : 1/4' },
-  { date:'23/06', time:'16:30', league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', home:'Robina City SC', away:'Capalaba Bulldogs', handicap:'0 : 1 3/4' },
-  { date:'23/06', time:'17:30', league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', home:'Logan Lightning', away:'Holland Park Hawks', handicap:'0 : 1/2' },
-  { date:'24/06', time:'06:00', league:'BRAZIL SERIE B', flag:'br', home:'[20] America Mineiro', away:'[8] Criciuma EC SC', handicap:'0 : 0' },
-  { date:'24/06', time:'02:00', league:'CHILE CUP', flag:'cl', home:'Coquimbo Unido', away:'Deportes Limache', handicap:'0 : 3/4' },
-  { date:'24/06', time:'07:30', league:'CHILE CUP', flag:'cl', home:'tino', away:'Audax Italiano', handicap:'0 : 1/2' },
-  { date:'24/06', time:'07:30', league:'CHILE CUP', flag:'cl', home:'Everton Vina del Mar', away:'CD Universidad Catolica', handicap:'1/4 : 0' },
-  { date:'24/06', time:'04:30', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'Nueva Chicago', away:'Atletico de Rafaela', handicap:'0 : 1/4' },
-  { date:'23/06', time:'17:00', league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Edgeworth Eagles', away:'Lambton Jaffas FC', handicap:'1/4 : 0' }
+  { date:'07/07', time:'23:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Argentina', away:'Egypt', handicap:'0 : 1 1/4' },
+  { date:'08/07', time:'03:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Colombia', away:'Switzerland', handicap:'0 : 1/4' },
+  { date:'07/07', time:'16:30', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Monaro Panthers FC', away:'Queanbeyan City FC', handicap:'0 : 1 1/4' },
+  { date:'07/07', time:'17:00', league:'SOUTH AUSTRALIA STATE LEAGUE 1', flag:'au', home:'The Cove FC', away:'Modbury Jets', handicap:'3/4 : 0' },
+  { date:'07/07', time:'06:00', league:'BRAZIL SERIE B', flag:'br', home:'[11] Athletic Club MG', away:'[7] Operario Ferroviario EC', handicap:'0 : 1/4' },
+  { date:'08/07', time:'07:00', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'[6] SD Aucas', away:'[12] Guayaquil City', handicap:'0 : 1' },
+  { date:'07/07', time:'17:00', league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Charlestown Azzurri FC', away:'Weston Bears', handicap:'1/2 : 0' }
 ];
 
 var predictions = [
-  { league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', m:[['Portugal','POR','Uzbekistan','UZB','2 - 0'],['England','ENG','Ghana','GHA','2 - 1'],['Croatia','CRO','Panama','PAN','2 - 0'],['Colombia','COL','DR Congo','DRC','1 - 0']] },
-  { league:'FINLAND VEIKKAUSLIIGA', flag:'fi', m:[['[6] Vaasa VPS','VAA','[2] AC Oulu','OUL','0 - 1'],['[3] KuPS','KUP','[8] Ilves Tampere','ILV','0 - 3'],['[9] Lahti','LAH','[7] TPS Turku','TPS','2 - 0'],['[1] Inter Turku','INT','[10] Seinajoen JK','SJK','0 - 1'],['[11] Jaro','JAR','[5] Gnistan Helsinki','GNI','1 - 0'],['[12] IFK Mariehamn','IFK','[4] HJK Helsinki','HJK','2 - 0']] },
-  { league:'GEORGIA EROVNULI LIGA', flag:'ge', m:[['[2] FC Iberia 1999','IBE','[10] FC Meshakhte Tkibuli','MES','0 - 1'],['[3] FC Dinamo Tbilisi','DIN','[4] FC Dinamo Batumi','BAT','0 - 3']] },
-  { league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', m:[['[6] Gold Coast Knights','GOL','[4] Eastern Suburbs','EAS','0 - 1']] },
-  { league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', m:[['Robina City SC','ROB','Capalaba Bulldogs','CAP','0 - 1'],['Logan Lightning','LOG','Holland Park Hawks','HOL','0 - 1']] },
-  { league:'BRAZIL SERIE B', flag:'br', m:[['[20] America Mineiro','AME','[8] Criciuma EC SC','CRI','0 - 0']] },
-  { league:'CHILE CUP', flag:'cl', m:[['Coquimbo Unido','COQ','Deportes Limache','LIM','0 - 3'],['tino','TIN','Audax Italiano','AUD','0 - 1'],['Everton Vina del Mar','EVE','CD Universidad Catolica','UNI','1 - 0']] },
-  { league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', m:[['Nueva Chicago','NUE','Atletico de Rafaela','ATL','0 - 1']] },
-  { league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', m:[['Edgeworth Eagles','EDG','Lambton Jaffas FC','LAM','1 - 0']] }
+  { league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', m:[['Argentina','ARG','Egypt','EGY','2 - 0'],['Colombia','COL','Switzerland','SUI','2 - 0']] },
+  { league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', m:[['Monaro Panthers FC','MON','Queanbeyan City FC','QUE','1 - 0']] },
+  { league:'SOUTH AUSTRALIA STATE LEAGUE 1', flag:'au', m:[['The Cove FC','COV','Modbury Jets','MOD','0 - 2']] },
+  { league:'BRAZIL SERIE B', flag:'br', m:[['[11] Athletic Club MG','ATH','[7] Operario Ferroviario EC','OPE','1 - 0']] },
+  { league:'ECUADOR LIGA PRO SERIE A', flag:'ec', m:[['[6] SD Aucas','AUC','[12] Guayaquil City','GUA','1 - 1']] },
+  { league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', m:[['Charlestown Azzurri FC','CHA','Weston Bears','WES','1 - 0']] }
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -2304,10 +2522,8 @@ var predictions = [
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Portugal', ha:'POR', a:'Uzbekistan', aa:'UZB', dt:'24 Jun 2026 \u2022 00:00 WIB', hc:'0 : 2', sc:'2 - 0' },
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'England', ha:'ENG', a:'Ghana', aa:'GHA', dt:'24 Jun 2026 \u2022 03:00 WIB', hc:'0 : 1 3/4', sc:'2 - 1' },
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Croatia', ha:'CRO', a:'Panama', aa:'PAN', dt:'24 Jun 2026 \u2022 06:00 WIB', hc:'0 : 1', sc:'2 - 0' },
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Colombia', ha:'COL', a:'DR Congo', aa:'DRC', dt:'24 Jun 2026 \u2022 09:00 WIB', hc:'0 : 1', sc:'1 - 0' }
+    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Argentina', ha:'ARG', a:'Egypt', aa:'EGY', dt:'07 Jul 2026 \u2022 23:00 WIB', hc:'0 : 1 1/4', sc:'2 - 0' },
+    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Colombia', ha:'COL', a:'Switzerland', aa:'SUI', dt:'08 Jul 2026 \u2022 03:00 WIB', hc:'0 : 1/4', sc:'2 - 0' }
   ];
 
   var h = '';
@@ -2520,7 +2736,560 @@ body { user-select: none; -webkit-user-select: none; -ms-user-select: none; }
     font-size: 16px !important;
   }
 }
+
+/* ══════════════════════════════════════════════════════════════════
+   BRACKET WORLD CUP 2026
+   ══════════════════════════════════════════════════════════════════ */
+
+.bracket-scroll {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-bottom: 20px;
+  -webkit-overflow-scrolling: touch;
+}
+.bracket-scroll::-webkit-scrollbar { height: 6px; }
+.bracket-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); border-radius: 3px; }
+.bracket-scroll::-webkit-scrollbar-thumb { background: rgba(34,211,238,0.25); border-radius: 3px; }
+
+.bracket-grid {
+  display: flex;
+  align-items: stretch;
+  min-width: fit-content;
+}
+
+.bracket-round {
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+.bracket-round + .bracket-round {
+  margin-left: 40px;
+}
+
+.round-header {
+  text-align: center;
+  padding: 10px 0 14px;
+  font-size: 10px;
+  font-weight: 700;
+  color: rgba(34,211,238,0.75);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  white-space: nowrap;
+  text-shadow: 0 0 10px rgba(34,211,238,0.3);
+}
+
+.round-body {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 180px;
+}
+
+/* ── Match Pair ─────────────────────────────────────────────── */
+.match-pair {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: relative;
+}
+
+/* Connector: horizontal from match right edge to midpoint */
+.bracket-match::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 50%;
+  width: 20px;
+  height: 1.5px;
+  background: rgba(34,211,238,0.22);
+  pointer-events: none;
+}
+
+/* Connector: vertical line between two matches in pair */
+.match-pair::after {
+  content: '';
+  position: absolute;
+  right: -20px;
+  top: 25%;
+  bottom: 25%;
+  width: 1.5px;
+  background: rgba(34,211,238,0.22);
+  pointer-events: none;
+}
+
+/* Connector: horizontal from vertical midpoint to next round */
+.match-pair::before {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: 50%;
+  width: 20px;
+  height: 1.5px;
+  background: rgba(34,211,238,0.22);
+  pointer-events: none;
+}
+
+/* Single match pair (Final) — hide pair connectors */
+.match-pair.single::after,
+.match-pair.single::before {
+  display: none !important;
+}
+
+/* Also hide bracket-match::after connector on final match */
+.round-final-col .bracket-match::after {
+  display: none !important;
+}
+
+/* ── Match Box (hover sama seperti .glass di dashboard) ─────── */
+.bracket-match {
+  width: 180px;
+  height: 50px;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.09) 0%,
+    rgba(255,255,255,0.04) 60%,
+    rgba(255,255,255,0.02) 100%
+  );
+  border: 2px solid rgba(34, 211, 238, 0.35);
+  border-top-color: rgba(34, 211, 238, 0.50);
+  border-left-color: rgba(34, 211, 238, 0.40);
+  box-shadow:
+    0 0 12px rgba(34, 211, 238, 0.12),
+    0 0 30px rgba(34, 211, 238, 0.06),
+    0 1px 0   rgba(34, 211, 238, 0.20) inset,
+    0 -1px 0  rgba(0,0,0,0.30) inset,
+    0 6px 6px rgba(0,0,0,0.14),
+    0 16px 48px rgba(0,0,0,0.38);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+/* top-edge shine pada match box */
+.bracket-match::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    rgba(255,255,255,0.28) 35%,
+    rgba(255,255,255,0.08) 65%,
+    transparent 100%);
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* ═══ HOVER — identik dengan .glass:hover di dashboard ═══ */
+.bracket-match:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(0,0,0,0.55) 0%,
+    rgba(0,0,0,0.35) 60%,
+    rgba(0,0,0,0.25) 100%
+  );
+  border: 3px solid rgba(34, 211, 238, 1);
+  border-top-color: rgba(34, 211, 238, 1);
+  border-left-color: rgba(34, 211, 238, 1);
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 8px rgba(34, 211, 238, 0.80),
+    0 0 25px rgba(34, 211, 238, 0.45),
+    0 0 35px rgba(34, 211, 238, 0.20),
+    0 0 60px rgba(34, 211, 238, 0.08),
+    0 -1px 0  rgba(0,0,0,0.2) inset,
+    0 8px 10px rgba(0,0,0,0.18),
+    0 24px 60px rgba(0,0,0,0.45);
+}
+
+/* ── Team Row ───────────────────────────────────────────────── */
+.team-row {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-size: 11px;
+  font-weight: 500;
+  gap: 4px;
+  transition: background 0.2s;
+  min-height: 0;
+  position: relative;
+  z-index: 1;
+}
+.team-row + .team-row {
+  border-top: 1px solid rgba(255,255,255,0.04);
+}
+
+.team-info {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  min-width: 0;
+  flex: 1;
+}
+
+.team-flag {
+  width: 18px;
+  height: 13px;
+  border-radius: 2px;
+  object-fit: cover;
+  flex-shrink: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
+  background: rgba(255,255,255,0.04);
+}
+
+.team-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: rgba(255,255,255,0.72);
+  font-size: 10.5px;
+  line-height: 1;
+}
+
+.team-score {
+  font-weight: 700;
+  color: rgba(255,255,255,0.45);
+  font-size: 11px;
+  flex-shrink: 0;
+  min-width: 14px;
+  text-align: right;
+}
+
+/* ═══ WINNER — nama tetap hijau, SKOR jadi GOLD ═══ */
+.team-row.winner {
+  background: rgba(74,222,128,0.05);
+}
+.team-row.winner .team-name { color: #4ade80; }
+.team-row.winner .team-score {
+  color: #fbbf24;
+  text-shadow: 0 0 12px rgba(251,191,36,0.55), 0 0 24px rgba(251,191,36,0.20);
+}
+
+/* ═══ LOSER — nama redup, skor putih tidak terlalu terang ═══ */
+.team-row.loser .team-name { color: rgba(255,255,255,0.30); }
+.team-row.loser .team-score { color: rgba(255,255,255,0.28); }
+
+/* TBD */
+.team-row.tbd-row {
+  justify-content: center;
+  color: rgba(255,255,255,0.18);
+  font-size: 10px;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+}
+
+.champion-box {
+  width: 120px;
+  padding: 16px 10px 14px;
+  border-radius: 14px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    rgba(251,191,36,0.14) 0%,
+    rgba(251,191,36,0.05) 60%,
+    rgba(251,191,36,0.02) 100%
+  );
+  border: 2px solid rgba(251,191,36,0.35);
+  border-top-color: rgba(251,191,36,0.50);
+  box-shadow:
+    0 0 16px rgba(251,191,36,0.12),
+    0 0 36px rgba(251,191,36,0.05),
+    0 1px 0 rgba(251,191,36,0.25) inset,
+    0 4px 12px rgba(0,0,0,0.25);
+  position: relative;
+  overflow: hidden;
+}
+.champion-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(251,191,36,0.50), transparent);
+  pointer-events: none;
+}
+
+.champion-trophy {
+  font-size: 26px;
+  margin-bottom: 4px;
+  filter: drop-shadow(0 0 6px rgba(251,191,36,0.5));
+}
+
+.champion-label {
+  font-size: 8px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: rgba(251,191,36,0.75);
+  margin-bottom: 6px;
+}
+
+.champion-team {
+  font-size: 12px;
+  font-weight: 700;
+  color: #fbbf24;
+  text-shadow: 0 0 14px rgba(251,191,36,0.55);
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   CHAMPION CENTERED IN FINAL ROUND
+   ══════════════════════════════════════════════════════════════════ */
+
+/* Remove old champion-above styles (element removed from DOM) */
+.champion-above { display: none !important; }
+
+/* ═══ FINAL ROUND — Match centered, Champion between header & match ═══ */
+.final-body-center {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* center match vertically in round-body */
+  align-items: center;
+}
+
+/* The match-pair in final round: centered like other rounds */
+.final-body-center .match-pair.single {
+  flex: 0 0 auto;
+}
+
+/* ═══ Champion: centered between "Final" header and match box ═══
+   Position: absolute, sitting in the gap above the centered match
+*/
+.champion-float {
+  position: absolute;
+  bottom: 50%;               /* anchor to vertical center of round-body */
+  left: 50%;
+  transform: translateX(-50%);
+  /* match box is 50px tall, centered → its top edge is 25px above center */
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.champion-float .champion-box {
+  pointer-events: auto;
+  margin-bottom: 4px;
+}
+
+.champion-float .champion-connector {
+  width: 1.5px;
+  height: 16px;
+  background: rgba(34, 211, 238, 0.22);
+}
+
+/* ═══ Light mode ═══ */
+body.light .champion-float .champion-connector {
+  background: rgba(99, 102, 241, 0.18);
+}
+
+/* Hide old wrapper if any */
+.champion-center-wrapper { display: none !important; }
+
+/* ══════════════════════════════════════════════════════════════════
+   BRACKET MOBILE HINT
+   ══════════════════════════════════════════════════════════════════ */
+
+
+.bracket-mobile-hint {
+  display: none;
+  text-align: center;
+  padding: 0 0 6px;
+  font-size: 10px;
+  color: rgba(34,211,238,0.45);
+  letter-spacing: 0.05em;
+}
+@media (max-width: 1100px) {
+  .bracket-mobile-hint { display: block; }
+}
+
+/* ══════════════════════════════════════════════════════════════════
+   BRACKET — LIGHT MODE OVERRIDES
+   ══════════════════════════════════════════════════════════════════ */
+
+body.light .round-header {
+  color: rgba(79,70,229,0.70);
+  text-shadow: none;
+}
+
+/* ═══ Match Box Light — sama seperti .glass:hover light di dashboard ═══ */
+body.light .bracket-match {
+  background: linear-gradient(
+    135deg,
+    rgba(240,242,250,0.78) 0%,
+    rgba(230,233,245,0.58) 60%,
+    rgba(222,226,240,0.48) 100%
+  );
+  border: 2px solid rgba(99,102,241,0.18);
+  border-top-color: rgba(99,102,241,0.28);
+  border-left-color: rgba(99,102,241,0.22);
+  box-shadow:
+    0 0 8px rgba(99,102,241,0.06),
+    0 0 18px rgba(99,102,241,0.03),
+    0 1px 0 rgba(255,255,255,0.9) inset,
+    0 -1px 0 rgba(0,0,0,0.05) inset,
+    0 2px 4px rgba(0,0,0,0.04),
+    0 8px 24px rgba(0,0,0,0.08);
+}
+body.light .bracket-match::before {
+  background: linear-gradient(90deg,
+    transparent 0%, rgba(255,255,255,0.7) 35%,
+    rgba(255,255,255,0.25) 65%, transparent 100%);
+}
+
+/* ═══ HOVER Light — identik .glass:hover light di dashboard ═══ */
+body.light .bracket-match:hover {
+  background: linear-gradient(
+    135deg,
+    rgba(248,249,252,0.92) 0%,
+    rgba(238,240,248,0.82) 60%,
+    rgba(230,233,245,0.72) 100%
+  );
+  border: 2px solid rgba(99,102,241,0.55);
+  border-top-color: rgba(99,102,241,0.65);
+  border-left-color: rgba(99,102,241,0.60);
+  transform: translateY(-5px);
+  box-shadow:
+    0 0 8px rgba(99,102,241,0.25),
+    0 0 20px rgba(99,102,241,0.12),
+    0 0 35px rgba(99,102,241,0.06),
+    0 -1px 0 rgba(0,0,0,0.03) inset,
+    0 4px 8px rgba(0,0,0,0.06),
+    0 16px 40px rgba(0,0,0,0.10);
+}
+
+body.light .team-row + .team-row {
+  border-top-color: rgba(99,102,241,0.06);
+}
+
+body.light .team-name { color: rgba(30,27,58,0.65); }
+body.light .team-score { color: rgba(30,27,58,0.40); }
+
+/* ═══ WINNER Light — skor tetap gold ═══ */
+body.light .team-row.winner {
+  background: rgba(22,163,74,0.06);
+}
+body.light .team-row.winner .team-name { color: #15803d; }
+body.light .team-row.winner .team-score {
+  color: #d97706;
+  text-shadow: 0 0 8px rgba(217,119,6,0.30);
+}
+
+/* ═══ LOSER Light ═══ */
+body.light .team-row.loser .team-name { color: rgba(30,27,58,0.28); }
+body.light .team-row.loser .team-score { color: rgba(30,27,58,0.22); }
+
+body.light .team-row.tbd-row { color: rgba(30,27,58,0.18); }
+
+body.light .team-flag {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.10);
+}
+
+/* Connectors */
+body.light .bracket-match::after,
+body.light .match-pair::after,
+body.light .match-pair::before {
+  background: rgba(99,102,241,0.18);
+}
+
+body.light .champion-box {
+  background: linear-gradient(
+    135deg,
+    rgba(30,27,58,0.92) 0%,
+    rgba(30,27,58,0.85) 60%,
+    rgba(30,27,58,0.78) 100%
+  );
+  border-color: rgba(251,191,36,0.30);
+  border-top-color: rgba(251,191,36,0.45);
+  box-shadow:
+    0 0 12px rgba(251,191,36,0.15),
+    0 0 24px rgba(251,191,36,0.06),
+    0 1px 0 rgba(251,191,36,0.20) inset,
+    0 4px 12px rgba(0,0,0,0.15);
+}
+body.light .champion-box::before {
+  background: linear-gradient(90deg, transparent, rgba(251,191,36,0.45), transparent);
+}
+
+body.light .champion-label { color: rgba(251,191,36,0.70); }
+body.light .champion-team {
+  color: #fbbf24;
+  text-shadow: 0 0 10px rgba(251,191,36,0.40);
+}
+
+body.light .bracket-scroll::-webkit-scrollbar-track { background: rgba(99,102,241,0.04); }
+body.light .bracket-scroll::-webkit-scrollbar-thumb { background: rgba(99,102,241,0.20); }
+
+body.light .bracket-mobile-hint { color: rgba(79,70,229,0.40); }
 </style>
 
+  <script>
+    // ── Section Switching (tambahkan ke existing jika sudah ada) ──
+    const sectionMap = {
+      dashboard: { id: 'secDashboard', title: 'Dashboard', desc: 'Ringkasan Pertandingan & Spotlight Liga Top' },
+      jadwal:    { id: 'secJadwal',    title: 'Jadwal Pertandingan', desc: 'Jadwal Lengkap Pertandingan Sepak Bola' },
+      prediksi:  { id: 'secPrediksi',  title: 'Prediksi', desc: 'Prediksi & Analisis Pertandingan' },
+      klasemen:  { id: 'secKlasemen',  title: 'Klasemen', desc: 'Klasemen Liga Sepak Bola Terupdate' },
+      worldcup:  { id: 'secWorldcup',  title: 'World Cup 2026', desc: 'Informasi Lengkap World Cup 2026' },
+      bracket:   { id: 'secBracket',   title: 'Bracket WC 2026', desc: 'Bagan Turnamen World Cup 2026' }
+    };
+
+    // Hide all sections
+    function hideAllSections() {
+      const sections = document.querySelectorAll('[id^="sec"]');
+      sections.forEach(function(s) { s.style.display = 'none'; });
+    }
+
+    // Show target section
+    function showSection(key) {
+      var cfg = sectionMap[key];
+      if (!cfg) return;
+      hideAllSections();
+      var el = document.getElementById(cfg.id);
+      if (el) el.style.display = 'block';
+      document.getElementById('headerTitle').textContent = cfg.title;
+      document.getElementById('headerDesc').textContent = cfg.desc;
+
+      // Update active nav
+      document.querySelectorAll('.nav-item').forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-section') === key) {
+          btn.classList.add('active');
+        }
+      });
+
+      // Re-init lucide icons for newly visible section
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+
+      // Close mobile sidebar
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').classList.remove('show');
+    }
+
+    // Bind nav items
+    document.querySelectorAll('.nav-item[data-section]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        showSection(this.getAttribute('data-section'));
+      });
+    });
+
+    // Re-init icons on load
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
+  </script>
 </body>
 </html>
