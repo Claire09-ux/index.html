@@ -2003,13 +2003,13 @@ var teamFlagMap = {
 
     function dateShort(d) { 
       var p = d.split('/'); 
-      return parseInt(p[0]) + '/' + parseInt(p[1]); 
+      return parseInt(p[1]) + '/' + parseInt(p[0]); 
     }
-    
+
     function dateLabel(d) { 
       var p = d.split('/'); 
       var m = ['','Jan','Feb','Mar','Apr','Mei','Jun','Jul','Ags','Sep','Okt','Nov','Des']; 
-      return parseInt(p[0]) + ' ' + m[parseInt(p[1])] + ' 2026'; 
+      return parseInt(p[1]) + ' ' + m[parseInt(p[0])] + ' 2026'; 
     }
     
     function scoreClass(s) { 
