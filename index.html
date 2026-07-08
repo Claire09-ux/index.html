@@ -1489,7 +1489,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secBracket" style="display:none">
         <div class="glass-static p-5 mb-5 anim-in">
           <div class="flex items-center gap-3 mb-1">
-            <i data-lucide="git-branch" class="w-5 h-5 text-cyan-400"></i>
+            <i data-lucide="trophy" style="width:24px;height:24px;color:#fbbf24;filter:drop-shadow(0 0 6px rgba(251,191,36,0.50))"></i>
             <h2 class="text-lg font-bold tracking-tight">Bracket World Cup 2026</h2>
           </div>
           <p class="text-xs text-white/30 ml-8">Bagan turnamen dari Round of 32 hingga Final</p>
@@ -2493,27 +2493,43 @@ function renderWCGroup(group) {
 }
 
 var leagueOrder = [
-  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', 'SOUTH AUSTRALIA STATE LEAGUE 1', 'BRAZIL SERIE B',
-  'ECUADOR LIGA PRO SERIE A', 'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE'
+  'UEFA CHAMPIONS LEAGUE QUALIFIERS', 'UEFA CONFERENCE LEAGUE QUALIFIERS', 'UEFA U19 CHAMPIONSHIP [ IN WALES ] PLAYOFF', 'UEFA U19 CHAMPIONSHIP [ IN WALES ]',
+  'CHILE LEAGUE CUP', 'BRAZIL SERIE B', 'ECUADOR LIGA PRO SERIE B', 'USL CHAMPIONSHIP',
+  'CANADIAN CHAMPIONSHIP', 'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE'
 ];
 
 var matches = [
-  { date:'07/07', time:'23:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Argentina', away:'Egypt', handicap:'0 : 1 1/4' },
-  { date:'08/07', time:'03:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Colombia', away:'Switzerland', handicap:'0 : 1/4' },
-  { date:'07/07', time:'16:30', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Monaro Panthers FC', away:'Queanbeyan City FC', handicap:'0 : 1 1/4' },
-  { date:'07/07', time:'17:00', league:'SOUTH AUSTRALIA STATE LEAGUE 1', flag:'au', home:'The Cove FC', away:'Modbury Jets', handicap:'3/4 : 0' },
-  { date:'07/07', time:'06:00', league:'BRAZIL SERIE B', flag:'br', home:'[11] Athletic Club MG', away:'[7] Operario Ferroviario EC', handicap:'0 : 1/4' },
-  { date:'08/07', time:'07:00', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'[6] SD Aucas', away:'[12] Guayaquil City', handicap:'0 : 1' },
-  { date:'07/07', time:'17:00', league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Charlestown Azzurri FC', away:'Weston Bears', handicap:'1/2 : 0' }
+  { date:'07/08', time:'22:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'un', home:'Kairat Almaty', away:'Sutjeska Niksic', handicap:'0 : 1 1/2' },
+  { date:'07/08', time:'23:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'un', home:'Flora Tallinn', away:'FC Iberia 1999', handicap:'1/4 : 0' },
+  { date:'07/09', time:'00:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'un', home:'FC Maxline Vitebsk [n]', away:'CS Universitatea Craiova', handicap:'1/2 : 0' },
+  { date:'07/09', time:'00:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'un', home:'FC Petrocub [n]', away:'KF Egnatia', handicap:'0 : 1/4' },
+  { date:'07/08', time:'23:00', league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'un', home:'Zira FK [n]', away:'Torpedo Kutaisi', handicap:'2 : 1' },
+  { date:'07/09', time:'00:30', league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'un', home:'Connahs Quay Nomads FC [n]', away:'FC Ballkani', handicap:'1 : 3' },
+  { date:'07/09', time:'00:30', league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'un', home:'Differdange', away:'Ilves Tampere', handicap:'0 : 2' },
+  { date:'07/08', time:'20:00', league:'UEFA U19 CHAMPIONSHIP [ IN WALES ] PLAYOFF', flag:'un', home:'Denmark U19', away:'Italy U19', handicap:'1 : 2' },
+  { date:'07/08', time:'22:30', league:'UEFA U19 CHAMPIONSHIP [ IN WALES ]', flag:'un', home:'Spain U19', away:'Croatia U19', handicap:'3 : 1' },
+  { date:'07/09', time:'01:00', league:'UEFA U19 CHAMPIONSHIP [ IN WALES ]', flag:'un', home:'Ukraine U19', away:'Germany U19', handicap:'2 : 0' },
+  { date:'07/08', time:'06:00', league:'CHILE LEAGUE CUP', flag:'cl', home:'Union La Calera', away:'Coquimbo Unido', handicap:'1 : 0' },
+  { date:'07/08', time:'03:00', league:'BRAZIL SERIE B', flag:'br', home:'[19] Ponte Preta SP', away:'[2] Criciuma EC SC', handicap:'2 : 1' },
+  { date:'07/08', time:'03:00', league:'ECUADOR LIGA PRO SERIE B', flag:'ec', home:'[12] El Nacional', away:'[7] Cumbaya FC', handicap:'0 : 3' },
+  { date:'07/08', time:'06:00', league:'USL CHAMPIONSHIP', flag:'us', home:'Hartford Athletic', away:'Orange County SC', handicap:'2 : 2' },
+  { date:'07/08', time:'09:30', league:'USL CHAMPIONSHIP', flag:'us', home:'Sacramento Republic FC', away:'Rhode Island FC', handicap:'1 : 0' },
+  { date:'07/08', time:'09:00', league:'CANADIAN CHAMPIONSHIP', flag:'ca', home:'Vancouver FC', away:'CF Montreal', handicap:'3 : 2' },
+  { date:'07/08', time:'09:30', league:'CANADIAN CHAMPIONSHIP', flag:'ca', home:'Vancouver Whitecaps FC', away:'Cavalry FC', handicap:'2 : 1' },
+  { date:'07/08', time:'17:00', league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Kahibah FC', away:'Maitland FC', handicap:'1 : 3' }
 ];
 
 var predictions = [
-  { league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', m:[['Argentina','ARG','Egypt','EGY','2 - 0'],['Colombia','COL','Switzerland','SUI','2 - 0']] },
-  { league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', m:[['Monaro Panthers FC','MON','Queanbeyan City FC','QUE','1 - 0']] },
-  { league:'SOUTH AUSTRALIA STATE LEAGUE 1', flag:'au', m:[['The Cove FC','COV','Modbury Jets','MOD','0 - 2']] },
-  { league:'BRAZIL SERIE B', flag:'br', m:[['[11] Athletic Club MG','ATH','[7] Operario Ferroviario EC','OPE','1 - 0']] },
-  { league:'ECUADOR LIGA PRO SERIE A', flag:'ec', m:[['[6] SD Aucas','AUC','[12] Guayaquil City','GUA','1 - 1']] },
-  { league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', m:[['Charlestown Azzurri FC','CHA','Weston Bears','WES','1 - 0']] }
+  { league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'un', m:[['Kairat Almaty','KAI','Sutjeska Niksic','SUT','0 - 1'],['Flora Tallinn','FLO','FC Iberia 1999','IBE','1 - 0'],['FC Maxline Vitebsk [n]','MAX','CS Universitatea Craiova','CRA','2 - 0'],['FC Petrocub [n]','PET','KF Egnatia','EGN','0 - 1']] },
+  { league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'un', m:[['Zira FK [n]','ZIR','Torpedo Kutaisi','TOR','2 - 1'],['Connahs Quay Nomads FC [n]','CON','FC Ballkani','BAL','1 - 3'],['Differdange','DIF','Ilves Tampere','ILV','0 - 2']] },
+  { league:'UEFA U19 CHAMPIONSHIP [ IN WALES ] PLAYOFF', flag:'un', m:[['Denmark U19','DEN','Italy U19','ITA','1 - 2']] },
+  { league:'UEFA U19 CHAMPIONSHIP [ IN WALES ]', flag:'un', m:[['Spain U19','ESP','Croatia U19','CRO','3 - 1'],['Ukraine U19','UKR','Germany U19','GER','2 - 0']] },
+  { league:'CHILE LEAGUE CUP', flag:'cl', m:[['Union La Calera','UNI','Coquimbo Unido','COQ','1 - 0']] },
+  { league:'BRAZIL SERIE B', flag:'br', m:[['[19] Ponte Preta SP','PON','[2] Criciuma EC SC','CRI','2 - 1']] },
+  { league:'ECUADOR LIGA PRO SERIE B', flag:'ec', m:[['[12] El Nacional','NAC','[7] Cumbaya FC','CUM','0 - 3']] },
+  { league:'USL CHAMPIONSHIP', flag:'us', m:[['Hartford Athletic','HAR','Orange County SC','ORA','2 - 2'],['Sacramento Republic FC','SAC','Rhode Island FC','RHO','1 - 0']] },
+  { league:'CANADIAN CHAMPIONSHIP', flag:'ca', m:[['Vancouver FC','VAN','CF Montreal','MON','3 - 2'],['Vancouver Whitecaps FC','VAN','Cavalry FC','CAV','2 - 1']] },
+  { league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', m:[['Kahibah FC','KAH','Maitland FC','MAI','1 - 3']] }
 ];
 
 /* ═══════════════════════════════════════════════════════════════
@@ -2522,8 +2538,10 @@ var predictions = [
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Argentina', ha:'ARG', a:'Egypt', aa:'EGY', dt:'07 Jul 2026 \u2022 23:00 WIB', hc:'0 : 1 1/4', sc:'2 - 0' },
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Colombia', ha:'COL', a:'Switzerland', aa:'SUI', dt:'08 Jul 2026 \u2022 03:00 WIB', hc:'0 : 1/4', sc:'2 - 0' }
+    { lg:'UEFA CHAMPIONS LEAGUE QUALIFIERS', fl:'un', h:'Kairat Almaty', ha:'KAI', a:'Sutjeska Niksic', aa:'SUT', dt:'08 Jul 2026 \u2022 22:00 WIB', hc:'0 : 1 1/2', sc:'0 - 1' },
+    { lg:'UEFA CHAMPIONS LEAGUE QUALIFIERS', fl:'un', h:'Flora Tallinn', ha:'FLO', a:'FC Iberia 1999', aa:'IBE', dt:'08 Jul 2026 \u2022 23:00 WIB', hc:'1/4 : 0', sc:'1 - 0' },
+    { lg:'UEFA CHAMPIONS LEAGUE QUALIFIERS', fl:'un', h:'FC Maxline Vitebsk [n]', ha:'MAX', a:'CS Universitatea Craiova', aa:'CRA', dt:'09 Jul 2026 \u2022 00:00 WIB', hc:'1/2 : 0', sc:'2 - 0' },
+    { lg:'UEFA CHAMPIONS LEAGUE QUALIFIERS', fl:'un', h:'FC Petrocub [n]', ha:'PET', a:'KF Egnatia', aa:'EGN', dt:'09 Jul 2026 \u2022 00:00 WIB', hc:'0 : 1/4', sc:'0 - 1' }
   ];
 
   var h = '';
