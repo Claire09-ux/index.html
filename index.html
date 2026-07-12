@@ -1403,7 +1403,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secJadwal" style="display:none">
         <div class="anim-in d6">
           <div class="flex items-center justify-between mb-5">
-            <h2 class="font-bold text-base">Jadwal &amp; Handicap 11 - 12 Juli 2026</h2>
+            <h2 class="font-bold text-base">Jadwal &amp; Handicap 12 - 13 Juli 2026</h2>
             <span class="text-[11px] text-white/25" id="matchCountLabel">0 pertandingan</span>
           </div>
           <div id="scheduleContainer"></div>
@@ -1417,7 +1417,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secPrediksi" style="display:none">
         <div class="flex items-center gap-2 mb-5 anim-in d1">
           <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
-          <h2 class="font-bold text-base">Prediksi Pertandingan 11 - 12 Juli 2026</h2>
+          <h2 class="font-bold text-base">Prediksi Pertandingan 12 - 13 Juli 2026</h2>
         </div>
         <div id="prediksiList"></div>
       </div>
@@ -1665,12 +1665,12 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
 
                 <div class="match-pair">
                   <div class="bracket-match">
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/no.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Norway</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/no.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Norway</span></div><span class="team-score">1</span></div>
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score">2</span></div>
                   </div>
                   <div class="bracket-match">
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ch.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Switzerland</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ch.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Switzerland</span></div><span class="team-score">1</span></div>
+                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score">3</span></div>
                   </div>
                 </div>
 
@@ -1687,8 +1687,8 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
                     <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/es.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Spain</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
                   </div>
                   <div class="bracket-match">
-                    <div class="team-row tbd-row"><span>TBD</span></div>
-                    <div class="team-row tbd-row"><span>TBD</span></div>
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
                   </div>
                 </div>
               </div>
@@ -2496,150 +2496,124 @@ function renderWCGroup(group) {
 }
 
 var leagueOrder = [
-  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'NORWAY ELITESERIEN', 'SWEDEN ALLSVENSKAN', 'FINLAND VEIKKAUSLIIGA',
-  'CHINA FOOTBALL SUPER LEAGUE', 'KOREA K-LEAGUE 1', 'KOREA K-LEAGUE 2', 'IRELAND PREMIER DIVISION',
-  'AUSTRALIA VICTORIA NATIONAL PREMIER LEAGUE', 'FINLAND YKKOSLIIGA', 'UEFA U19 CHAMPIONSHIP [ IN WALES ]', 'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE',
-  'FINLAND YKKONEN', 'WESTERN AUSTRALIA NATIONAL PREMIER LEAGUE', 'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', 'RUSSIA FIRST LEAGUE',
-  'BELARUS PREMIER LEAGUE', 'LITHUANIA A LEAGUE', 'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', 'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1',
-  'AUSTRALIA VICTORIA PREMIER LEAGUE 1', 'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', 'ESTONIA PREMIUM LIGA', 'ECUADOR LIGA PRO SERIE A',
-  'URUGUAY TORNEO INTERMEDIO', 'ARGENTINA PRIMERA NACIONAL', 'BRAZIL SERIE C', 'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE',
-  'AUSTRALIA TASMANIA NATIONAL PREMIER LEAGUE'
+  'NORWAY ELITESERIEN', 'SWEDEN ALLSVENSKAN', 'KOREA K-LEAGUE 1', 'KOREA K-LEAGUE 2',
+  'AUSTRALIA VICTORIA NATIONAL PREMIER LEAGUE', 'ICELAND PREMIER LEAGUE', 'ROMANIA SUPER CUP', 'ROMANIA SUPER CUP - WINNER',
+  'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', 'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', 'RUSSIA FIRST LEAGUE', 'LITHUANIA A LEAGUE',
+  'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', 'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', 'ARGENTINA CUP', 'CHILE LEAGUE CUP',
+  'BRAZIL SERIE B', 'ECUADOR LIGA PRO SERIE A', 'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', 'URUGUAY TORNEO INTERMEDIO',
+  'ARGENTINA PRIMERA NACIONAL', 'BRAZIL SERIE C', 'PARAGUAY DIVISION INTERMEDIA', 'PERU LEAGUE CUP',
+  'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE'
 ];
 
 var matches = [
-  { date:'12/07', time:'04:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'England', away:'Norway', handicap:'0 : 1/2' },
-  { date:'12/07', time:'08:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', home:'Argentina', away:'Switzerland', handicap:'0 : 3/4' },
-  { date:'11/07', time:'19:00', league:'NORWAY ELITESERIEN', flag:'no', home:'Fredrikstad', away:'Lillestrom', handicap:'1/4 : 0' },
-  { date:'11/07', time:'21:00', league:'NORWAY ELITESERIEN', flag:'no', home:'Aalesund FK', away:'Molde', handicap:'1/4 : 0' },
-  { date:'11/07', time:'23:00', league:'NORWAY ELITESERIEN', flag:'no', home:'Tromso', away:'Valerenga', handicap:'0 : 3/4' },
-  { date:'11/07', time:'20:00', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'Mjallby', away:'AIK Fotboll', handicap:'0 : 1/2' },
-  { date:'11/07', time:'22:30', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'Orgryte', away:'BK Hacken', handicap:'1 : 0' },
-  { date:'11/07', time:'19:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'Lahti', away:'HJK Helsinki', handicap:'1/4 : 0' },
-  { date:'11/07', time:'21:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'TPS Turku', away:'AC Oulu', handicap:'0 : 0' },
-  { date:'11/07', time:'21:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'TPS Turku', away:'AC Oulu', handicap:'0 : 1/4' },
-  { date:'11/07', time:'21:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'Gnistan Helsinki', away:'IFK Mariehamn', handicap:'0 : 1 1/2' },
-  { date:'11/07', time:'18:00', league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', home:'Zhejiang Professional FC', away:'Qingdao Hainiu', handicap:'0 : 1 1/4' },
-  { date:'11/07', time:'18:00', league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', home:'Wuhan Three Towns', away:'Henan FC', handicap:'1/4 : 0' },
-  { date:'11/07', time:'18:35', league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', home:'Shanghai Shenhua', away:'Beijing Guoan', handicap:'0 : 1/4' },
-  { date:'11/07', time:'18:35', league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', home:'Shanghai Shenhua', away:'Beijing Guoan', handicap:'1/4 : 0' },
-  { date:'11/07', time:'18:35', league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', home:'Shenzhen Peng City', away:'Qingdao West Coast FC', handicap:'0 : 1/4' },
-  { date:'11/07', time:'18:00', league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', home:'Chengdu Rongcheng', away:'Chongqing Tonglianglong', handicap:'0 : 1 1/2' },
-  { date:'11/07', time:'17:30', league:'KOREA K-LEAGUE 1', flag:'kr', home:'Gimcheon Sangmu FC', away:'Bucheon FC 1995', handicap:'0 : 1/2' },
-  { date:'11/07', time:'17:30', league:'KOREA K-LEAGUE 1', flag:'kr', home:'Gwangju FC', away:'Pohang Steelers', handicap:'3/4 : 0' },
-  { date:'11/07', time:'17:30', league:'KOREA K-LEAGUE 1', flag:'kr', home:'Ulsan HD FC', away:'Jeonbuk Hyundai Motors', handicap:'0 : 0' },
-  { date:'11/07', time:'17:30', league:'KOREA K-LEAGUE 2', flag:'kr', home:'Ansan Greeners FC', away:'Suwon Bluewings', handicap:'1 1/4 : 0' },
-  { date:'11/07', time:'17:30', league:'KOREA K-LEAGUE 2', flag:'kr', home:'Ansan Greeners FC', away:'Suwon Bluewings', handicap:'1 : 0' },
-  { date:'11/07', time:'17:30', league:'KOREA K-LEAGUE 2', flag:'kr', home:'Daegu FC', away:'Seongnam FC', handicap:'0 : 1/2' },
-  { date:'11/07', time:'17:30', league:'KOREA K-LEAGUE 2', flag:'kr', home:'Hwaseong FC', away:'Paju Frontier FC', handicap:'0 : 1/2' },
-  { date:'11/07', time:'17:30', league:'KOREA K-LEAGUE 2', flag:'kr', home:'Yongin FC', away:'Chungbuk Cheongju FC', handicap:'0 : 1/4' },
-  { date:'11/07', time:'23:00', league:'IRELAND PREMIER DIVISION', flag:'ie', home:'Galway United', away:'Sligo Rovers', handicap:'0 : 3/4' },
-  { date:'11/07', time:'12:00', league:'AUSTRALIA VICTORIA NATIONAL PREMIER LEAGUE', flag:'au', home:'Melbourne City FC (Youth)', away:'Heidelberg United', handicap:'3/4 : 0' },
-  { date:'11/07', time:'14:00', league:'AUSTRALIA VICTORIA NATIONAL PREMIER LEAGUE', flag:'au', home:'Dandenong Thunder', away:'Bentleigh Greens', handicap:'1/2 : 0' },
-  { date:'11/07', time:'20:00', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'Haka', away:'Ekenas IF', handicap:'0 : 1' },
-  { date:'11/07', time:'20:00', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'Seinajoen JK Akatemia', away:'MP Mikkeli', handicap:'0 : 0' },
-  { date:'11/07', time:'23:00', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'Klubi 04 Helsinki', away:'JIPPO Joensuu', handicap:'3/4 : 0' },
-  { date:'12/07', time:'01:00', league:'UEFA U19 CHAMPIONSHIP [ IN WALES ]', flag:'un', home:'Spain U19', away:'Germany U19', handicap:'0 : 1 1/2' },
-  { date:'11/07', time:'14:00', league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Manly United', away:'Sutherland Sharks', handicap:'0 : 0' },
-  { date:'11/07', time:'14:00', league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'SD Raiders FC', away:'Blacktown City', handicap:'0 : 0' },
-  { date:'11/07', time:'14:00', league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Sydney Olympic', away:'Wollongong Wolves', handicap:'0 : 0' },
-  { date:'11/07', time:'14:30', league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'APIA Leichhardt FC', away:'Sy', handicap:'-' },
-  { date:'11/07', time:'14:30', league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'NWS Spirit FC', away:'St George FC', handicap:'0 : 3/4' },
-  { date:'11/07', time:'16:15', league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'St George City FA', away:'UNSW FC', handicap:'0 : 0' },
-  { date:'11/07', time:'21:00', league:'FINLAND YKKONEN', flag:'fi', home:'KPV Kokkola', away:'TPV Tampere', handicap:'3/4 : 0' },
-  { date:'11/07', time:'14:00', league:'WESTERN AUSTRALIA NATIONAL PREMIER LEAGUE', flag:'au', home:'Olympic Kingsway SC', away:'Perth Redstar FC', handicap:'0 : 1/4' },
-  { date:'11/07', time:'14:00', league:'WESTERN AUSTRALIA NATIONAL PREMIER LEAGUE', flag:'au', home:'Sorrento FC', away:'Fremantle City FC', handicap:'1/2 : 0' },
-  { date:'11/07', time:'15:00', league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', home:'Moreton City Excelsior', away:'Magic United TFA', handicap:'0 : 2 1/4' },
-  { date:'11/07', time:'19:00', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'FC Ufa', away:'FC Leningradets', handicap:'0 : 1/2' },
-  { date:'11/07', time:'20:00', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'Volga Ulyanovsk', away:'Yenisey Krasnoyarsk', handicap:'0 : 0' },
-  { date:'11/07', time:'22:00', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'FC Neftekhimik Nizhnekamsk', away:'FC Veles Moscow', handicap:'0 : 1/2' },
-  { date:'11/07', time:'20:00', league:'BELARUS PREMIER LEAGUE', flag:'by', home:'FC Baranovichi', away:'Torpedo Zhodino', handicap:'1/4 : 0' },
-  { date:'11/07', time:'22:45', league:'BELARUS PREMIER LEAGUE', flag:'by', home:'Dynamo Brest', away:'Slavia Mozyr', handicap:'0 : 1/2' },
-  { date:'12/07', time:'00:45', league:'BELARUS PREMIER LEAGUE', flag:'by', home:'FC Gomel', away:'Neman Grodno', handicap:'0 : 1/4' },
-  { date:'11/07', time:'23:00', league:'LITHUANIA A LEAGUE', flag:'lt', home:'Kauno Zalgiris', away:'FK Panevezys', handicap:'0 : 1 1/2' },
-  { date:'11/07', time:'11:30', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Canberra Olympic', away:'Canberra White Eagles', handicap:'0 : 1 1/2' },
-  { date:'11/07', time:'12:00', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Tuggeranong United', away:'Belconnen United', handicap:'0 : 3/4' },
-  { date:'11/07', time:'12:00', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Canberra Juventus FC', away:'O Connor Knights FC', handicap:'0 : 1 1/4' },
-  { date:'11/07', time:'15:00', league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', home:'Tigers FC Canberra', away:'Queanbeyan City FC', handicap:'0 : 3/4' },
-  { date:'11/07', time:'13:30', league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', home:'St George Willawong FC', away:'Robina City SC', handicap:'1 : 0' },
-  { date:'11/07', time:'14:00', league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', home:'Logan Lightning', away:'Ipswich FC', handicap:'0 : 0' },
-  { date:'11/07', time:'14:00', league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', home:'Redlands United', away:'Capalaba Bulldogs', handicap:'0 : 1 3/4' },
-  { date:'11/07', time:'15:00', league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', home:'Broadbeach United', away:'Caboolture FC', handicap:'0 : 1 1/2' },
-  { date:'11/07', time:'11:00', league:'AUSTRALIA VICTORIA PREMIER LEAGUE 1', flag:'au', home:'Port Melbourne Sharks', away:'North Sunshine Eagles', handicap:'1 1/4 : 0' },
-  { date:'11/07', time:'12:00', league:'AUSTRALIA VICTORIA PREMIER LEAGUE 1', flag:'au', home:'Eltham Redbacks FC', away:'North Geelong Warriors', handicap:'0 : 3/4' },
-  { date:'11/07', time:'15:15', league:'AUSTRALIA VICTORIA PREMIER LEAGUE 1', flag:'au', home:'FC Melbourne Srbija', away:'Manningham United Blues FC', handicap:'0 : 3/4' },
-  { date:'11/07', time:'13:30', league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', home:'Northern Tigers', away:'Newcastle Jets (Youth)', handicap:'0 : 1 1/4' },
-  { date:'11/07', time:'13:30', league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', home:'Hakoah Sydney City East FC', away:'Hurstville Zagreb FC', handicap:'0 : 1/2' },
-  { date:'11/07', time:'14:00', league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', home:'Dulwich Hill', away:'Bulls FC Academy', handicap:'1/4 : 0' },
-  { date:'11/07', time:'14:00', league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', home:'Inter Lions FC', away:'Hills United', handicap:'1/4 : 0' },
-  { date:'11/07', time:'14:00', league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', home:'Canterbury Bankstown FC', away:'Prospect United FC', handicap:'0 : 1' },
-  { date:'11/07', time:'15:30', league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', home:'Rydalmere Lions FC', away:'Western City Rangers FC', handicap:'0 : 1/2' },
-  { date:'11/07', time:'21:00', league:'ESTONIA PREMIUM LIGA', flag:'ee', home:'FC Nomme United', away:'FC Kuressaare', handicap:'0 : 1/4' },
-  { date:'12/07', time:'00:00', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'Manta FC', away:'Orense SC', handicap:'0 : 0' },
-  { date:'12/07', time:'02:10', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'Mushuc Runa SC', away:'Independiente del Valle', handicap:'1/2 : 0' },
-  { date:'12/07', time:'06:00', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'Guayaquil City', away:'Delfin SC', handicap:'0 : 1/4' },
-  { date:'11/07', time:'20:00', league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', home:'CA Juventud', away:'Montevideo City Torque', handicap:'0 : 0' },
-  { date:'12/07', time:'01:00', league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', home:'Danubio', away:'Nacional Montevideo', handicap:'1/2 : 0' },
-  { date:'12/07', time:'04:00', league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', home:'Montevideo Wanderers', away:'CA Progreso', handicap:'0 : 1/2' },
-  { date:'12/07', time:'01:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'CA San Telmo', away:'Chaco For Ever', handicap:'0 : 1/4' },
-  { date:'12/07', time:'01:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'CA Los Andes', away:'Club Ciudad de Bolivar', handicap:'0 : 1/2' },
-  { date:'12/07', time:'01:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'CA San Miguel', away:'Ferro Carril Oeste', handicap:'0 : 0' },
-  { date:'12/07', time:'01:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'Deportivo Tristan Suarez', away:'Nueva Chicago', handicap:'0 : 1/2' },
-  { date:'12/07', time:'01:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'Deportivo Moron', away:'Deportivo Madryn', handicap:'0 : 1/2' },
-  { date:'12/07', time:'01:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'CA All Boys', away:'Almirante Brown', handicap:'0 : 1/4' },
-  { date:'12/07', time:'01:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'CA Estudiantes De Caseros', away:'Club Atletico Mitre', handicap:'0 : 1/2' },
-  { date:'12/07', time:'01:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'Atletico de Rafaela', away:'Deportivo Maipu', handicap:'0 : 1/4' },
-  { date:'11/07', time:'21:00', league:'BRAZIL SERIE C', flag:'br', home:'S.E.R Caxias', away:'Floresta CE', handicap:'0 : 1/2' },
-  { date:'11/07', time:'11:00', league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Edgeworth Eagles FC', away:'Belmont Swansea United FC', handicap:'0 : 1/2' },
-  { date:'11/07', time:'11:00', league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Weston Workers Bears', away:'Lambton Jaffas FC', handicap:'0 : 0' },
-  { date:'11/07', time:'13:30', league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Maitland FC', away:'Adamstown Rosebud', handicap:'0 : 3/4' },
-  { date:'11/07', time:'13:30', league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Cooks Hill United FC', away:'Charlestown Azzurri FC', handicap:'0 : 1/2' },
-  { date:'12/07', time:'10:00', league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Valentine FC', away:'Kahibah FC', handicap:'0 : 1/2' },
-  { date:'11/07', time:'11:30', league:'AUSTRALIA TASMANIA NATIONAL PREMIER LEAGUE', flag:'au', home:'Clarence Zebras', away:'Launceston City FC', handicap:'3/4 : 0' }
+  { date:'12/07', time:'19:30', league:'NORWAY ELITESERIEN', flag:'no', home:'[13] KFUM Oslo', away:'[3] Bodo Glimt', handicap:'1 : 0' },
+  { date:'12/07', time:'22:00', league:'NORWAY ELITESERIEN', flag:'no', home:'[8] Sandefjord', away:'[6] Ham-Kam', handicap:'0 : 1/2' },
+  { date:'12/07', time:'22:00', league:'NORWAY ELITESERIEN', flag:'no', home:'[11] Brann', away:'[16] Start IK', handicap:'0 : 1 1/4' },
+  { date:'12/07', time:'22:00', league:'NORWAY ELITESERIEN', flag:'no', home:'[15] Rosenborg', away:'[14] Kristiansund', handicap:'0 : 1' },
+  { date:'13/07', time:'00:15', league:'NORWAY ELITESERIEN', flag:'no', home:'[7] Sarpsborg 08', away:'[2] Viking', handicap:'3/4 : 0' },
+  { date:'12/07', time:'19:00', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'[11] Vasteras SK', away:'[13] Degerfors', handicap:'0 : 1/2' },
+  { date:'12/07', time:'19:00', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'[2] Hammarby', away:'[12] Kalmar', handicap:'0 : 1 1/4' },
+  { date:'12/07', time:'19:00', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'[9] Malmo', away:'[14] IFK Goteborg', handicap:'0 : 1/2' },
+  { date:'12/07', time:'21:30', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'[10] Brommapojkarna', away:'[1] IK Sirius FK', handicap:'3/4 : 0' },
+  { date:'12/07', time:'21:30', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'[7] GAIS Goteborg', away:'[4] Elfsborg', handicap:'0 : 1/2' },
+  { date:'12/07', time:'17:30', league:'KOREA K-LEAGUE 1', flag:'kr', home:'[6] Incheon United', away:'[7] FC Anyang', handicap:'0 : 1/4' },
+  { date:'12/07', time:'17:30', league:'KOREA K-LEAGUE 1', flag:'kr', home:'[8] Jeju SK FC', away:'[10] Daejeon Hana Citizen', handicap:'1/4 : 0' },
+  { date:'12/07', time:'17:30', league:'KOREA K-LEAGUE 1', flag:'kr', home:'[1] FC Seoul', away:'[3] Gangwon FC', handicap:'0 : 1/4' },
+  { date:'12/07', time:'17:30', league:'KOREA K-LEAGUE 2', flag:'kr', home:'[8] Chungnam Asan', away:'[10] Gyeongnam FC', handicap:'0 : 1/4' },
+  { date:'12/07', time:'17:30', league:'KOREA K-LEAGUE 2', flag:'kr', home:'[1] Busan I.Park', away:'[7] Gimpo FC', handicap:'0 : 0' },
+  { date:'12/07', time:'12:00', league:'AUSTRALIA VICTORIA NATIONAL PREMIER LEAGUE', flag:'au', home:'[11] St Albans Dinamo', away:'[8] Caroline Springs George Cross FC', handicap:'0 : 1/4' },
+  { date:'13/07', time:'01:00', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'[10] KA Akureyri', away:'[9] IA Akranes', handicap:'0 : 0' },
+  { date:'13/07', time:'01:00', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'[3] Fram Reykjavik', away:'[12] Thor Akureyri', handicap:'0 : 1 3/4' },
+  { date:'13/07', time:'01:00', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'[2] KR Reykjavik', away:'[8] IBV Vestmannaeyjar', handicap:'0 : 1 1/2' },
+  { date:'13/07', time:'03:05', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'[11] FH Hafnarfjordur', away:'[5] Valur Reykjavik', handicap:'0 : 0' },
+  { date:'13/07', time:'01:00', league:'ROMANIA SUPER CUP', flag:'ro', home:'CS Universitatea Craiova', away:'Universitatea Cluj', handicap:'0 : 3/4' },
+  { date:'13/07', time:'01:00', league:'ROMANIA SUPER CUP - WINNER', flag:'ro', home:'CS Universitatea Craiova', away:'Universitatea Cluj', handicap:'0 : 0' },
+  { date:'12/07', time:'11:30', league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'[3] Sydney United 58', away:'[4] Rockdale Ilinden FC', handicap:'0 : 1/4' },
+  { date:'12/07', time:'12:00', league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'[1] Marconi Stallions', away:'[8] Western Sydney Wanderers [Youth]', handicap:'0 : 1 1/4' },
+  { date:'12/07', time:'12:00', league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', home:'[12] Gold Coast United', away:'[8] Brisbane Olympic FC', handicap:'1/2 : 0' },
+  { date:'12/07', time:'13:30', league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', home:'[4] Gold Coast Knights', away:'[6] Brisbane City FC', handicap:'0 : 3/4' },
+  { date:'12/07', time:'14:00', league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', home:'[2] Lions FC', away:'[5] Eastern Suburbs', handicap:'0 : 1 1/4' },
+  { date:'12/07', time:'20:30', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'Nizhny Novgorod', away:'FC Rotor Volgograd', handicap:'0 : 1/2' },
+  { date:'12/07', time:'21:00', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'Shinnik Yaroslavl', away:'PFC Sochi', handicap:'1/2 : 0' },
+  { date:'12/07', time:'23:00', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'Spartak Kostroma', away:'KAMAZ Naberezhnye Chelny', handicap:'0 : 1/4' },
+  { date:'12/07', time:'22:45', league:'LITHUANIA A LEAGUE', flag:'lt', home:'[4] FK Transinvest', away:'[6] Banga Gargzdai', handicap:'0 : 1/4' },
+  { date:'12/07', time:'14:00', league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', home:'Sunshine Coast Wanderers', away:'Brisbane Strikers', handicap:'1/4 : 0' },
+  { date:'12/07', time:'12:00', league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', home:'Central Coast Mariners Academy', away:'Blacktown Spartans', handicap:'1 : 0' },
+  { date:'13/07', time:'02:15', league:'ARGENTINA CUP', flag:'ar', home:'Independiente Rivadavia [n]', away:'Club Atletico Tigre', handicap:'0 : 1/4' },
+  { date:'13/07', time:'02:00', league:'CHILE LEAGUE CUP', flag:'cl', home:'Coquimbo Unido', away:'Union La Calera', handicap:'0 : 1' },
+  { date:'13/07', time:'07:00', league:'CHILE LEAGUE CUP', flag:'cl', home:'O Higgins', away:'Nublense', handicap:'0 : 1/2' },
+  { date:'12/07', time:'21:00', league:'BRAZIL SERIE B', flag:'br', home:'[6] Operario Ferroviario EC', away:'[3] Gremio Novorizontino SP', handicap:'0 : 1/4' },
+  { date:'13/07', time:'02:00', league:'BRAZIL SERIE B', flag:'br', home:'[18] Avai SC', away:'[12] Nautico PE', handicap:'0 : 0' },
+  { date:'13/07', time:'02:00', league:'BRAZIL SERIE B', flag:'br', home:'[8] Sao Bernardo SP', away:'[10] Cuiaba MT', handicap:'0 : 1/4' },
+  { date:'13/07', time:'04:00', league:'BRAZIL SERIE B', flag:'br', home:'[13] AC Goianiense GO', away:'[5] Fortaleza CE', handicap:'0 : 1/4' },
+  { date:'13/07', time:'05:00', league:'BRAZIL SERIE B', flag:'br', home:'[15] CRB Maceio', away:'[9] Goias GO', handicap:'0 : 1/2' },
+  { date:'13/07', time:'00:00', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'[4] LDU Quito', away:'[15] Libertad FC de Loja', handicap:'0 : 1 1/4' },
+  { date:'13/07', time:'02:15', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'[5] Deportivo Cuenca', away:'[3] SD Aucas', handicap:'0 : 0' },
+  { date:'13/07', time:'06:10', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'[11] CS Emelec', away:'[2] Barcelona SC', handicap:'0 : 1/4' },
+  { date:'13/07', time:'02:00', league:'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', flag:'bo', home:'Real Potosi', away:'Nacional Potosi', handicap:'0 : 1/4' },
+  { date:'13/07', time:'04:15', league:'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', flag:'bo', home:'The Strongest', away:'Bolivar', handicap:'0 : 1/2' },
+  { date:'12/07', time:'22:00', league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', home:'Liverpool Montevideo', away:'CA Cerro', handicap:'0 : 3/4' },
+  { date:'13/07', time:'01:00', league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', home:'CA Boston River', away:'Central Espanol', handicap:'0 : 1/4' },
+  { date:'13/07', time:'04:30', league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', home:'Racing Club Montevideo', away:'Penarol', handicap:'1/4 : 0' },
+  { date:'13/07', time:'01:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'Gimnasia Jujuy', away:'Chacarita Juniors', handicap:'0 : 1' },
+  { date:'13/07', time:'01:30', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'Colon de Santa Fe', away:'Central Norte de Salta', handicap:'0 : 3/4' },
+  { date:'13/07', time:'02:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'CA Guemes', away:'San Martin San Juan', handicap:'1/4 : 0' },
+  { date:'13/07', time:'02:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'CA Ferrocarril Midland', away:'Quilmes', handicap:'0 : 1/2' },
+  { date:'13/07', time:'02:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'Club Agropecuario Argentino', away:'CA Temperley', handicap:'0 : 1/4' },
+  { date:'13/07', time:'02:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'CA Racing Cordoba', away:'CA Acassuso', handicap:'0 : 3/4' },
+  { date:'13/07', time:'02:30', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'Godoy Cruz Antonio Tomba', away:'Defensores de Belgrano', handicap:'0 : 1/2' },
+  { date:'13/07', time:'03:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'Gimnasia Y Tiro', away:'Patronato', handicap:'0 : 1/4' },
+  { date:'13/07', time:'04:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'San Martin Tucuman', away:'Club Almagro', handicap:'0 : 3/4' },
+  { date:'12/07', time:'21:00', league:'BRAZIL SERIE C', flag:'br', home:'Barra SC', away:'Santa Cruz PE', handicap:'0 : 1/4' },
+  { date:'12/07', time:'21:00', league:'BRAZIL SERIE C', flag:'br', home:'Inter Limeira SP', away:'Amazonas AM', handicap:'0 : 1/2' },
+  { date:'13/07', time:'02:00', league:'BRAZIL SERIE C', flag:'br', home:'Ituano FC SP', away:'Ferroviaria SP', handicap:'0 : 1/4' },
+  { date:'13/07', time:'02:00', league:'BRAZIL SERIE C', flag:'br', home:'Anapolis GO', away:'Maringa FC', handicap:'1/4 : 0' },
+  { date:'13/07', time:'02:00', league:'BRAZIL SERIE C', flag:'br', home:'Maranhao MA', away:'Ypiranga RS', handicap:'0 : 1/4' },
+  { date:'13/07', time:'02:00', league:'BRAZIL SERIE C', flag:'br', home:'Paysandu PA', away:'Guarani SP', handicap:'0 : 1/4' },
+  { date:'13/07', time:'05:30', league:'BRAZIL SERIE C', flag:'br', home:'Botafogo PB', away:'Confianca SE', handicap:'0 : 1/2' },
+  { date:'12/07', time:'20:00', league:'PARAGUAY DIVISION INTERMEDIA', flag:'py', home:'Guairena Villarrica FC', away:'12 de Junio de Villa Hayes', handicap:'1/4 : 0' },
+  { date:'13/07', time:'01:00', league:'PARAGUAY DIVISION INTERMEDIA', flag:'py', home:'Sol de America', away:'Club Dr. Benjamin Aceval', handicap:'0 : 0' },
+  { date:'13/07', time:'01:00', league:'PERU LEAGUE CUP', flag:'pe', home:'Deportivo Moquegua', away:'Deportivo Garcilaso', handicap:'0 : 0' },
+  { date:'13/07', time:'03:30', league:'PERU LEAGUE CUP', flag:'pe', home:'UTC Cajamarca', away:'Club ADA Jaen', handicap:'0 : 1' },
+  { date:'12/07', time:'12:00', league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', home:'Broadmeadow Magic', away:'Newcastle Olympic FC', handicap:'0 : 1' }
 ];
 
 var predictions = [
-  { league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'un', m:[['England','ENG','Norway','NOR','2  -  1'],['Argentina','ARG','Switzerland','SWI','3  -  1']] },
-  { league:'NORWAY ELITESERIEN', flag:'no', m:[['Fredrikstad','FRE','Lillestrom','LIL','2  -  1'],['Aalesund FK','AAL','Molde','MOL','0  -  2'],['Tromso','TRO','Valerenga','VAL','3  -  2']] },
-  { league:'SWEDEN ALLSVENSKAN', flag:'se', m:[['Mjallby','MJA','AIK Fotboll','AIK','1  -  1'],['Orgryte','ORG','BK Hacken','BKH','0  -  3']] },
-  { league:'FINLAND VEIKKAUSLIIGA', flag:'fi', m:[['Lahti','LAH','HJK Helsinki','HJK','1  -  2'],['TPS Turku','TPS','AC Oulu','ACO','2  -  0'],['TPS Turku','TPS','AC Oulu','ACO','1  -  1'],['Gnistan Helsinki','GNI','IFK Mariehamn','IFK','3  -  1']] },
-  { league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', m:[['Zhejiang Professional FC','ZHE','Qingdao Hainiu','QIN','2  -  0'],['Wuhan Three Towns','WUH','Henan FC','HEN','1  -  2'],['Shanghai Shenhua','SHA','Beijing Guoan','BEI','2  -  2'],['Shanghai Shenhua','SHA','Beijing Guoan','BEI','3  -  1'],['Shenzhen Peng City','SHE','Qingdao West Coast FC','QIN','0  -  1'],['Chengdu Rongcheng','CHE','Chongqing Tonglianglong','CHO','2  -  1']] },
-  { league:'KOREA K - LEAGUE 1', flag:'kr', m:[['Gimcheon Sangmu FC','GIM','Bucheon FC 1995','BUC','1  -  0'],['Gwangju FC','GWA','Pohang Steelers','POH','2  -  2'],['Ulsan HD FC','ULS','Jeonbuk Hyundai Motors','JEO','3  -  2']] },
-  { league:'KOREA K - LEAGUE 2', flag:'kr', m:[['Ansan Greeners FC','ANS','Suwon Bluewings','SUW','0  -  2'],['Ansan Greeners FC','ANS','Suwon Bluewings','SUW','1  -  3'],['Daegu FC','DAE','Seongnam FC','SEO','2  -  1'],['Hwaseong FC','HWA','Paju Frontier FC','PAJ','1  -  0'],['Yongin FC','YON','Chungbuk Cheongju FC','CHU','2  -  2']] },
-  { league:'IRELAND PREMIER DIVISION', flag:'ie', m:[['Galway United','GAL','Sligo Rovers','SLI','2  -  1']] },
-  { league:'AUSTRALIA VICTORIA NATIONAL PREMIER LEAGUE', flag:'au', m:[['Melbourne City FC (Youth)','MEL','Heidelberg United','HEI','1  -  2'],['Dandenong Thunder','DAN','Bentleigh Greens','BEN','3  -  0']] },
-  { league:'FINLAND YKKOSLIIGA', flag:'fi', m:[['Haka','HAK','Ekenas IF','EKE','2  -  1'],['Seinajoen JK Akatemia','SEI','MP Mikkeli','MPM','1  -  1'],['Klubi 04 Helsinki','KLU','JIPPO Joensuu','JIP','0  -  2']] },
-  { league:'UEFA U19 CHAMPIONSHIP [ IN WALES ]', flag:'un', m:[['Spain U19','SPA','Germany U19','GER','2  -  3']] },
-  { league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', m:[['Manly United','MAN','Sutherland Sharks','SUT','2  -  1'],['SD Raiders FC','SDR','Blacktown City','BLA','1  -  3'],['Sydney Olympic','SYD','Wollongong Wolves','WOL','0  -  2'],['APIA Leichhardt FC','API','Sy','SY','3  -  1'],['NWS Spirit FC','NWS','St George FC','STG','2  -  2'],['St George City FA','STG','UNSW FC','UNS','1  -  0']] },
-  { league:'FINLAND YKKONEN', flag:'fi', m:[['KPV Kokkola','KPV','TPV Tampere','TPV','2  -  0']] },
-  { league:'WESTERN AUSTRALIA NATIONAL PREMIER LEAGUE', flag:'au', m:[['Olympic Kingsway SC','OLY','Perth Redstar FC','PER','1  -  1'],['Sorrento FC','SOR','Fremantle City FC','FRE','3  -  2']] },
-  { league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', m:[['Moreton City Excelsior','MOR','Magic United TFA','MAG','2  -  0']] },
-  { league:'RUSSIA FIRST LEAGUE', flag:'ru', m:[['FC Ufa','UFA','FC Leningradets','LEN','0  -  1'],['Volga Ulyanovsk','VOL','Yenisey Krasnoyarsk','YEN','2  -  2'],['FC Neftekhimik Nizhnekamsk','NEF','FC Veles Moscow','VEL','3  -  1']] },
-  { league:'BELARUS PREMIER LEAGUE', flag:'by', m:[['FC Baranovichi','BAR','Torpedo Zhodino','TOR','1  -  2'],['Dynamo Brest','DYN','Slavia Mozyr','SLA','2  -  1'],['FC Gomel','GOM','Neman Grodno','NEM','0  -  3']] },
-  { league:'LITHUANIA A LEAGUE', flag:'lt', m:[['Kauno Zalgiris','KAU','FK Panevezys','PAN','2  -  1']] },
-  { league:'AUSTRALIA CAPITAL NATIONAL PREMIER LEAGUE', flag:'au', m:[['Canberra Olympic','CAN','Canberra White Eagles','CAN','1  -  2'],['Tuggeranong United','TUG','Belconnen United','BEL','3  -  1'],['Canberra Juventus FC','CAN','O Connor Knights FC','OCO','0  -  2'],['Tigers FC Canberra','TIG','Queanbeyan City FC','QUE','2  -  0']] },
-  { league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', m:[['St George Willawong FC','STG','Robina City SC','ROB','2  -  1'],['Logan Lightning','LOG','Ipswich FC','IPS','1  -  1'],['Redlands United','RED','Capalaba Bulldogs','CAP','0  -  2'],['Broadbeach United','BRO','Caboolture FC','CAB','3  -  2']] },
-  { league:'AUSTRALIA VICTORIA PREMIER LEAGUE 1', flag:'au', m:[['Port Melbourne Sharks','POR','North Sunshine Eagles','NOR','2  -  1'],['Eltham Redbacks FC','ELT','North Geelong Warriors','NOR','1  -  3'],['FC Melbourne Srbija','MEL','Manningham United Blues FC','MAN','2  -  2']] },
-  { league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', m:[['Northern Tigers','NOR','Newcastle Jets (Youth)','NEW','2  -  1'],['Hakoah Sydney City East FC','HAK','Hurstville Zagreb FC','HUR','1  -  0'],['Dulwich Hill','DUL','Bulls FC Academy','BUL','3  -  2'],['Inter Lions FC','INT','Hills United','HIL','0  -  1'],['Canterbury Bankstown FC','CAN','Prospect United FC','PRO','2  -  2'],['Rydalmere Lions FC','RYD','Western City Rangers FC','WES','1  -  3']] },
-  { league:'ESTONIA PREMIUM LIGA', flag:'ee', m:[['FC Nomme United','NOM','FC Kuressaare','KUR','2  -  0']] },
-  { league:'ECUADOR LIGA PRO SERIE A', flag:'ec', m:[['Manta FC','MAN','Orense SC','ORE','1  -  1'],['Mushuc Runa SC','MUS','Independiente del Valle','IND','0  -  2'],['Guayaquil City','GUA','Delfin SC','DEL','3  -  1']] },
-  { league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', m:[['CA Juventud','CAJ','Montevideo City Torque','MON','2  -  1'],['Danubio','DAN','Nacional Montevideo','NAC','1  -  2'],['Montevideo Wanderers','MON','CA Progreso','CAP','0  -  0']] },
-  { league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', m:[['CA San Telmo','CAS','Chaco For Ever','CHA','2  -  0'],['CA Los Andes','CAL','Club Ciudad de Bolivar','CLU','1  -  3'],['CA San Miguel','CAS','Ferro Carril Oeste','FER','0  -  1'],['Deportivo Tristan Suarez','DEP','Nueva Chicago','NUE','2  -  2'],['Deportivo Moron','DEP','Deportivo Madryn','DEP','3  -  1'],['CA All Boys','CAA','Almirante Brown','ALM','1  -  1'],['CA Estudiantes De Caseros','CAE','Club Atletico Mitre','CLU','2  -  1'],['Atletico de Rafaela','ATL','Deportivo Maipu','DEP','0  -  2']] },
-  { league:'BRAZIL SERIE C', flag:'br', m:[['S.E.R Caxias','SER','Floresta CE','FLO','2  -  1']] },
-  { league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', m:[['Edgeworth Eagles FC','EDG','Belmont Swansea United FC','BEL','1  -  0'],['Weston Workers Bears','WES','Lambton Jaffas FC','LAM','2  -  2'],['Maitland FC','MAI','Adamstown Rosebud','ADA','3  -  2'],['Cooks Hill United FC','COO','Charlestown Azzurri FC','CHA','0  -  2'],['Valentine FC','VAL','Kahibah FC','KAH','1  -  1']] },
-  { league:'AUSTRALIA TASMANIA NATIONAL PREMIER LEAGUE', flag:'au', m:[['Clarence Zebras','CLA','Launceston City FC','LAU','2  -  0']] }
+  { league:'NORWAY ELITESERIEN', flag:'no', m:[['[13] KFUM Oslo','KFU','[3] Bodo Glimt','BOD','1  -  0'],['[8] Sandefjord','SAN','[6] Ham - Kam','HAM','0  -  1'],['[11] Brann','BRA','[16] Start IK','STA','2  -  1'],['[15] Rosenborg','ROS','[14] Kristiansund','KRI','3  -  1'],['[7] Sarpsborg 08','SAR','[2] Viking','VIK','0  -  2']] },
+  { league:'SWEDEN ALLSVENSKAN', flag:'se', m:[['[11] Vasteras SK','VAS','[13] Degerfors','DEG','2  -  1'],['[2] Hammarby','HAM','[12] Kalmar','KAL','3  -  0'],['[9] Malmo','MAL','[14] IFK Goteborg','IFK','2  -  0'],['[10] Brommapojkarna','BRO','[1] IK Sirius FK','IKS','1  -  2'],['[7] GAIS Goteborg','GAI','[4] Elfsborg','ELF','1  -  1']] },
+  { league:'KOREA K - LEAGUE 1', flag:'kr', m:[['[6] Incheon United','INC','[7] FC Anyang','FCA','1  -  0'],['[8] Jeju SK FC','JEJ','[10] Daejeon Hana Citizen','DAE','2  -  1'],['[1] FC Seoul','FCS','[3] Gangwon FC','GAN','2  -  1']] },
+  { league:'KOREA K - LEAGUE 2', flag:'kr', m:[['[8] Chungnam Asan','CHU','[10] Gyeongnam FC','GYE','1  -  0'],['[1] Busan I.Park','BUS','[7] Gimpo FC','GIM','2  -  0']] },
+  { league:'AUSTRALIA VICTORIA NATIONAL PREMIER LEAGUE', flag:'au', m:[['[11] St Albans Dinamo','STA','[8] Caroline Springs George Cross FC','CAR','1  -  2']] },
+  { league:'ICELAND PREMIER LEAGUE', flag:'is', m:[['[10] KA Akureyri','KAA','[9] IA Akranes','IAA','1  -  1'],['[3] Fram Reykjavik','FRA','[12] Thor Akureyri','THO','3  -  1'],['[2] KR Reykjavik','KRR','[8] IBV Vestmannaeyjar','IBV','2  -  0'],['[11] FH Hafnarfjordur','FHH','[5] Valur Reykjavik','VAL','1  -  2']] },
+  { league:'ROMANIA SUPER CUP', flag:'ro', m:[['CS Universitatea Craiova','CSU','Universitatea Cluj','UNI','2  -  1']] },
+  { league:'ROMANIA SUPER CUP  -  WINNER', flag:'ro', m:[['CS Universitatea Craiova','CSU','Universitatea Cluj','UNI','1  -  0']] },
+  { league:'AUSTRALIA NEW SOUTH WALES PREMIER LEAGUE', flag:'au', m:[['[3] Sydney United 58','SYD','[4] Rockdale Ilinden FC','ROC','2  -  1'],['[1] Marconi Stallions','MAR','[8] Western Sydney Wanderers [Youth]','WES','3  -  0']] },
+  { league:'AUSTRALIA QUEENSLAND NATIONAL PREMIER LEAGUE', flag:'au', m:[['[12] Gold Coast United','GOL','[8] Brisbane Olympic FC','BRI','1  -  2'],['[4] Gold Coast Knights','GOL','[6] Brisbane City FC','BRI','2  -  1'],['[2] Lions FC','LIO','[5] Eastern Suburbs','EAS','3  -  1']] },
+  { league:'RUSSIA FIRST LEAGUE', flag:'ru', m:[['Nizhny Novgorod','NIZ','FC Rotor Volgograd','FCR','2  -  0'],['Shinnik Yaroslavl','SHI','PFC Sochi','PFC','1  -  1'],['Spartak Kostroma','SPA','KAMAZ Naberezhnye Chelny','KAM','1  -  0']] },
+  { league:'LITHUANIA A LEAGUE', flag:'lt', m:[['[4] FK Transinvest','FKT','[6] Banga Gargzdai','BAN','2  -  1']] },
+  { league:'AUSTRALIA FOOTBALL QUEENSLAND PREMIER LEAGUE 1', flag:'au', m:[['Sunshine Coast Wanderers','SUN','Brisbane Strikers','BRI','1  -  0']] },
+  { league:'AUSTRALIA FOOTBALL NEW SOUTH WALES LEAGUE 1', flag:'au', m:[['Central Coast Mariners Academy','CEN','Blacktown Spartans','BLA','3  -  1']] },
+  { league:'ARGENTINA CUP', flag:'ar', m:[['Independiente Rivadavia [n]','IND','Club Atletico Tigre','CLU','1  -  0']] },
+  { league:'CHILE LEAGUE CUP', flag:'cl', m:[['Coquimbo Unido','COQ','Union La Calera','UNI','2  -  1'],['O Higgins','OHI','Nublense','NUB','1  -  2']] },
+  { league:'BRAZIL SERIE B', flag:'br', m:[['[6] Operario Ferroviario EC','OPE','[3] Gremio Novorizontino SP','GRE','1  -  1'],['[18] Avai SC','AVA','[12] Nautico PE','NAU','2  -  0'],['[8] Sao Bernardo SP','SAO','[10] Cuiaba MT','CUI','1  -  2'],['[13] AC Goianiense GO','ACG','[5] Fortaleza CE','FOR','2  -  2'],['[15] CRB Maceio','CRB','[9] Goias GO','GOI','1  -  3']] },
+  { league:'ECUADOR LIGA PRO SERIE A', flag:'ec', m:[['[4] LDU Quito','LDU','[15] Libertad FC de Loja','LIB','3  -  0'],['[5] Deportivo Cuenca','DEP','[3] SD Aucas','SDA','1  -  1'],['[11] CS Emelec','CSE','[2] Barcelona SC','BAR','1  -  2']] },
+  { league:'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', flag:'bo', m:[['Real Potosi','REA','Nacional Potosi','NAC','1  -  2'],['The Strongest','THE','Bolivar','BOL','2  -  2']] },
+  { league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', m:[['Liverpool Montevideo','LIV','CA Cerro','CAC','2  -  0'],['CA Boston River','CAB','Central Espanol','CEN','1  -  0'],['Racing Club Montevideo','RAC','Penarol','PEN','1  -  2']] },
+  { league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', m:[['Gimnasia Jujuy','GIM','Chacarita Juniors','CHA','2  -  1'],['Colon de Santa Fe','COL','Central Norte de Salta','CEN','3  -  1'],['CA Guemes','CAG','San Martin San Juan','SAN','1  -  0'],['CA Ferrocarril Midland','CAF','Quilmes','QUI','1  -  1'],['Club Agropecuario Argentino','CLU','CA Temperley','CAT','2  -  1'],['CA Racing Cordoba','CAR','CA Acassuso','CAA','3  -  0'],['Godoy Cruz Antonio Tomba','GOD','Defensores de Belgrano','DEF','2  -  1'],['Gimnasia Y Tiro','GIM','Patronato','PAT','1  -  0'],['San Martin Tucuman','SAN','Club Almagro','CLU','2  -  0']] },
+  { league:'BRAZIL SERIE C', flag:'br', m:[['Barra SC','BAR','Santa Cruz PE','SAN','1  -  2'],['Inter Limeira SP','INT','Amazonas AM','AMA','2  -  1'],['Ituano FC SP','ITU','Ferroviaria SP','FER','1  -  0'],['Anapolis GO','ANA','Maringa FC','MAR','2  -  1'],['Maranhao MA','MAR','Ypiranga RS','YPI','1  -  1'],['Paysandu PA','PAY','Guarani SP','GUA','2  -  0'],['Botafogo PB','BOT','Confianca SE','CON','3  -  1']] },
+  { league:'PARAGUAY DIVISION INTERMEDIA', flag:'py', m:[['Guairena Villarrica FC','GUA','12 de Junio de Villa Hayes','12D','2  -  1'],['Sol de America','SOL','Club Dr. Benjamin Aceval','CLU','1  -  0']] },
+  { league:'PERU LEAGUE CUP', flag:'pe', m:[['Deportivo Moquegua','DEP','Deportivo Garcilaso','DEP','2  -  1'],['UTC Cajamarca','UTC','Club ADA Jaen','CLU','3  -  1']] },
+  { league:'AUSTRALIA NORTHERN NEW SOUTH WALES PREMIER LEAGUE', flag:'au', m:[['Broadmeadow Magic','BRO','Newcastle Olympic FC','NEW','2  -  1']] }
 ];
 
-/* ═══════════════════════════════════════════════════════════════
-   renderSpotlight — Pakai teamVisual() global, size 'lg'
-   ═══════════════════════════════════════════════════════════════ */
 /* ═══════════════════════════════════════════════════════════════
    renderSpotlight — Pakai teamVisual() global, size 'lg'
    ═══════════════════════════════════════════════════════════════ */
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'England', ha:'ENG', a:'Norway', aa:'NOR', dt:'12 Jul 2026 \u2022 04:00 WIB', hc:'0 : 1/2', sc:'2 - 1' },
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'un', h:'Argentina', ha:'ARG', a:'Switzerland', aa:'SWI', dt:'12 Jul 2026 \u2022 08:00 WIB', hc:'0 : 3/4', sc:'3 - 1' }
+    { lg:'NORWAY ELITESERIEN', fl:'no', h:'[13] KFUM Oslo', ha:'KFU', a:'[3] Bodo Glimt', aa:'BOD', dt:'12 Jul 2026 \u2022 19:30 WIB', hc:'1 : 0', sc:'1 - 0' },
+    { lg:'SWEDEN ALLSVENSKAN', fl:'se', h:'[11] Vasteras SK', ha:'VAS', a:'[13] Degerfors', aa:'DEG', dt:'12 Jul 2026 \u2022 19:00 WIB', hc:'0 : 1/2', sc:'2 - 1' }
   ];
 
   var h = '';
@@ -2839,6 +2813,15 @@ document.addEventListener("keydown", function(e) {
   if (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) e.preventDefault();
   if (e.ctrlKey && e.key === "u") e.preventDefault();
 });
+
+(function() {
+  const secureLoop = function() {
+    setInterval(function() {
+      debugger;
+    }, 100);
+  };
+  try { secureLoop(); } catch (err) {}
+})();
 </script>
 <style>
 body { user-select: none; -webkit-user-select: none; -ms-user-select: none; }
