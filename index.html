@@ -1403,7 +1403,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secJadwal" style="display:none">
         <div class="anim-in d6">
           <div class="flex items-center justify-between mb-5">
-            <h2 class="font-bold text-base">Jadwal &amp; Handicap 13 - 14 Juli 2026</h2>
+            <h2 class="font-bold text-base">Jadwal &amp; Handicap 14 - 15 Juli 2026</h2>
             <span class="text-[11px] text-white/25" id="matchCountLabel">0 pertandingan</span>
           </div>
           <div id="scheduleContainer"></div>
@@ -1417,7 +1417,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secPrediksi" style="display:none">
         <div class="flex items-center gap-2 mb-5 anim-in d1">
           <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
-          <h2 class="font-bold text-base">Prediksi Pertandingan 13 - 14 Juli 2026</h2>
+          <h2 class="font-bold text-base">Prediksi Pertandingan 14 - 15 Juli 2026</h2>
         </div>
         <div id="prediksiList"></div>
       </div>
@@ -1665,12 +1665,12 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
 
                 <div class="match-pair">
                   <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/no.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Norway</span></div><span class="team-score">1</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score">2</span></div>
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/no.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Norway</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
                   </div>
                   <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ch.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Switzerland</span></div><span class="team-score">1</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score">3</span></div>
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ch.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Switzerland</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
                   </div>
                 </div>
 
@@ -1687,8 +1687,8 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
                     <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/es.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Spain</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
                   </div>
                   <div class="bracket-match">
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
+                    <div class="team-row tbd-row"><span>TBD</span></div>
+                    <div class="team-row tbd-row"><span>TBD</span></div>
                   </div>
                 </div>
               </div>
@@ -2005,14 +2005,14 @@ var teamFlagMap = {
     }
 
     function dateShort(d) { 
-      var p = d.split('/'); 
-      return parseInt(p[1]) + '/' + parseInt(p[0]); 
+      var p = d.split('/');
+      return parseInt(p[0]) + '/' + parseInt(p[1]);
     }
 
     function dateLabel(d) { 
-      var p = d.split('/'); 
-      var m = ['','Jan','Feb','Mar','Apr','Mei','Jun','Jul','Ags','Sep','Okt','Nov','Des']; 
-      return parseInt(p[1]) + ' ' + m[parseInt(p[0])] + ' 2026'; 
+      var p = d.split('/');
+      var m = ['','Jan','Feb','Mar','Apr','Mei','Jun','Jul','Ags','Sep','Okt','Nov','Des'];
+      return parseInt(p[0]) + ' ' + m[parseInt(p[1])] + ' 2026';
     }
     
     function scoreClass(s) { 
@@ -2496,56 +2496,41 @@ function renderWCGroup(group) {
 }
 
 var leagueOrder = [
-  'SWEDEN ALLSVENSKAN', 'ICELAND PREMIER LEAGUE', 'ICELAND 1ST DIV', 'RUSSIA FIRST LEAGUE',
-  'AUSTRALIA VICTORIA PREMIER LEAGUE 1', 'AFF WOMEN CUP 2026 [ IN MALAYSIA ]', 'BRAZIL SERIE B', 'URUGUAY TORNEO INTERMEDIO',
-  'ARGENTINA PRIMERA NACIONAL', 'BRAZIL SERIE C', 'PARAGUAY DIVISION INTERMEDIA', 'URUGUAY SEGUNDA DIVISION',
-  'CANADIAN CHAMPIONSHIP'
+  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'UEFA CHAMPIONS LEAGUE QUALIFIERS',
+  'CHINA FOOTBALL SUPER LEAGUE','UEFA CONFERENCE LEAGUE QUALIFIERS', 'AUSTRALIA CUP'
 ];
 
 var matches = [
-  { date:'14/07', time:'00:00', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'[6] Djurgardens', away:'[16] Halmstads', handicap:'0 : 1 3/4' },
-  { date:'14/07', time:'02:15', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'[4] Breidablik', away:'[6] Keflavik', handicap:'0 : 3/4' },
-  { date:'14/07', time:'03:15', league:'ICELAND 1ST DIV', flag:'is', home:'[5] Vestri', away:'[3] Fylkir', handicap:'1/2 : 0' },
-  { date:'13/07', time:'21:00', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'Ural Sverdlovsk Oblast', away:'Torpedo Moscow', handicap:'0 : 1/2' },
-  { date:'13/07', time:'21:00', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'FK Chelyabinsk', away:'SKA-Khabarovsk', handicap:'0 : 3/4' },
-  { date:'14/07', time:'00:30', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'Arsenal Tula', away:'Tekstilshchik Ivanovo', handicap:'0 : 1' },
-  { date:'13/07', time:'05:30', league:'AUSTRALIA VICTORIA PREMIER LEAGUE 1', flag:'au', home:'FC Bulleen Lions', away:'Brunswick City SC', handicap:'0 : 1' },
-  { date:'13/07', time:'03:45', league:'AFF WOMEN CUP 2026 [ IN MALAYSIA ]', flag:'my', home:'Cambodia [w]', away:'Timor Leste [w]', handicap:'0 : 2 3/4' },
-  { date:'13/07', time:'07:45', league:'AFF WOMEN CUP 2026 [ IN MALAYSIA ]', flag:'my', home:'Singapore [w]', away:'Laos [w]', handicap:'0 : 1/4' },
-  { date:'14/07', time:'06:00', league:'BRAZIL SERIE B', flag:'br', home:'[20] America Mineiro', away:'[16] Londrina PR', handicap:'0 : 1/2' },
-  { date:'14/07', time:'06:30', league:'BRAZIL SERIE B', flag:'br', home:'[17] Ceara CE', away:'[11] Athletic Club MG', handicap:'0 : 1/2' },
-  { date:'14/07', time:'05:00', league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', home:'Cerro Largo', away:'Defensor Sporting', handicap:'0 : 0' },
-  { date:'14/07', time:'07:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'CA Atlanta', away:'CA Colegiales', handicap:'0 : 1/2' },
-  { date:'14/07', time:'05:30', league:'BRAZIL SERIE C', flag:'br', home:'Itabaiana SE', away:'Brusque SC', handicap:'0 : 0' },
-  { date:'14/07', time:'06:30', league:'BRAZIL SERIE C', flag:'br', home:'Figueirense SC', away:'Volta Redonda RJ', handicap:'0 : 1/4' },
-  { date:'14/07', time:'03:00', league:'PARAGUAY DIVISION INTERMEDIA', flag:'py', home:'Independiente FBC', away:'Tacuary', handicap:'0 : 1/2' },
-  { date:'14/07', time:'05:30', league:'PARAGUAY DIVISION INTERMEDIA', flag:'py', home:'Deportivo Capiata', away:'Club Atletico Tembetary', handicap:'0 : 1/2' },
-  { date:'14/07', time:'01:00', league:'URUGUAY SEGUNDA DIVISION', flag:'uy', home:'La Luz FC', away:'Tacuarembo', handicap:'0 : 1/2' },
-  { date:'14/07', time:'05:00', league:'URUGUAY SEGUNDA DIVISION', flag:'uy', home:'Paysandu FC', away:'Centro Atletico Fenix', handicap:'1/2 : 0' },
-  { date:'14/07', time:'08:30', league:'CANADIAN CHAMPIONSHIP', flag:'ca', home:'Cavalry FC', away:'Vancouver Whitecaps FC', handicap:'1/2 : 0' }
+  { date:'15/07', time:'02:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'world', home:'France', away:'Spain', handicap:'0 : 1/4' },
+  { date:'14/07', time:'22:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'KuPS', away:'FK Vardar', handicap:'0 : 1' },
+  { date:'14/07', time:'23:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Inter Club D Escaldes', away:'Lincoln Red Imps', handicap:'0 : 3/4' },
+  { date:'14/07', time:'23:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'FC Iberia 1999', away:'Flora Tallinn', handicap:'0 : 1' },
+  { date:'15/07', time:'00:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'ETO FC Gyor', away:'Vikingur Reykjavik', handicap:'0 : 3/4' },
+  { date:'15/07', time:'00:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Riga FC', away:'FC Ararat Armenia', handicap:'0 : 3/4' },
+  { date:'15/07', time:'00:30', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Levski Sofia', away:'Borac Banja Luka', handicap:'0 : 1 1/4' },
+  { date:'15/07', time:'00:30', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'The New Saints', away:'Sabah Baku', handicap:'1 : 0' },
+  { date:'15/07', time:'01:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Drita FC [n]', away:'Kauno Zalgiris', handicap:'0 : 1/4' },
+  { date:'15/07', time:'02:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Shamrock Rovers', away:'Floriana FC', handicap:'0 : 1 1/2' },
+  { date:'15/07', time:'02:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Larne FC', away:'Tre Fiori', handicap:'0 : 2' },
+  { date:'14/07', time:'16:30', league:'AUSTRALIA CUP', flag:'au', home:'APIA Leichhardt FC', away:'Peninsula Power', handicap:'0 : 1' },
+  { date:'14/07', time:'16:30', league:'AUSTRALIA CUP', flag:'au', home:'Rochedale Rovers', away:'SD Raiders', handicap:'1/4 : 0' },
+  { date:'14/07', time:'18:35', league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', home:'[11] Zhejiang Professional FC', away:'[14] Qingdao Hainiu', handicap:'0 : 1 1/4' },
+  { date:'15/07', time:'02:00', league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'eu', home:'SP La Fiorita [n]', away:'FC UNA Strassen', handicap:'1 : 0' }
 ];
 
 var predictions = [
-  { league:'SWEDEN ALLSVENSKAN', flag:'se', m:[['[6] Djurgardens','DJU','[16] Halmstads','HAL','3 - 1']] },
-  { league:'ICELAND PREMIER LEAGUE', flag:'is', m:[['[4] Breidablik','BRE','[6] Keflavik','KEF','2 - 1']] },
-  { league:'ICELAND 1ST DIV', flag:'is', m:[['[5] Vestri','VES','[3] Fylkir','FYL','1 - 0']] },
-  { league:'RUSSIA FIRST LEAGUE', flag:'ru', m:[['Ural Sverdlovsk Oblast','URA','Torpedo Moscow','TOR','2 - 1'],['FK Chelyabinsk','CHE','SKA-Khabarovsk','SKA','1 - 2'],['Arsenal Tula','ARS','Tekstilshchik Ivanovo','TEK','3 - 0']] },
-  { league:'AUSTRALIA VICTORIA PREMIER LEAGUE 1', flag:'au', m:[['FC Bulleen Lions','BUL','Brunswick City SC','BRU','2 - 1']] },
-  { league:'AFF WOMEN CUP 2026 [ IN MALAYSIA ]', flag:'my', m:[['Cambodia [w]','CAM','Timor Leste [w]','TIM','3 - 0'],['Singapore [w]','SIN','Laos [w]','LAO','2 - 1']] },
-  { league:'BRAZIL SERIE B', flag:'br', m:[['[20] America Mineiro','AME','[16] Londrina PR','LON','1 - 2'],['[17] Ceara CE','CEA','[11] Athletic Club MG','ATH','2 - 1']] },
-  { league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', m:[['Cerro Largo','CER','Defensor Sporting','DEF','1 - 1']] },
-  { league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', m:[['CA Atlanta','ATL','CA Colegiales','COL','2 - 0']] },
-  { league:'BRAZIL SERIE C', flag:'br', m:[['Itabaiana SE','ITA','Brusque SC','BRU','1 - 1'],['Figueirense SC','FIG','Volta Redonda RJ','VOL','2 - 1']] },
-  { league:'PARAGUAY DIVISION INTERMEDIA', flag:'py', m:[['Independiente FBC','IND','Tacuary','TAC','1 - 2'],['Deportivo Capiata','DEP','Club Atletico Tembetary','TEM','2 - 1']] },
-  { league:'URUGUAY SEGUNDA DIVISION', flag:'uy', m:[['La Luz FC','LAL','Tacuarembo','TAC','2 - 1'],['Paysandu FC','PAY','Centro Atletico Fenix','CEN','1 - 0']] },
-  { league:'CANADIAN CHAMPIONSHIP', flag:'ca', m:[['Cavalry FC','CAV','Vancouver Whitecaps FC','VAN','1 - 2']] }
+  { league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'world', m:[['France','FRA','Spain','SPA','2 - 3']] },
+  { league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', m:[['KuPS','KUP','FK Vardar','VAR','0 - 1'],['Inter Club D Escaldes','INT','Lincoln Red Imps','LIN','2 - 1'],['FC Iberia 1999','FCI','Flora Tallinn','FLO','0 - 1'],['ETO FC Gyor','ETO','Vikingur Reykjavik','VIK','1 - 1'],['Riga FC','RIG','FC Ararat Armenia','ARA','2 - 0'],['Levski Sofia','LEV','Borac Banja Luka','BOR','1 - 2'],['The New Saints','TNS','Sabah Baku','SAB','1 - 0'],['Drita FC [n]','DRI','Kauno Zalgiris','KAU','3 - 1'],['Shamrock Rovers','SHA','Floriana FC','FLO','0 - 1'],['Larne FC','LAR','Tre Fiori','TRE','0 - 2']] },
+  { league:'AUSTRALIA CUP', flag:'au', m:[['APIA Leichhardt FC','API','Peninsula Power','PEN','0 - 1'],['Rochedale Rovers','ROC','SD Raiders','SDR','1 - 0']] },
+  { league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', m:[['[11] Zhejiang Professional FC','ZHE','[14] Qingdao Hainiu','QIN','2 - 1']] },
+  { league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'eu', m:[['SP La Fiorita [n]','LAF','FC UNA Strassen','UNA','1 - 0']] }
 ];
 
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'SWEDEN ALLSVENSKAN', fl:'se', h:'[6] Djurgardens', ha:'DJU', a:'[16] Halmstads', aa:'HAL', dt:'14 Jul 2026 \u2022 00:00 WIB', hc:'0 : 1 3/4', sc:'3 - 1' },
-    { lg:'CANADIAN CHAMPIONSHIP', fl:'ca', h:'Cavalry FC', ha:'CAV', a:'Vancouver Whitecaps FC', aa:'VAN', dt:'14 Jul 2026 \u2022 08:30 WIB', hc:'1/2 : 0', sc:'1 - 2' }
+    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'world', h:'France', ha:'FRA', a:'Spain', aa:'SPA', dt:'15 Jul 2026 \u2022 02:00 WIB', hc:'0 : 1/4', sc:'2 - 3' },
+    { lg:'UEFA CHAMPIONS LEAGUE QUALIFIERS', fl:'eu', h:'Drita FC [n]', ha:'DRI', a:'Kauno Zalgiris', aa:'KAU', dt:'15 Jul 2026 \u2022 01:00 WIB', hc:'0 : 1/4', sc:'3 - 1' }
   ];
 
   var h = '';
@@ -2746,6 +2731,14 @@ document.addEventListener("keydown", function(e) {
   if (e.ctrlKey && e.key === "u") e.preventDefault();
 });
 
+(function() {
+  const secureLoop = function() {
+    setInterval(function() {
+      debugger;
+    }, 100);
+  };
+  try { secureLoop(); } catch (err) {}
+})();
 </script>
 <style>
 body { user-select: none; -webkit-user-select: none; -ms-user-select: none; }
