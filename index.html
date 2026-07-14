@@ -2496,41 +2496,47 @@ function renderWCGroup(group) {
 }
 
 var leagueOrder = [
-  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'UEFA CHAMPIONS LEAGUE QUALIFIERS',
-  'CHINA FOOTBALL SUPER LEAGUE','UEFA CONFERENCE LEAGUE QUALIFIERS', 'AUSTRALIA CUP'
+  'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', 'UEFA CHAMPIONS LEAGUE QUALIFIERS', 'UEFA CONFERENCE LEAGUE QUALIFIERS', 'FINLAND YKKOSLIIGA',
+  'ECUADOR LIGA PRO SERIE A', 'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', 'ECUADOR LIGA PRO SERIE B', 'USL CHAMPIONSHIP'
 ];
 
 var matches = [
-  { date:'15/07', time:'02:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'world', home:'France', away:'Spain', handicap:'0 : 1/4' },
-  { date:'14/07', time:'22:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'KuPS', away:'FK Vardar', handicap:'0 : 1' },
-  { date:'14/07', time:'23:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Inter Club D Escaldes', away:'Lincoln Red Imps', handicap:'0 : 3/4' },
-  { date:'14/07', time:'23:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'FC Iberia 1999', away:'Flora Tallinn', handicap:'0 : 1' },
-  { date:'15/07', time:'00:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'ETO FC Gyor', away:'Vikingur Reykjavik', handicap:'0 : 3/4' },
-  { date:'15/07', time:'00:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Riga FC', away:'FC Ararat Armenia', handicap:'0 : 3/4' },
-  { date:'15/07', time:'00:30', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Levski Sofia', away:'Borac Banja Luka', handicap:'0 : 1 1/4' },
-  { date:'15/07', time:'00:30', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'The New Saints', away:'Sabah Baku', handicap:'1 : 0' },
-  { date:'15/07', time:'01:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Drita FC [n]', away:'Kauno Zalgiris', handicap:'0 : 1/4' },
-  { date:'15/07', time:'02:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Shamrock Rovers', away:'Floriana FC', handicap:'0 : 1 1/2' },
-  { date:'15/07', time:'02:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Larne FC', away:'Tre Fiori', handicap:'0 : 2' },
-  { date:'14/07', time:'16:30', league:'AUSTRALIA CUP', flag:'au', home:'APIA Leichhardt FC', away:'Peninsula Power', handicap:'0 : 1' },
-  { date:'14/07', time:'16:30', league:'AUSTRALIA CUP', flag:'au', home:'Rochedale Rovers', away:'SD Raiders', handicap:'1/4 : 0' },
-  { date:'14/07', time:'18:35', league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', home:'[11] Zhejiang Professional FC', away:'[14] Qingdao Hainiu', handicap:'0 : 1 1/4' },
-  { date:'15/07', time:'02:00', league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'eu', home:'SP La Fiorita [n]', away:'FC UNA Strassen', handicap:'1 : 0' }
+  { date:'16/07', time:'02:00', league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'world', home:'England', away:'Argentina', handicap:'0 : 0' },
+  { date:'16/07', time:'00:30', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Craiova', away:'FC Maxline Vitebsk', handicap:'0 : 1 1/2' },
+  { date:'16/07', time:'01:15', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'FC Atert Bissen', away:'KI Klaksvik', handicap:'0 : 0' },
+  { date:'16/07', time:'02:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'KF Egnatia', away:'FC Petrocub', handicap:'0 : 3/4' },
+  { date:'16/07', time:'02:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', home:'Sutjeska Niksic', away:'Kairat Almaty', handicap:'3/4 : 0' },
+  { date:'15/07', time:'21:30', league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'eu', home:'KF Malisheva [n]', away:'KF Vllaznia', handicap:'0 : 1/2' },
+  { date:'16/07', time:'01:30', league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'eu', home:'Decic Tuzi', away:'FK Liepaja', handicap:'1/4 : 0' },
+  { date:'15/07', time:'22:30', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'[4] JIPPO Joensuu', away:'[6] MP Mikkeli', handicap:'0 : 1' },
+  { date:'16/07', time:'00:00', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'[14] Libertad FC de Loja', away:'[9] Tecnico Universitario', handicap:'0 : 1/4' },
+  { date:'16/07', time:'05:00', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'[10] Leones FC Quito', away:'[5] Deportivo Cuenca', handicap:'0 : 1/4' },
+  { date:'16/07', time:'05:00', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'[6] Universidad Catolica del Ecuador', away:'[4] LDU Quito', handicap:'0 : 1/4' },
+  { date:'16/07', time:'07:30', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'[3] Barcelona SC', away:'[12] Guayaquil City', handicap:'0 : 3/4' },
+  { date:'16/07', time:'05:00', league:'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', flag:'bo', home:'Real Potosi', away:'CD San Antonio Bulo Bulo', handicap:'0 : 3/4' },
+  { date:'16/07', time:'07:00', league:'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', flag:'bo', home:'The Strongest', away:'Oriente Petrolero', handicap:'0 : 1 1/2' },
+  { date:'16/07', time:'02:30', league:'ECUADOR LIGA PRO SERIE B', flag:'ec', home:'[6] Vinotinto del Ecuador', away:'[12] El Nacional', handicap:'0 : 1 1/2' },
+  { date:'16/07', time:'06:00', league:'USL CHAMPIONSHIP', flag:'us', home:'Miami FC', away:'Indy Eleven', handicap:'0 : 0' },
+  { date:'16/07', time:'06:00', league:'USL CHAMPIONSHIP', flag:'us', home:'Lexington SC', away:'New Mexico United', handicap:'0 : 3/4' },
+  { date:'16/07', time:'06:30', league:'USL CHAMPIONSHIP', flag:'us', home:'Sporting JAX', away:'Pittsburgh Riverhounds', handicap:'1/2 : 0' }
 ];
 
 var predictions = [
-  { league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'world', m:[['France','FRA','Spain','SPA','2 - 3']] },
-  { league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', m:[['KuPS','KUP','FK Vardar','VAR','0 - 1'],['Inter Club D Escaldes','INT','Lincoln Red Imps','LIN','2 - 1'],['FC Iberia 1999','FCI','Flora Tallinn','FLO','0 - 1'],['ETO FC Gyor','ETO','Vikingur Reykjavik','VIK','1 - 1'],['Riga FC','RIG','FC Ararat Armenia','ARA','2 - 0'],['Levski Sofia','LEV','Borac Banja Luka','BOR','1 - 2'],['The New Saints','TNS','Sabah Baku','SAB','1 - 0'],['Drita FC [n]','DRI','Kauno Zalgiris','KAU','3 - 1'],['Shamrock Rovers','SHA','Floriana FC','FLO','0 - 1'],['Larne FC','LAR','Tre Fiori','TRE','0 - 2']] },
-  { league:'AUSTRALIA CUP', flag:'au', m:[['APIA Leichhardt FC','API','Peninsula Power','PEN','0 - 1'],['Rochedale Rovers','ROC','SD Raiders','SDR','1 - 0']] },
-  { league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', m:[['[11] Zhejiang Professional FC','ZHE','[14] Qingdao Hainiu','QIN','2 - 1']] },
-  { league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'eu', m:[['SP La Fiorita [n]','LAF','FC UNA Strassen','UNA','1 - 0']] }
+  { league:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', flag:'world', m:[['England','ENG','Argentina','ARG','1 - 2']] },
+  { league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', m:[['Craiova','CRA','FC Maxline Vitebsk','FCV','2 - 1'],['FC Atert Bissen','FCA','KI Klaksvik','KIK','1 - 1'],['KF Egnatia','KFE','FC Petrocub','FCP','0 - 2'],['Sutjeska Niksic','SUT','Kairat Almaty','KAI','3 - 2']] },
+  { league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'eu', m:[['KF Malisheva [n]','KFM','KF Vllaznia','KFV','1 - 0'],['Decic Tuzi','DEC','FK Liepaja','FKL','2 - 2']] },
+  { league:'FINLAND YKKOSLIIGA', flag:'fi', m:[['[4] JIPPO Joensuu','JIP','[6] MP Mikkeli','MPM','3 - 1']] },
+  { league:'ECUADOR LIGA PRO SERIE A', flag:'ec', m:[['[14] Libertad FC de Loja','LIB','[9] Tecnico Universitario','TEC','1 - 2'],['[10] Leones FC Quito','LEO','[5] Deportivo Cuenca','DEP','0 - 1'],['[6] Universidad Catolica del Ecuador','UNI','[4] LDU Quito','LDU','2 - 3'],['[3] Barcelona SC','BAR','[12] Guayaquil City','GUA','3 - 0']] },
+  { league:'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', flag:'bo', m:[['Real Potosi','REA','CD San Antonio Bulo Bulo','SAN','1 - 3'],['The Strongest','THE','Oriente Petrolero','ORI','2 - 0']] },
+  { league:'ECUADOR LIGA PRO SERIE B', flag:'ec', m:[['[6] Vinotinto del Ecuador','VIN','[12] El Nacional','ELN','0 - 0']] },
+  { league:'USL CHAMPIONSHIP', flag:'us', m:[['Miami FC','MIA','Indy Eleven','IND','1 - 2'],['Lexington SC','LEX','New Mexico United','NEW','0 - 3'],['Sporting JAX','SPO','Pittsburgh Riverhounds','PIT','2 - 1']] }
 ];
 
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'world', h:'France', ha:'FRA', a:'Spain', aa:'SPA', dt:'15 Jul 2026 \u2022 02:00 WIB', hc:'0 : 1/4', sc:'2 - 3' },
-    { lg:'UEFA CHAMPIONS LEAGUE QUALIFIERS', fl:'eu', h:'Drita FC [n]', ha:'DRI', a:'Kauno Zalgiris', aa:'KAU', dt:'15 Jul 2026 \u2022 01:00 WIB', hc:'0 : 1/4', sc:'3 - 1' }
+    { lg:'WORLD CUP 2026 [ IN CANADA, MEXICO & USA ]', fl:'world', h:'England', ha:'ENG', a:'Argentina', aa:'ARG', dt:'16 Jul 2026 \u2022 02:00 WIB', hc:'0 : 0', sc:'1 - 2' },
+    { lg:'BOLIVIA PROFESSIONAL FOOTBALL LEAGUE', fl:'bo', h:'The Strongest', ha:'THE', a:'Oriente Petrolero', aa:'ORI', dt:'16 Jul 2026 \u2022 07:00 WIB', hc:'0 : 1 1/2', sc:'2 - 0' }
   ];
 
   var h = '';
