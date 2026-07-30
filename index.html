@@ -1403,7 +1403,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secJadwal" style="display:none">
         <div class="anim-in d6">
           <div class="flex items-center justify-between mb-5">
-            <h2 class="font-bold text-base">Jadwal &amp; Handicap 29 - 30 Juli 2026</h2>
+            <h2 class="font-bold text-base">Jadwal &amp; Handicap 31 JULI - 01 AGUSTUS 2026</h2>
             <span class="text-[11px] text-white/25" id="matchCountLabel">0 pertandingan</span>
           </div>
           <div id="scheduleContainer"></div>
@@ -1417,7 +1417,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secPrediksi" style="display:none">
         <div class="flex items-center gap-2 mb-5 anim-in d1">
           <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
-          <h2 class="font-bold text-base">Prediksi Pertandingan 29 - 30 Juli 2026</h2>
+          <h2 class="font-bold text-base">Prediksi Pertandingan 31 JULI - 01 AGUSTUS 2026</h2>
         </div>
         <div id="prediksiList"></div>
       </div>
@@ -2496,64 +2496,84 @@ function renderWCGroup(group) {
 }
 
 var leagueOrder = [
-  'SYDNEY SUPER CUP [ IN AUSTRALIA ]', 'UEFA CHAMPIONS LEAGUE QUALIFIERS', 'UEFA CONFERENCE LEAGUE QUALIFIERS',
-  'PREMIER LEAGUE SUMMER SERIES [ IN USA ]', 'FINLAND YKKOSLIIGA', 'KOREA CUP',
-  'BRAZIL SERIE A', 'ARGENTINA LIGA PROFESIONAL', 'COPA SUDAMERICANA',
-  'PARAGUAY PRIMERA DIVISION', 'USL CHAMPIONSHIP'
+  'ASEAN CHAMPIONSHIP 2026', 'NORWAY ELITESERIEN', 'RUSSIA PREMIER LEAGUE', 'AUSTRIA BUNDESLIGA',
+  'CHINA FOOTBALL SUPER LEAGUE', 'BELGIUM SUPER CUP', 'POLAND EKSTRAKLASA', 'DENMARK 1ST DIV',
+  'IRELAND PREMIER DIVISION', 'FINLAND YKKOSLIIGA', 'AUSTRIA UNI LIGA', 'GERMANY FIRST LEAGUE',
+  'POLAND I LIGA', 'CROATIA SUPRELIGA', 'PRINS CHALLENGE LEAGUE', 'USA MAJOR LEAGUE SOCCER',
+  'MEXICO PRIMERA DIVISION', 'CHILE PRIMERA DIVISION', 'COLOMBIA PRIMERA A', 'URUGUAY TORNEO INTERMEDIO',
+  'USA CHAMPIONSHIP'
 ];
 
 var matches = [
-  { date:'29/07', time:'16:45', league:'SYDNEY SUPER CUP [ IN AUSTRALIA ]', flag:'au', home:'Sydney FC', away:'Tottenham Hotspur', handicap:'1 1/2 : 0' },
-  { date:'29/07', time:'22:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'kz', home:'Kairat Almaty', away:'Omonia Nicosia', handicap:'0 : 1/4' },
-  { date:'29/07', time:'23:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'lt', home:'Kauno Zalgiris [n]', away:'KI Klaksvik', handicap:'0 : 3/4' },
-  { date:'30/07', time:'00:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'pl', home:'Lech Poznan', away:'AGF Aarhus', handicap:'0 : 3/4' },
-  { date:'30/07', time:'00:30', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'il', home:'Hapoel Beer Sheva [n]', away:'Vikingur Reykjavik', handicap:'0 : 1' },
-  { date:'30/07', time:'00:30', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'ro', home:'CS Universitatea Craiova', away:'Levski Sofia', handicap:'0 : 1/2' },
-  { date:'30/07', time:'01:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'pl', home:'Gornik Zabrze', away:'Fenerbahce', handicap:'1 1/4 : 0' },
-  { date:'30/07', time:'01:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'rs', home:'Crvena Zvezda', away:'Larne', handicap:'0 : 2 3/4' },
-  { date:'30/07', time:'01:15', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'sk', home:'Slovan Bratislava', away:'Iberia', handicap:'0 : 1 1/2' },
-  { date:'29/07', time:'21:30', league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'xk', home:'KF Dukagjini [n]', away:'Lugano', handicap:'3/4 : 0' },
-  { date:'30/07', time:'00:00', league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'dk', home:'FC Copenhagen', away:'Polissya Zhytomyr', handicap:'0 : 3/4' },
-  { date:'30/07', time:'01:30', league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'at', home:'Rapid Wien', away:'FC Santa Coloma', handicap:'0 : 2 1/2' },
-  { date:'30/07', time:'06:30', league:'PREMIER LEAGUE SUMMER SERIES [ IN USA ]', flag:'us', home:'Liverpool', away:'Wrexham', handicap:'0 : 1 1/2' },
-  { date:'29/07', time:'22:30', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'[6] MP Mikkeli', away:'[8] KaPa Helsinki', handicap:'0 : 1/4' },
-  { date:'29/07', time:'17:00', league:'KOREA CUP', flag:'kr', home:'Gimcheon Sangmu FC', away:'Suwon FC', handicap:'0 : 1/4' },
-  { date:'30/07', time:'05:30', league:'BRAZIL SERIE A', flag:'br', home:'[18] Mirassol SP', away:'[19] Remo PA', handicap:'0 : 3/4' },
-  { date:'30/07', time:'05:30', league:'BRAZIL SERIE A', flag:'br', home:'[15] Internacional RS', away:'[2] Flamengo RJ', handicap:'1/2 : 0' },
-  { date:'30/07', time:'07:30', league:'BRAZIL SERIE A', flag:'br', home:'[4] Fluminense RJ', away:'[6] Bahia EC BA', handicap:'0 : 3/4' },
-  { date:'30/07', time:'07:30', league:'BRAZIL SERIE A', flag:'br', home:'[11] Vitoria BA', away:'[1] Palmeiras SP', handicap:'1/2 : 0' },
-  { date:'30/07', time:'00:30', league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', home:'CA Barracas Central', away:'Aldosivi', handicap:'0 : 1/4' },
-  { date:'30/07', time:'03:00', league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', home:'Defensa y Justicia', away:'Deportivo Riestra', handicap:'0 : 1/4' },
-  { date:'30/07', time:'05:15', league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', home:'Gimnasia La Plata', away:'CA River Plate', handicap:'1/4 : 0' },
-  { date:'30/07', time:'07:30', league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', home:'Instituto', away:'CA Platense', handicap:'0 : 1/4' },
-  { date:'30/07', time:'05:00', league:'COPA SUDAMERICANA', flag:'br', home:'Vasco da Gama RJ', away:'Independiente Medellin', handicap:'0 : 3/4' },
-  { date:'30/07', time:'07:30', league:'COPA SUDAMERICANA', flag:'pe', home:'Cienciano', away:'Lanus', handicap:'0 : 1/4' },
-  { date:'30/07', time:'07:30', league:'COPA SUDAMERICANA', flag:'br', home:'Red Bull Bragantino SP', away:'Sporting Cristal', handicap:'0 : 1 1/2' },
-  { date:'30/07', time:'02:00', league:'PARAGUAY PRIMERA DIVISION', flag:'py', home:'Sportivo Luqueno', away:'Sportivo Trinidense', handicap:'0 : 0' },
-  { date:'30/07', time:'04:30', league:'PARAGUAY PRIMERA DIVISION', flag:'py', home:'Nacional Asuncion', away:'Olimpia Asuncion', handicap:'1/4 : 0' },
-  { date:'30/07', time:'06:00', league:'USL CHAMPIONSHIP', flag:'us', home:'Pittsburgh Riverhounds', away:'FC Tulsa', handicap:'0 : 1/4' },
-  { date:'30/07', time:'06:30', league:'USL CHAMPIONSHIP', flag:'us', home:'Louisville City FC', away:'Birmingham Legion', handicap:'0 : 1 1/4' }
+  { date:'31/07', time:'17:00', league:'ASEAN CHAMPIONSHIP 2026', flag:'asean', home:'Timor Leste [n]', away:'Indonesia', handicap:'4 1/2 : 0' },
+  { date:'31/07', time:'20:00', league:'ASEAN CHAMPIONSHIP 2026', flag:'vn', home:'Vietnam', away:'Singapore', handicap:'0 : 1/2' },
+  { date:'01/08', time:'00:00', league:'NORWAY ELITESERIEN', flag:'no', home:'Valerenga', away:'Ham-Kam', handicap:'0 : 1/2' },
+  { date:'01/08', time:'02:00', league:'NORWAY ELITESERIEN', flag:'no', home:'Bodo Glimt', away:'Lillestrom', handicap:'0 : 1 3/4' },
+  { date:'01/08', time:'00:00', league:'RUSSIA PREMIER LEAGUE', flag:'ru', home:'Rubin Moscow', away:'Rostov FC', handicap:'1/4 : 0' },
+  { date:'01/08', time:'00:30', league:'AUSTRIA BUNDESLIGA', flag:'at', home:'LAK Linz', away:'Grazer AK', handicap:'0 : 3/4' },
+  { date:'31/07', time:'19:35', league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', home:'Henan FC', away:'Dalian Yingbo', handicap:'0 : 1/2' },
+  { date:'01/08', time:'02:00', league:'BELGIUM SUPER CUP', flag:'be', home:'Club Brugge', away:'Union Saint-Gilloise', handicap:'0 : 1/4' },
+  { date:'31/07', time:'23:00', league:'POLAND EKSTRAKLASA', flag:'pl', home:'Wisla Plock', away:'Widzew Lodz', handicap:'1/4 : 0' },
+  { date:'01/08', time:'02:00', league:'POLAND EKSTRAKLASA', flag:'pl', home:'Motor Lublin', away:'Jagiellonia Bialystok', handicap:'0 : 1' },
+  { date:'31/07', time:'23:00', league:'DENMARK 1ST DIV', flag:'dk', home:'Aarhus Fremad', away:'Aalborg', handicap:'0 : 1/2' },
+  { date:'01/08', time:'00:00', league:'DENMARK 1ST DIV', flag:'dk', home:'Herfolge Koge', away:'Vejle', handicap:'1/4 : 0' },
+  { date:'01/08', time:'00:00', league:'DENMARK 1ST DIV', flag:'dk', home:'AB Gladsaxe', away:'Fredericia', handicap:'1/4 : 0' },
+  { date:'01/08', time:'01:45', league:'IRELAND PREMIER DIVISION', flag:'ie', home:'Dundalk', away:'Sligo Rovers', handicap:'0 : 1/4' },
+  { date:'01/08', time:'02:00', league:'IRELAND PREMIER DIVISION', flag:'ie', home:'Drogheda United', away:'Shamrock Rovers', handicap:'1/2 : 0' },
+  { date:'31/07', time:'23:30', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'FC KTP', away:'Seinajoen JK Akatemia', handicap:'0 : 1/2' },
+  { date:'31/07', time:'23:30', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'Ekenas IF', away:'KuPS Kuopio', handicap:'0 : 1/2' },
+  { date:'31/07', time:'23:30', league:'FINLAND YKKOSLIIGA', flag:'fi', home:'FC Honka', away:'Haka', handicap:'0 : 1/2' },
+  { date:'31/07', time:'23:30', league:'AUSTRIA UNI LIGA', flag:'at', home:'ASK Voitsberg', away:'SKN St. Polten', handicap:'1/4 : 0' },
+  { date:'31/07', time:'23:30', league:'AUSTRIA UNI LIGA', flag:'at', home:'Admira Wacker', away:'SK Rapid Wien Am', handicap:'0 : 1/4' },
+  { date:'31/07', time:'23:30', league:'AUSTRIA UNI LIGA', flag:'at', home:'Kapfenberger SV', away:'FC Liefering', handicap:'3/4 : 0' },
+  { date:'31/07', time:'23:30', league:'AUSTRIA UNI LIGA', flag:'at', home:'Young Violets Austria Wien', away:'Blau Weiss Linz', handicap:'1/4 : 0' },
+  { date:'01/08', time:'02:00', league:'AUSTRIA UNI LIGA', flag:'at', home:'Floridsdorfer AC', away:'SV Stripfing', handicap:'0 : 1/4' },
+  { date:'01/08', time:'00:00', league:'GERMANY FIRST LEAGUE', flag:'de', home:'Sporia Berlin', away:'FC Zibo', handicap:'0 : 1 3/4' },
+  { date:'31/07', time:'23:00', league:'POLAND I LIGA', flag:'pl', home:'LKS Lodz', away:'Polonia Bytom', handicap:'0 : 1/4' },
+  { date:'01/08', time:'02:00', league:'CROATIA SUPRELIGA', flag:'hr', home:'NK Osijek Zagreb', away:'Slaven Koprivnica', handicap:'0 : 1/2' },
+  { date:'01/08', time:'00:30', league:'PRINS CHALLENGE LEAGUE', flag:'ch', home:'WSG Tirol', away:'Neuchatel Xamax', handicap:'0 : 1/4' },
+  { date:'01/08', time:'00:30', league:'PRINS CHALLENGE LEAGUE', flag:'ch', home:'Stade Nyonnais', away:'FC Schaffhausen', handicap:'0 : 1/2' },
+  { date:'01/08', time:'00:30', league:'PRINS CHALLENGE LEAGUE', flag:'ch', home:'Yverdon Sport', away:'Etoile Carouge', handicap:'0 : 1/4' },
+  { date:'01/08', time:'01:15', league:'PRINS CHALLENGE LEAGUE', flag:'ch', home:'SC Kriens', away:'Winterthur', handicap:'1/2 : 0' },
+  { date:'01/08', time:'06:30', league:'USA MAJOR LEAGUE SOCCER', flag:'us', home:'New York City FC', away:'Toronto FC', handicap:'0 : 3/4' },
+  { date:'01/08', time:'08:00', league:'MEXICO PRIMERA DIVISION', flag:'mx', home:'Puebla FC', away:'Guadalajara Chivas', handicap:'0 : 1/4' },
+  { date:'01/08', time:'10:00', league:'MEXICO PRIMERA DIVISION', flag:'mx', home:'Atletico San Luis', away:'Tijuana', handicap:'0 : 1/2' },
+  { date:'01/08', time:'10:00', league:'MEXICO PRIMERA DIVISION', flag:'mx', home:'FC Juarez', away:'Pumas UNAM', handicap:'1/4 : 0' },
+  { date:'01/08', time:'07:00', league:'CHILE PRIMERA DIVISION', flag:'cl', home:'Universidad de Concepcion', away:'Audax Italiano', handicap:'0 : 0' },
+  { date:'01/08', time:'08:00', league:'COLOMBIA PRIMERA A', flag:'co', home:'Fortaleza CDF', away:'Deportivo Pereira', handicap:'0 : 1/4' },
+  { date:'01/08', time:'05:30', league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', home:'Montevideo City Torque', away:'Montevideo Wanderers', handicap:'0 : 1/2' },
+  { date:'01/08', time:'08:00', league:'USA CHAMPIONSHIP', flag:'us', home:'San Antonio FC', away:'Indy Eleven', handicap:'0 : 1/2' }
 ];
 
 var predictions = [
-  { league:'SYDNEY SUPER CUP [ IN AUSTRALIA ]', flag:'au', m:[['Sydney FC','SYD','Tottenham Hotspur','TOT','2 - 1']] },
-  { league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'eu', m:[['Kairat Almaty','KAI','Omonia Nicosia','OMO','1 - 0'],['Kauno Zalgiris [n]','KAU','KI Klaksvik','KLA','2 - 1'],['Lech Poznan','LEC','AGF Aarhus','AGF','1 - 2'],['Hapoel Beer Sheva [n]','HAP','Vikingur Reykjavik','VIK','3 - 1'],['CS Universitatea Craiova','CSU','Levski Sofia','LEV','2 - 0'],['Gornik Zabrze','GOR','Fenerbahce','FEN','1 - 3'],['Crvena Zvezda','CRV','Larne','LAR','3 - 0'],['Slovan Bratislava','SLO','Iberia','IBE','2 - 1']] },
-  { league:'UEFA CONFERENCE LEAGUE QUALIFIERS', flag:'eu', m:[['KF Dukagjini [n]','KFD','Lugano','LUG','1 - 2'],['FC Copenhagen','COP','Polissya Zhytomyr','POL','2 - 0'],['Rapid Wien','RAP','FC Santa Coloma','SAN','3 - 1']] },
-  { league:'PREMIER LEAGUE SUMMER SERIES [ IN USA ]', flag:'us', m:[['Liverpool','LIV','Wrexham','WRE','3 - 0']] },
-  { league:'FINLAND YKKOSLIIGA', flag:'fi', m:[['[6] MP Mikkeli','MPM','[8] KaPa Helsinki','KAP','2 - 1']] },
-  { league:'KOREA CUP', flag:'kr', m:[['Gimcheon Sangmu FC','GIM','Suwon FC','SUW','1 - 0']] },
-  { league:'BRAZIL SERIE A', flag:'br', m:[['[18] Mirassol SP','MIR','[19] Remo PA','REM','2 - 0'],['[15] Internacional RS','INT','[2] Flamengo RJ','FLA','1 - 2'],['[4] Fluminense RJ','FLU','[6] Bahia EC BA','BAH','2 - 1'],['[11] Vitoria BA','VIT','[1] Palmeiras SP','PAL','1 - 3']] },
-  { league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', m:[['CA Barracas Central','BAR','Aldosivi','ALD','2 - 0'],['Defensa y Justicia','DEF','Deportivo Riestra','RIE','1 - 0'],['Gimnasia La Plata','GIM','CA River Plate','RIV','1 - 2'],['Instituto','INS','CA Platense','PLA','2 - 1']] },
-  { league:'COPA SUDAMERICANA', flag:'sa', m:[['Vasco da Gama RJ','VAS','Independiente Medellin','MED','2 - 1'],['Cienciano','CIE','Lanus','LAN','1 - 1'],['Red Bull Bragantino SP','RBB','Sporting Cristal','SPO','3 - 1']] },
-  { league:'PARAGUAY PRIMERA DIVISION', flag:'py', m:[['Sportivo Luqueno','SLU','Sportivo Trinidense','STR','1 - 1'],['Nacional Asuncion','NAC','Olimpia Asuncion','OLI','2 - 1']] },
-  { league:'USL CHAMPIONSHIP', flag:'us', m:[['Pittsburgh Riverhounds','PIT','FC Tulsa','TUL','2 - 0'],['Louisville City FC','LOU','Birmingham Legion','BIR','3 - 1']] }
+  { league:'ASEAN CHAMPIONSHIP 2026', flag:'asean', m:[['Timor Leste [n]','TLS','Indonesia','IDN','1 - 3'],['Vietnam','VIE','Singapore','SIN','3 - 0']] },
+  { league:'NORWAY ELITESERIEN', flag:'no', m:[['Valerenga','VAL','Ham-Kam','HAM','4 - 2'],['Bodo Glimt','BOD','Lillestrom','LIL','3 - 1']] },
+  { league:'RUSSIA PREMIER LEAGUE', flag:'ru', m:[['Rubin Moscow','RUB','Rostov FC','ROS','1 - 2']] },
+  { league:'AUSTRIA BUNDESLIGA', flag:'at', m:[['LAK Linz','LAK','Grazer AK','GRA','4 - 1']] },
+  { league:'CHINA FOOTBALL SUPER LEAGUE', flag:'cn', m:[['Henan FC','HEN','Dalian Yingbo','DAL','3 - 1']] },
+  { league:'BELGIUM SUPER CUP', flag:'be', m:[['Club Brugge','CLU','Union Saint-Gilloise','USG','4 - 1']] },
+  { league:'POLAND EKSTRAKLASA', flag:'pl', m:[['Wisla Plock','WIS','Widzew Lodz','WID','0 - 1'],['Motor Lublin','MOT','Jagiellonia Bialystok','JAG','2 - 0']] },
+  { league:'DENMARK 1ST DIV', flag:'dk', m:[['Aarhus Fremad','AAR','Aalborg','AAL','4 - 1'],['Herfolge Koge','HER','Vejle','VEJ','1 - 3'],['AB Gladsaxe','ABG','Fredericia','FRE','2 - 4']] },
+  { league:'IRELAND PREMIER DIVISION', flag:'ie', m:[['Dundalk','DUN','Sligo Rovers','SLI','4 - 1'],['Drogheda United','DRO','Shamrock Rovers','SHA','1 - 3']] },
+  { league:'FINLAND YKKOSLIIGA', flag:'fi', m:[['FC KTP','KTP','Seinajoen JK Akatemia','SJK','2 - 1'],['Ekenas IF','EKE','KuPS Kuopio','KUP','1 - 0'],['FC Honka','HON','Haka','HAK','4 - 0']] },
+  { league:'AUSTRIA UNI LIGA', flag:'at', m:[['ASK Voitsberg','ASK','SKN St. Polten','SKN','2 - 1'],['Admira Wacker','ADM','SK Rapid Wien Am','RAP','3 - 1'],['Kapfenberger SV','KAP','FC Liefering','LIE','1 - 2'],['Young Violets Austria Wien','YOU','Blau Weiss Linz','BLA','0 - 1'],['Floridsdorfer AC','FLO','SV Stripfing','STR','1 - 2']] },
+  { league:'GERMANY FIRST LEAGUE', flag:'de', m:[['Sporia Berlin','SPO','FC Zibo','ZIB','4 - 1']] },
+  { league:'POLAND I LIGA', flag:'pl', m:[['LKS Lodz','LKS','Polonia Bytom','BYT','3 - 1']] },
+  { league:'CROATIA SUPRELIGA', flag:'hr', m:[['NK Osijek Zagreb','OSI','Slaver Koprivnica','SLA','1 - 1']] },
+  { league:'PRINS CHALLENGE LEAGUE', flag:'ch', m:[['WSG Tirol','WSG','Neuchatel Xamax','NEU','2 - 1'],['Stade Nyonnais','NYO','FC Schaffhausen','SCH','2 - 0'],['Yverdon Sport','YVE','Etoile Carouge','ETO','3 - 0'],['SC Kriens','KRI','Winterthur','WIN','1 - 0']] },
+  { league:'USA MAJOR LEAGUE SOCCER', flag:'us', m:[['New York City FC','NYC','Toronto FC','TOR','2 - 0']] },
+  { league:'MEXICO PRIMERA DIVISION', flag:'mx', m:[['Puebla FC','PUE','Guadalajara Chivas','GUA','2 - 1'],['Atletico San Luis','ATL','Tijuana','TIJ','4 - 1'],['FC Juarez','JUA','Pumas UNAM','PUM','1 - 0']] },
+  { league:'CHILE PRIMERA DIVISION', flag:'cl', m:[['Universidad de Concepcion','UDC','Audax Italiano','AUD','3 - 1']] },
+  { league:'COLOMBIA PRIMERA A', flag:'co', m:[['Fortaleza CDF','FOR','Deportivo Pereira','PER','3 - 0']] },
+  { league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', m:[['Montevideo City Torque','MCT','Montevideo Wanderers','WAN','2 - 0']] },
+  { league:'USA CHAMPIONSHIP', flag:'us', m:[['San Antonio FC','SAN','Indy Eleven','IND','3 - 1']] }
 ];
 
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'SYDNEY SUPER CUP [ IN AUSTRALIA ]', fl:'au', h:'Sydney FC', ha:'SYD', a:'Tottenham Hotspur', aa:'TOT', dt:'29 Jul 2026 \u2022 16:45 WIB', hc:'1 1/2 : 0', sc:'2 - 1' },
-    { lg:'UEFA CHAMPIONS LEAGUE QUALIFIERS', fl:'eu', h:'Gornik Zabrze', ha:'GOR', a:'Fenerbahce', aa:'FEN', dt:'30 Jul 2026 \u2022 01:00 WIB', hc:'1 1/4 : 0', sc:'1 - 3' }
+    { lg:'ASEAN CHAMPIONSHIP 2026', fl:'asean', h:'Timor Leste [n]', ha:'TLS', a:'Indonesia', aa:'IDN', dt:'31 Jul 2026 \u2022 17:00 WIB', hc:'4 1/2 : 0', sc:'1 - 3' },
+    { lg:'NORWAY ELITESERIEN', fl:'no', h:'Bodo Glimt', ha:'BOD', a:'Lillestrom', aa:'LIL', dt:'01 Aug 2026 \u2022 02:00 WIB', hc:'0 : 1 3/4', sc:'3 - 1' }
   ];
 
   var h = '';
