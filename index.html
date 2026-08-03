@@ -1395,7 +1395,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secJadwal" style="display:none">
         <div class="anim-in d6">
           <div class="flex items-center justify-between mb-5">
-            <h2 class="font-bold text-base">Jadwal &amp; Handicap 03 - 04 AGUSTUS 2026</h2>
+            <h2 class="font-bold text-base">Jadwal &amp; Handicap 04 - 05 AGUSTUS 2026</h2>
             <span class="text-[11px] text-white/25" id="matchCountLabel">0 pertandingan</span>
           </div>
           <div id="scheduleContainer"></div>
@@ -1409,7 +1409,7 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
       <div id="secPrediksi" style="display:none">
         <div class="flex items-center gap-2 mb-5 anim-in d1">
           <i data-lucide="sparkles" class="w-4 h-4 text-indigo-400"></i>
-          <h2 class="font-bold text-base">Prediksi Pertandingan 03 - 04 AGUSTUS 2026</h2>
+          <h2 class="font-bold text-base">Prediksi Pertandingan 04 - 05 AGUSTUS 2026</h2>
         </div>
         <div id="prediksiList"></div>
       </div>
@@ -2017,91 +2017,38 @@ BL1: [
     }
 
 var leagueOrder = [
-  'ASEAN CHAMPIONSHIP 2026', 'SWEDEN ALLSVENSKAN', 'FINLAND VEIKKAUSLIIGA', 'DENMARK SUPER LEAGUE',
-  'SCOTLAND PREMIERSHIP', 'SWEDEN SUPERETTAN', 'POLAND EKSTRAKLASA', 'NORWAY 1ST DIV',
-  'ICELAND PREMIER LEAGUE', 'ROMANIA SUPERLIGA', 'POLAND 1ST LIGA', 'ENGLISH LEAGUE CUP QUALIFIERS',
-  'BULGARIA FIRST PROFESSIONAL FOOTBALL LEAGUE', 'ICELAND 1ST DIV', 'HUNGARY LIGA NB 1', 'SERBIA SUPERLIGA',
-  'RUSSIA FIRST LEAGUE', 'LITHUANIA A LEAGUE', 'ARGENTINA LIGA PROFESIONAL', 'BRAZIL CUP',
-  'ECUADOR LIGA PRO SERIE A', 'PARAGUAY PRIMERA DIVISION', 'COSTA RICA PRIMERA DIVISION', 'ARGENTINA PRIMERA NACIONAL',
-  'URUGUAY TORNEO INTERMEDIO', 'CHILE PRIMERA B', 'URUGUAY SEGUNDA DIVISION'
+  'ASEAN CHAMPIONSHIP 2026', 'ICELAND PREMIER LEAGUE', 'UEFA CHAMPIONS LEAGUE QUALIFIERS',
+  'UEFA EUROPA LEAGUE QUALIFIERS'
 ];
 
 var matches = [
-  { date:'03/08', time:'17:30', league:'ASEAN CHAMPIONSHIP 2026', flag:'id', home:'Cambodia', away:'Timor-Leste', handicap:'0 : 1 1/2' },
-  { date:'03/08', time:'20:30', league:'ASEAN CHAMPIONSHIP 2026', flag:'id', home:'Indonesia', away:'Vietnam', handicap:'0 : 0' },
-  { date:'04/08', time:'00:00', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'[16] Halmstads', away:'[1] IK Sirius FK', handicap:'1 1/2 : 0' },
-  { date:'04/08', time:'00:00', league:'SWEDEN ALLSVENSKAN', flag:'se', home:'[4] Djurgardens', away:'[6] Vasteras SK', handicap:'0 : 1 1/4' },
-  { date:'03/08', time:'23:00', league:'FINLAND VEIKKAUSLIIGA', flag:'fi', home:'[11] Seinajoen JK', away:'[4] HJK Helsinki', handicap:'1/2 : 0' },
-  { date:'04/08', time:'00:00', league:'DENMARK SUPER LEAGUE', flag:'dk', home:'Odense BK', away:'Sonderjyske', handicap:'0 : 1/4' },
-  { date:'04/08', time:'01:30', league:'SCOTLAND PREMIERSHIP', flag:'sc', home:'Celtic FC', away:'Dundee', handicap:'0 : 2' },
-  { date:'04/08', time:'00:05', league:'SWEDEN SUPERETTAN', flag:'se', home:'[14] Orebro', away:'[15] IFK Varnamo', handicap:'0 : 1/4' },
-  { date:'04/08', time:'00:00', league:'POLAND EKSTRAKLASA', flag:'pl', home:'Cracovia Krakow', away:'Pogon Szczecin', handicap:'0 : 1/4' },
-  { date:'04/08', time:'00:00', league:'NORWAY 1ST DIV', flag:'no', home:'[8] Ranheim', away:'[4] Haugesund', handicap:'1/4 : 0' },
-  { date:'04/08', time:'02:15', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'Valur', away:'Stjarnan', handicap:'0 : 0' },
-  { date:'03/08', time:'22:30', league:'ROMANIA SUPERLIGA', flag:'ro', home:'Universitatea Cluj', away:'Botosani', handicap:'0 : 1/2' },
-  { date:'04/08', time:'01:30', league:'ROMANIA SUPERLIGA', flag:'ro', home:'FCSB', away:'Farul Constanta', handicap:'0 : 3/4' },
-  { date:'04/08', time:'00:00', league:'POLAND 1ST LIGA', flag:'pl', home:'MZKS Chrobry Glogow', away:'Odra Opole', handicap:'0 : 1/4' },
-  { date:'04/08', time:'01:30', league:'ENGLISH LEAGUE CUP QUALIFIERS', flag:'eng', home:'York City', away:'Crawley Town', handicap:'0 : 3/4' },
-  { date:'04/08', time:'01:15', league:'BULGARIA FIRST PROFESSIONAL FOOTBALL LEAGUE', flag:'bg', home:'Spartak Varna', away:'Lokomotiv Plovdiv', handicap:'1/4 : 0' },
-  { date:'03/08', time:'21:00', league:'ICELAND 1ST DIV', flag:'is', home:'[7] IF Vestri', away:'[6] Grotta', handicap:'0 : 1/2' },
-  { date:'03/08', time:'23:30', league:'HUNGARY LIGA NB 1', flag:'hu', home:'Zalaegerszegi TE', away:'Paksi FC', handicap:'1/4 : 0' },
-  { date:'04/08', time:'02:00', league:'SERBIA SUPERLIGA', flag:'rs', home:'FK Zeleznicar Pancevo', away:'Mladost Lucani', handicap:'0 : 3/4' },
-  { date:'04/08', time:'00:00', league:'SERBIA SUPERLIGA', flag:'rs', home:'FK Vojvodina', away:'FK Macva Sabac', handicap:'0 : 2 1/2' },
-  { date:'03/08', time:'21:00', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'FC Ufa', away:'KAMAZ Naberezhnye Chelny', handicap:'0 : 1/4' },
-  { date:'03/08', time:'23:30', league:'RUSSIA FIRST LEAGUE', flag:'ru', home:'FC Veles Moscow', away:'FC Rotor Volgograd', handicap:'1/2 : 0' },
-  { date:'03/08', time:'22:45', league:'LITHUANIA A LEAGUE', flag:'lt', home:'[9] FA Siauliai', away:'[6] Banga Gargzdai', handicap:'1/2 : 0' },
-  { date:'03/08', time:'23:30', league:'LITHUANIA A LEAGUE', flag:'lt', home:'[8] FK Panevezys', away:'[5] Dziugas Telsiai', handicap:'1/4 : 0' },
-  { date:'04/08', time:'02:45', league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', home:'CA Sarmiento', away:'Independiente Rivadavia', handicap:'1/4 : 0' },
-  { date:'04/08', time:'05:00', league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', home:'Velez Sarsfield', away:'CA Independiente', handicap:'0 : 0' },
-  { date:'04/08', time:'05:00', league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', home:'CA Platense', away:'Talleres Cordoba', handicap:'0 : 1/4' },
-  { date:'04/08', time:'07:15', league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', home:'Central Cordoba Santiago del Estero', away:'San Lorenzo', handicap:'1/4 : 0' },
-  { date:'04/08', time:'07:15', league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', home:'CA Huracan', away:'Atletico Tucuman', handicap:'0 : 1/2' },
-  { date:'04/08', time:'07:00', league:'BRAZIL CUP', flag:'br', home:'Atl Paranaense', away:'Vitoria BA', handicap:'0 : 3/4' },
-  { date:'04/08', time:'07:00', league:'ECUADOR LIGA PRO SERIE A', flag:'ec', home:'[6] LDU Quito', away:'[15] Delfin SC', handicap:'0 : 1 1/2' },
-  { date:'04/08', time:'02:00', league:'PARAGUAY PRIMERA DIVISION', flag:'py', home:'Sportivo Trinidense', away:'Sportivo San Lorenzo', handicap:'0 : 1' },
-  { date:'04/08', time:'04:30', league:'PARAGUAY PRIMERA DIVISION', flag:'py', home:'Deportivo Recoleta', away:'Nacional Asuncion', handicap:'1/2 : 0' },
-  { date:'04/08', time:'09:00', league:'COSTA RICA PRIMERA DIVISION', flag:'cr', home:'Perez Zeledon', away:'Cartagines', handicap:'1/2 : 0' },
-  { date:'04/08', time:'02:00', league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', home:'CA Guemes', away:'Deportivo Tristan Suarez', handicap:'0 : 0' },
-  { date:'04/08', time:'05:00', league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', home:'Defensor Sporting', away:'CA Cerro', handicap:'0 : 3/4' },
-  { date:'04/08', time:'07:00', league:'CHILE PRIMERA B', flag:'cl', home:'Deportes Temuco', away:'Deportes Copiapo', handicap:'0 : 1/2' },
-  { date:'04/08', time:'02:00', league:'URUGUAY SEGUNDA DIVISION', flag:'uy', home:'Atenas de San Carlos', away:'Colon FC', handicap:'1/4 : 0' }
+  { date:'04/08', time:'17:00', league:'ASEAN CHAMPIONSHIP 2026', flag:'mm', home:'Myanmar', away:'Laos', handicap:'0 : 2 1/2' },
+  { date:'04/08', time:'20:00', league:'ASEAN CHAMPIONSHIP 2026', flag:'ph', home:'Philippines', away:'Thailand', handicap:'1 1/2 : 0' },
+  { date:'05/08', time:'01:30', league:'ICELAND PREMIER LEAGUE', flag:'is', home:'Thor Akureyri', away:'Breidablik', handicap:'3/4 : 0' },
+  { date:'04/08', time:'23:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'am', home:'FC Ararat-Armenia [n]', away:'NK Celje', handicap:'0 : 0' },
+  { date:'04/08', time:'23:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'se', home:'Mjallby', away:'Slovan Bratislava', handicap:'0 : 1/2' },
+  { date:'05/08', time:'00:30', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'bg', home:'Levski Sofia', away:'Kairat Almaty', handicap:'0 : 3/4' },
+  { date:'05/08', time:'00:30', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'il', home:'Hapoel Beer Sheva [n]', away:'Crvena Zvezda', handicap:'1/2 : 0' },
+  { date:'05/08', time:'01:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'be', home:'Union Saint-Gilloise [n]', away:'Bodo Glimt', handicap:'0 : 1/4' },
+  { date:'05/08', time:'01:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'cz', home:'Sparta Praha', away:'Lyon', handicap:'1/4 : 0' },
+  { date:'05/08', time:'01:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'gr', home:'Olympiacos', away:'NEC Nijmegen', handicap:'0 : 1' },
+  { date:'05/08', time:'01:00', league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'hr', home:'NK Dinamo Zagreb', away:'Kauno Zalgiris', handicap:'0 : 2' },
+  { date:'05/08', time:'02:00', league:'UEFA EUROPA LEAGUE QUALIFIERS', flag:'nir', home:'Larne', away:'Iberia 1999', handicap:'1/4 : 0' },
+  { date:'05/08', time:'02:00', league:'UEFA EUROPA LEAGUE QUALIFIERS', flag:'ie', home:'Shamrock Rovers', away:'Egnatia Rrogozhine', handicap:'0 : 1/2' }
 ];
 
 var predictions = [
-  { league:'ASEAN CHAMPIONSHIP 2026', flag:'id', m:[['Cambodia','CAM','Timor-Leste','TIM','1 - 2'],['Indonesia','IDN','Vietnam','VIE','2 - 1']] },
-  { league:'SWEDEN ALLSVENSKAN', flag:'se', m:[['[16] Halmstads','HAL','[1] IK Sirius FK','SIR','0 - 2'],['[4] Djurgardens','DJU','[6] Vasteras SK','VAS','3 - 1']] },
-  { league:'FINLAND VEIKKAUSLIIGA', flag:'fi', m:[['[11] Seinajoen JK','SEI','[4] HJK Helsinki','HJK','1 - 0']] },
-  { league:'DENMARK SUPER LEAGUE', flag:'dk', m:[['Odense BK','ODE','Sonderjyske','SON','2 - 2']] },
-  { league:'SCOTLAND PREMIERSHIP', flag:'sc', m:[['Celtic FC','CEL','Dundee','DUN','3 - 0']] },
-  { league:'SWEDEN SUPERETTAN', flag:'se', m:[['[14] Orebro','ORE','[15] IFK Varnamo','VAR','1 - 1']] },
-  { league:'POLAND EKSTRAKLASA', flag:'pl', m:[['Cracovia Krakow','CRA','Pogon Szczecin','POG','2 - 0']] },
-  { league:'NORWAY 1ST DIV', flag:'no', m:[['[8] Ranheim','RAN','[4] Haugesund','HAU','1 - 2']] },
-  { league:'ICELAND PREMIER LEAGUE', flag:'is', m:[['Valur','VAL','Stjarnan','STJ','2 - 1']] },
-  { league:'ROMANIA SUPERLIGA', flag:'ro', m:[['Universitatea Cluj','UCL','Botosani','BOT','1 - 0'],['FCSB','FCS','Farul Constanta','FAR','3 - 1']] },
-  { league:'POLAND 1ST LIGA', flag:'pl', m:[['MZKS Chrobry Glogow','CHR','Odra Opole','ODR','1 - 2']] },
-  { league:'ENGLISH LEAGUE CUP QUALIFIERS', flag:'eng', m:[['York City','YOR','Crawley Town','CRA','2 - 1']] },
-  { league:'BULGARIA FIRST PROFESSIONAL FOOTBALL LEAGUE', flag:'bg', m:[['Spartak Varna','SPA','Lokomotiv Plovdiv','LOK','0 - 2']] },
-  { league:'ICELAND 1ST DIV', flag:'is', m:[['[7] IF Vestri','VES','[6] Grotta','GRO','2 - 0']] },
-  { league:'HUNGARY LIGA NB 1', flag:'hu', m:[['Zalaegerszegi TE','ZAL','Paksi FC','PAK','1 - 3']] },
-  { league:'SERBIA SUPERLIGA', flag:'rs', m:[['FK Zeleznicar Pancevo','ZEL','Mladost Lucani','MLA','2 - 1'],['FK Vojvodina','VOJ','FK Macva Sabac','MAC','3 - 0']] },
-  { league:'RUSSIA FIRST LEAGUE', flag:'ru', m:[['FC Ufa','UFA','KAMAZ Naberezhnye Chelny','KAM','1 - 1'],['FC Veles Moscow','VEL','FC Rotor Volgograd','ROT','2 - 0']] },
-  { league:'LITHUANIA A LEAGUE', flag:'lt', m:[['[9] FA Siauliai','SIA','[6] Banga Gargzdai','BAN','2 - 1'],['[8] FK Panevezys','PAN','[5] Dziugas Telsiai','DZI','1 - 0']] },
-  { league:'ARGENTINA LIGA PROFESIONAL', flag:'ar', m:[['CA Sarmiento','SAR','Independiente Rivadavia','IND','2 - 1'],['Velez Sarsfield','VEL','CA Independiente','CAI','1 - 1'],['CA Platense','PLA','Talleres Cordoba','TAL','0 - 2'],['Central Cordoba Santiago del Estero','CCO','San Lorenzo','SLO','1 - 2'],['CA Huracan','HUR','Atletico Tucuman','TUC','3 - 1']] },
-  { league:'BRAZIL CUP', flag:'br', m:[['Atl Paranaense','CAP','Vitoria BA','VIT','2 - 0']] },
-  { league:'ECUADOR LIGA PRO SERIE A', flag:'ec', m:[['[6] LDU Quito','LDU','[15] Delfin SC','DEL','3 - 0']] },
-  { league:'PARAGUAY PRIMERA DIVISION', flag:'py', m:[['Sportivo Trinidense','TRI','Sportivo San Lorenzo','SSL','2 - 1'],['Deportivo Recoleta','REC','Nacional Asuncion','NAC','1 - 2']] },
-  { league:'COSTA RICA PRIMERA DIVISION', flag:'cr', m:[['Perez Zeledon','PER','Cartagines','CAR','2 - 1']] },
-  { league:'ARGENTINA PRIMERA NACIONAL', flag:'ar', m:[['CA Guemes','GUE','Deportivo Tristan Suarez','DTS','1 - 1']] },
-  { league:'URUGUAY TORNEO INTERMEDIO', flag:'uy', m:[['Defensor Sporting','DEF','CA Cerro','CER','3 - 1']] },
-  { league:'CHILE PRIMERA B', flag:'cl', m:[['Deportes Temuco','TEM','Deportes Copiapo','COP','1 - 2']] },
-  { league:'URUGUAY SEGUNDA DIVISION', flag:'uy', m:[['Atenas de San Carlos','ATE','Colon FC','COL','2 - 0']] }
+  { league:'ASEAN CHAMPIONSHIP 2026', flag:'mm', m:[['Myanmar','MYA','Laos','LAO','2 - 1'],['Philippines','PHI','Thailand','THA','1 - 3']] },
+  { league:'ICELAND PREMIER LEAGUE', flag:'is', m:[['Thor Akureyri','THO','Breidablik','BRE','0 - 3']] },
+  { league:'UEFA CHAMPIONS LEAGUE QUALIFIERS', flag:'am', m:[['FC Ararat-Armenia [n]','ARA','NK Celje','CEL','1 - 1'],['Mjallby','MJA','Slovan Bratislava','SLO','2 - 1'],['Levski Sofia','LEV','Kairat Almaty','KAI','0 - 2'],['Hapoel Beer Sheva [n]','HAP','Crvena Zvezda','CRV','1 - 0'],['Union Saint-Gilloise [n]','USG','Bodo Glimt','BOD','2 - 2'],['Sparta Praha','SPA','Lyon','LYO','1 - 2'],['Olympiacos','OLY','NEC Nijmegen','NEC','3 - 1'],['NK Dinamo Zagreb','DIN','Kauno Zalgiris','KAU','2 - 0']] },
+  { league:'UEFA EUROPA LEAGUE QUALIFIERS', flag:'nir', m:[['Larne','LAR','Iberia 1999','IBE','1 - 0'],['Shamrock Rovers','SHA','Egnatia Rrogozhine','EGN','2 - 1']] }
 ];
 
 function renderSpotlight() {
   var el = document.getElementById('spotlightCards');
   var sp = [
-    { lg:'ASEAN CHAMPIONSHIP 2026', fl:'id', h:'Cambodia', ha:'CAM', a:'Timor-Leste', aa:'TIM', dt:'03 Aug 2026 \u2022 17:30 WIB', hc:'0 : 1 1/2', sc:'1 - 2' },
-    { lg:'ASEAN CHAMPIONSHIP 2026', fl:'id', h:'Indonesia', ha:'IDN', a:'Vietnam', aa:'VIE', dt:'03 Aug 2026 \u2022 20:30 WIB', hc:'0 : 0', sc:'2 - 1' }
+    { lg:'ASEAN CHAMPIONSHIP 2026', fl:'mm', h:'Myanmar', ha:'MYA', a:'Laos', aa:'LAO', dt:'04 Aug 2026 \u2022 17:00 WIB', hc:'0 : 2 1/2', sc:'2 - 1' },
+    { lg:'ASEAN CHAMPIONSHIP 2026', fl:'ph', h:'Philippines', ha:'PHI', a:'Thailand', aa:'THA', dt:'04 Aug 2026 \u2022 20:00 WIB', hc:'1 1/2 : 0', sc:'1 - 3' }
   ];
 
   var h = '';
