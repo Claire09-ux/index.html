@@ -1305,14 +1305,6 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
           <i data-lucide="medal" class="w-[18px] h-[18px]"></i> 
           Klasemen
         </button>
-        <button class="nav-item anim-in d5" data-section="worldcup">
-          <i data-lucide="trophy" class="w-[18px] h-[18px]"></i> 
-          World Cup 2026
-        </button>
-        <button class="nav-item anim-in d6" data-section="bracket">
-          <i data-lucide="git-branch" class="w-[18px] h-[18px]"></i> 
-          Bracket WC 2026
-        </button>
       </nav>
 
       <div class="glass-static p-3 flex items-center gap-2 mt-4 anim-in d8">
@@ -1455,274 +1447,6 @@ body, .bg-scene, .glass, .glass-static, .glass-sidebar,
         <div id="klasemenContent" class="glass-static p-3 lg:p-4"></div>
       </div>
 
-      <div id="secWorldcup" style="display:none">
-        <div class="flex items-center gap-2 mb-5">
-          <i data-lucide="trophy" class="w-4 h-4 text-indigo-400"></i>
-          <h2 class="font-bold text-base">FIFA World Cup 2026</h2>
-          <span class="text-[10px] text-white/50 ml-2 hidden sm:inline">Group Stage</span>
-        </div>
-
-        <div class="flex gap-3 mb-4 flex-nowrap" id="wcTabs">
-          <div class="klasemen-tab active flex items-center gap-2" data-wcgroup="A"><span>A</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="B"><span>B</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="C"><span>C</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="D"><span>D</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="E"><span>E</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="F"><span>F</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="G"><span>G</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="H"><span>H</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="I"><span>I</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="J"><span>J</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="K"><span>K</span></div>
-          <div class="klasemen-tab flex items-center gap-2" data-wcgroup="L"><span>L</span></div>
-        </div>
-
-        <div id="wcContent" class="glass-static p-3 lg:p-4">
-          <div class="flex flex-col items-center gap-3 py-12">
-            <i data-lucide="trophy" class="w-10 h-10 text-white/10"></i>
-            <span class="text-sm text-white/30">Pilih grup untuk melihat klasemen</span>
-          </div>
-        </div>
-      </div> 
-
-        <!-- ═══════════════ BRACKET WORLD CUP 2026 ═══════════════ -->
-      <div id="secBracket" style="display:none">
-        <div class="glass-static p-5 mb-5 anim-in">
-          <div class="flex items-center gap-3 mb-1">
-            <i data-lucide="trophy" style="width:24px;height:24px;color:#fbbf24;filter:drop-shadow(0 0 6px rgba(251,191,36,0.50))"></i>
-            <h2 class="text-lg font-bold tracking-tight">Bracket World Cup 2026</h2>
-          </div>
-          <p class="text-xs text-white/30 ml-8">Bagan turnamen dari Round of 32 hingga Final</p>
-        </div>
-
-        <div class="bracket-scroll">
-          <div class="bracket-mobile-hint">← Geser untuk melihat bracket lengkap →</div>
-          <div class="bracket-grid" style="height:900px;">
-
-            <!-- ════════ ROUND OF 32 ════════ -->
-            <div class="bracket-round">
-              <div class="round-header">Round of 32</div>
-              <div class="round-body">
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/za.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">South Africa</span></div><span class="team-score">0</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ca.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Canada</span></div><span class="team-score">1</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/nl.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Netherlands</span></div><span class="team-score">1 (2)</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ma.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Morocco</span></div><span class="team-score">1 (3)</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/de.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Germany</span></div><span class="team-score">1 (3)</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/py.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Paraguay</span></div><span class="team-score">1 (4)</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/fr.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">France</span></div><span class="team-score">3</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/se.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Sweden</span></div><span class="team-score">0</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/be.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Belgium</span></div><span class="team-score">3</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/sn.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Senegal</span></div><span class="team-score">2</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/us.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">USA</span></div><span class="team-score">2</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ba.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Bosnia &amp; Herz.</span></div><span class="team-score">0</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/es.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Spain</span></div><span class="team-score">3</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/at.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Austria</span></div><span class="team-score">0</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/pt.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Portugal</span></div><span class="team-score">2</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/hr.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Croatia</span></div><span class="team-score">1</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/br.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Brazil</span></div><span class="team-score">2</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/jp.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Japan</span></div><span class="team-score">1</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ci.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Côte d'Ivoire</span></div><span class="team-score">1</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/no.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Norway</span></div><span class="team-score">2</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/mx.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Mexico</span></div><span class="team-score">2</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ec.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Ecuador</span></div><span class="team-score">0</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score">2</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/cd.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">DR Congo</span></div><span class="team-score">1</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ch.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Switzerland</span></div><span class="team-score">2</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/dz.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Algeria</span></div><span class="team-score">0</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/co.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Colombia</span></div><span class="team-score">1</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/gh.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Ghana</span></div><span class="team-score">0</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/au.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Australia</span></div><span class="team-score">1 (2)</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/eg.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Egypt</span></div><span class="team-score">1 (4)</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score">3</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/cv.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Cabo Verde</span></div><span class="team-score">2</span></div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- ════════ ROUND OF 16 ════════ -->
-            <div class="bracket-round">
-              <div class="round-header">Round of 16</div>
-              <div class="round-body">
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ca.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Canada</span></div><span class="team-score">0</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ma.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Morocco</span></div><span class="team-score">3</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/py.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Paraguay</span></div><span class="team-score">0</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/fr.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">France</span></div><span class="team-score">1</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/us.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">USA</span></div><span class="team-score">1</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/be.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Belgium</span></div><span class="team-score">4</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/pt.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Portugal</span></div><span class="team-score">0</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/es.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Spain</span></div><span class="team-score">1</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/br.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Brazil</span></div><span class="team-score">1</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/no.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Norway</span></div><span class="team-score">2</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/mx.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Mexico</span></div><span class="team-score">2</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score">3</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ch.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Switzerland</span></div><span class="team-score">0 (4)</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/co.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Colombia</span></div><span class="team-score">0 (3)</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score">3</span></div>
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/eg.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Egypt</span></div><span class="team-score">2</span></div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- ════════ QUARTER-FINALS ════════ -->
-            <div class="bracket-round">
-              <div class="round-header">Quarter-Finals</div>
-              <div class="round-body">
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/ma.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Morocco</span></div><span class="team-score">0</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/fr.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">France</span></div><span class="team-score">2</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row loser"><div class="team-info"><img src="https://flagcdn.com/w20/be.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Belgium</span></div><span class="team-score">1</span></div>
-                    <div class="team-row winner"><div class="team-info"><img src="https://flagcdn.com/w20/es.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Spain</span></div><span class="team-score">2</span></div>
-                  </div>
-                </div>
-
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/no.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Norway</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/gb-eng.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">England</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ch.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Switzerland</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/ar.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Argentina</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <!-- ════════ SEMI-FINALS ════════ -->
-            <div class="bracket-round">
-              <div class="round-header">Semi-Finals</div>
-              <div class="round-body">
-                <div class="match-pair">
-                  <div class="bracket-match">
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/fr.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">France</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
-                    <div class="team-row"><div class="team-info"><img src="https://flagcdn.com/w20/es.png" class="team-flag" alt="" onerror="this.style.display='none'"><span class="team-name">Spain</span></div><span class="team-score" style="color:rgba(255,255,255,0.28)">-</span></div>
-                  </div>
-                  <div class="bracket-match">
-                    <div class="team-row tbd-row"><span>TBD</span></div>
-                    <div class="team-row tbd-row"><span>TBD</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <!-- ════════ FINAL ════════ -->
-            <div class="bracket-round round-final-col">
-              <div class="round-header">Final</div>
-              <div class="round-body final-body-center">
-                <div class="champion-float">
-                  <div class="champion-box" id="championBox">
-                    <div class="champion-trophy-wrap">
-                      <i data-lucide="trophy" class="champion-trophy-icon"></i>
-                      <div class="champion-rays"></div>
-                    </div>
-                    <div class="champion-label">🏆 World Champion</div>
-                    <div class="champion-flag-wrap" id="championFlagWrap" style="display:none">
-                      <img id="championFlagImg" class="champion-flag-img" src="" alt="" />
-                    </div>
-                    <div class="champion-team" id="championTeamName">TBD</div>
-                  </div>
-                  <div class="champion-connector"></div>
-                </div>
-                <div class="match-pair single">
-                  <div class="bracket-match">
-                    <div class="team-row tbd-row"><span>TBD</span></div>
-                    <div class="team-row tbd-row"><span>TBD</span></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div>
-        </div>
       
       <footer class="text-center text-[11px] text-white/55 pb-4 mt-6">
         &copy; 2026 KAPSUL4D. All right reserved.
@@ -2047,8 +1771,7 @@ var teamFlagMap = {
       dashboard: { title: 'Dashboard', desc: 'Ringkasan Pertandingan & Spotlight Liga Top' },
       jadwal: { title: 'Jadwal Pertandingan', desc: 'Jadwal Lengkap Beserta Handicap Untuk Semua Liga' },
       prediksi: { title: 'Prediksi Pertandingan', desc: 'Prediksi Lengkap Semua Liga' },
-      klasemen: { title: 'Klasemen Liga', desc: '' },
-      worldcup: { title: 'World Cup 2026', desc: 'Klasemen Group Stage FIFA World Cup 2026' }
+      klasemen: { title: 'Klasemen Liga', desc: '' }
     };
 
     
@@ -2062,7 +1785,7 @@ var teamFlagMap = {
         this.classList.add('active');
         var sec = this.dataset.section; 
         currentSection = sec;
-        ['secDashboard', 'secJadwal', 'secPrediksi', 'secKlasemen', 'secWorldcup'].forEach(function (id) { 
+        ['secDashboard', 'secJadwal', 'secPrediksi', 'secKlasemen'].forEach(function (id) { 
           document.getElementById(id).style.display = 'none'; 
         });
         document.getElementById('sec' + sec.charAt(0).toUpperCase() + sec.slice(1)).style.display = '';
@@ -2110,7 +1833,7 @@ var ST = {
     [10, 'Real Sociedad', 38, 11, 13, 14, 59, 61, -2, 46, 'LDDLD'],
     [11, 'Espanyol', 38, 12, 10, 16, 43, 55, -12, 46, 'LLWWD'],
     [12, 'Athletic Bilbao', 38, 13, 6, 19, 43, 58, -15, 45, 'WLLDL'],
-    [13, 'Sevilla', 38, 12, 7, 19, 46, 60, -14, 43, 'WWWLL'],
+    [13, 'Sevilla', 38, 12, 7, 15, 46, 60, -14, 43, 'WWWLL'],
     [14, 'Alaves', 38, 11, 10, 17, 44, 56, -12, 43, 'LDWWL'],
     [15, 'Elche', 38, 10, 13, 15, 49, 57, -8, 43, 'LDLWL'],
     [16, 'Levante', 38, 11, 9, 18, 47, 61, -14, 42, 'LWWWL'],
@@ -2191,102 +1914,6 @@ BL1: [
       FL1: { ucl: 3,  uclQ: 3, uel: 4,  uecl: 5,  relPlayoff: 15, rel: 16 }
     };
 
-var WCGroups = {
-  A: [
-    [1, 'Mexico', 3, 3, 0, 0, 6, 0, 6, 9, 'WWW'],
-    [2, 'South Africa', 3, 1, 1, 1, 2, 3, -1, 4, 'LDW'],
-    [3, 'South Korea', 3, 1, 0, 2, 2, 3, -1, 3, 'WLL'],
-    [4, 'Czechia', 3, 0, 1, 2, 2, 6, -4, 1, 'LDL']
-  ],
-  B: [
-    [1, 'Switzerland', 3, 2, 1, 0, 7, 3, 4, 7, 'DWW'],
-    [2, 'Canada', 3, 1, 1, 1, 8, 3, 5, 4, 'DWL'],
-    [3, 'Bosnia and Herzegovina', 3, 1, 1, 1, 5, 6, -1, 4, 'DLW'],
-    [4, 'Qatar', 3, 0, 1, 2, 2, 10, -8, 1, 'DLL']
-  ],
-  C: [
-    [1, 'Brazil', 3, 2, 1, 0, 7, 1, 6, 7, 'DWW'],
-    [2, 'Morocco', 3, 2, 1, 0, 6, 3, 3, 7, 'DWW'],
-    [3, 'Scotland', 3, 1, 0, 2, 1, 4, -3, 3, 'WLL'],
-    [4, 'Haiti', 3, 0, 0, 3, 2, 8, -6, 0, 'LLL']
-  ],
-  D: [
-    [1, 'USA', 3, 2, 0, 1, 8, 4, 4, 6, 'WWL'],
-    [2, 'Australia', 3, 1, 1, 1, 2, 2, 0, 4, 'WLD'],
-    [3, 'Paraguay', 3, 1, 1, 1, 2, 4, -2, 4, 'LWD'],
-    [4, 'Türkiye', 3, 1, 0, 2, 3, 5, -2, 3, 'LLW']
-  ],
-  E: [
-    [1, 'Germany', 3, 2, 0, 1, 10, 4, 6, 6, 'WWL'],
-    [2, 'Ivory Coast', 3, 2, 0, 1, 4, 2, 2, 6, 'WLW'],
-    [3, 'Ecuador', 3, 1, 1, 1, 2, 2, 0, 4, 'LDW'],
-    [4, 'Curaçao', 3, 0, 1, 2, 1, 9, -8, 1, 'LDL']
-  ],
-  F: [
-    [1, 'Netherlands', 3, 2, 1, 0, 10, 4, 6, 7, 'DWW'],
-    [2, 'Japan', 3, 1, 2, 0, 7, 3, 4, 5, 'DWD'],
-    [3, 'Sweden', 3, 1, 1, 1, 7, 7, 0, 4, 'WLD'],
-    [4, 'Tunisia', 3, 0, 0, 3, 2, 12, -10, 0, 'LLL']
-  ],
-  G: [
-    [1, 'Belgium', 3, 1, 2, 0, 6, 2, 4, 5, 'DDW'],
-    [2, 'Egypt', 3, 1, 2, 0, 5, 3, 2, 5, 'DWD'],
-    [3, 'Iran', 3, 0, 3, 0, 3, 3, 0, 3, 'DDD'],
-    [4, 'New Zealand', 3, 0, 1, 2, 4, 10, -6, 1, 'DLL']
-  ],
-  H: [
-    [1, 'Spain', 3, 2, 1, 0, 5, 0, 5, 7, 'DWW'],
-    [2, 'Cabo Verde', 3, 0, 3, 0, 2, 2, 0, 3, 'DDD'],
-    [3, 'Uruguay', 3, 0, 2, 1, 3, 4, -1, 2, 'DDL'],
-    [4, 'Saudi Arabia', 3, 0, 2, 1, 1, 5, -4, 2, 'DLD']
-  ],
-  I: [
-    [1, 'France', 3, 3, 0, 0, 10, 2, 8, 9, 'WWW'],
-    [2, 'Norway', 3, 2, 0, 1, 8, 7, 1, 6, 'WWL'],
-    [3, 'Senegal', 3, 1, 0, 2, 8, 6, 2, 3, 'LLW'],
-    [4, 'Iraq', 3, 0, 0, 3, 1, 12, -11, 0, 'LLL']
-  ],
-  J: [
-    [1, 'Argentina', 3, 3, 0, 0, 8, 1, 7, 9, 'WWW'],
-    [2, 'Austria', 3, 1, 1, 1, 6, 6, 0, 4, 'WLD'],
-    [3, 'Algeria', 3, 1, 1, 1, 5, 7, -2, 4, 'LWD'],
-    [4, 'Jordan', 3, 0, 0, 3, 3, 8, -5, 0, 'LLL']
-  ],
-  K: [
-    [1, 'Colombia', 3, 2, 1, 0, 4, 1, 3, 7, 'WWD'],
-    [2, 'Portugal', 3, 1, 2, 0, 6, 1, 5, 5, 'DWD'],
-    [3, 'DR Congo', 3, 1, 1, 1, 4, 3, 1, 4, 'DLW'],
-    [4, 'Uzbekistan', 3, 0, 0, 3, 2, 11, -9, 0, 'LLL']
-  ],
-  L: [
-    [1, 'England', 3, 2, 1, 0, 6, 2, 4, 7, 'WDW'],
-    [2, 'Croatia', 3, 2, 0, 1, 5, 5, 0, 6, 'LWW'],
-    [3, 'Ghana', 3, 1, 1, 1, 2, 2, 0, 4, 'WDL'],
-    [4, 'Panama', 3, 0, 0, 3, 0, 4, -4, 0, 'LLL']
-  ]
-};
-
-var wcFlagMap = {
-  'Mexico': 'mx', 'South Africa': 'za', 'South Korea': 'kr', 'Czechia': 'cz',
-  'Canada': 'ca', 'Bosnia and Herzegovina': 'ba', 'Qatar': 'qa', 'Switzerland': 'ch',
-  'Brazil': 'br', 'Morocco': 'ma', 'Haiti': 'ht', 'Scotland': 'gb-sct',
-  'USA': 'us', 'Paraguay': 'py', 'Australia': 'au', 'T\u00fcrkiye': 'tr',
-  'Germany': 'de', 'Cura\u00e7ao': 'cw', 'Ivory Coast': 'ci', 'Ecuador': 'ec',
-  'Netherlands': 'nl', 'Japan': 'jp', 'Sweden': 'se', 'Tunisia': 'tn',
-  'Belgium': 'be', 'Egypt': 'eg', 'Iran': 'ir', 'New Zealand': 'nz',
-  'Spain': 'es', 'Cabo Verde': 'cv', 'Saudi Arabia': 'sa', 'Uruguay': 'uy',
-  'France': 'fr', 'Senegal': 'sn', 'Iraq': 'iq', 'Norway': 'no',
-  'Argentina': 'ar', 'Algeria': 'dz', 'Austria': 'at', 'Jordan': 'jo',
-  'Portugal': 'pt', 'DR Congo': 'cd', 'Uzbekistan': 'uz', 'Colombia': 'co',
-  'England': 'gb-eng', 'Croatia': 'hr', 'Ghana': 'gh', 'Panama': 'pa'
-};
-
-function wcFlag(name) {
-  var code = wcFlagMap[name];
-  if (!code) return '<div class="team-crest bg-gradient-to-br from-gray-600 to-gray-800" style="font-size:6px">?</div>';
-  return '<img src="https://flagcdn.com/w40/' + code + '.png" class="w-5 h-[14px] rounded-[3px] object-cover flex-shrink-0" style="box-shadow:0 2px 6px rgba(0,0,0,0.35),inset 0 1px 0 rgba(255,255,255,0.15);" alt="' + name + '" loading="lazy" onerror="this.style.display=\'none\'">';
-}
-
     function getZoneClass(i, z) {
       if (i >= z.rel) return 'relegation';
       if (z.relPlayoff !== undefined && i === z.relPlayoff) return 'relegation-playoff';
@@ -2319,20 +1946,6 @@ function wcFlag(name) {
         renderManualTable(currentLeague);
       });
     });
-
-    var currentWCGroup = 'A';
-
-    document.querySelectorAll('#wcTabs .klasemen-tab').forEach(function (tab) {
-      tab.addEventListener('click', function () {
-        document.querySelectorAll('#wcTabs .klasemen-tab').forEach(function (t) { 
-          t.classList.remove('active'); 
-        });
-        this.classList.add('active');
-        currentWCGroup = this.dataset.wcgroup;
-        renderWCGroup(currentWCGroup);
-      });
-    });
-
 
     function renderManualTable(code) {
       var el = document.getElementById('klasemenContent');
@@ -2402,98 +2015,6 @@ function wcFlag(name) {
           '</div>' +
         '</div>';
     }
-
-function renderWCGroup(group) {
-  var el = document.getElementById('wcContent');
-  var data = WCGroups[group];
-  if (!data) {
-    el.innerHTML = '<div class="flex flex-col items-center gap-3 py-12"><i data-lucide="trophy" class="w-10 h-10 text-white/10"></i><span class="text-sm text-white/30">Data Grup ' + group + ' belum tersedia</span></div>';
-    lucide.createIcons();
-    return;
-  }
-  var wcGrid = '24px 22px 1fr 26px 26px 26px 26px 26px 26px 30px 30px 65px';
-
-  function getZone(i) {
-    if (i <= 1) return 'uecl';
-    if (i === 2) return 'uel';
-    return 'relegation';
-  }
-
-  var rows = '';
-  data.forEach(function (t, i) {
-    var gd = t[8] > 0 ? '+' + t[8] : t[8];
-    var gdC = t[8] > 0 ? 'text-green-400' : t[8] < 0 ? 'text-red-400' : 'text-white/40';
-    var zone = getZone(i);
-    var posC = 'text-white/30';
-    if (zone === 'uecl') posC = 'text-green-400';
-    else if (zone === 'uel') posC = 'text-orange-400';
-    else posC = 'text-red-400';
-
-    var prevZone = i > 0 ? getZone(i - 1) : '';
-    var nextZone = i < data.length - 1 ? getZone(i + 1) : '';
-    var isFirst = prevZone !== zone;
-    var isLast = nextZone !== zone;
-    var radius = '7px';
-    if (!isFirst && !isLast) radius = '0 7px 7px 0';
-    else if (isFirst && !isLast) radius = '7px 7px 0 0';
-    else if (!isFirst && isLast) radius = '0 7px 7px 0';
-
-    var formHTML = '';
-    if (t[10] && t[10].length > 0) {
-      formHTML = '<div class="flex items-center justify-center">' + formDots(t[10]) + '</div>';
-    } else {
-      formHTML = '<div class="flex items-center justify-center text-[10px] text-white/10">-</div>';
-    }
-    rows +=
-      '<div class="stand-row ' + zone + '" style="grid-template-columns:' + wcGrid + ';border-radius:' + radius + ';animation:fadeInUp .3s ' + (i * 0.05) + 's cubic-bezier(.4,0,.2,1) forwards;opacity:0">' +
-        '<div class="text-[11px] font-bold ' + posC + '">' + t[0] + '</div>' +
-        '<div class="cell-crest">' + wcFlag(t[1]) + '</div>' +
-        '<div class="text-[11px] sm:text-[12px] font-semibold truncate pl-0.5">' + t[1] + '</div>' +
-        '<div class="cell-mp text-[10px] text-white">' + t[2] + '</div>' +
-        '<div class="cell-w text-[10px] text-white">' + t[3] + '</div>' +
-        '<div class="cell-d text-[10px] text-white">' + t[4] + '</div>' +
-        '<div class="cell-l text-[10px] text-white">' + t[5] + '</div>' +
-        '<div class="cell-gf text-[10px] text-white">' + t[6] + '</div>' +
-        '<div class="cell-ga text-[10px] text-white">' + t[7] + '</div>' +
-        '<div class="text-[10px] sm:text-[11px] ' + gdC + ' font-medium text-center">' + gd + '</div>' +
-        '<div class="text-[11px] sm:text-[12px] font-bold text-center">' + t[9] + '</div>' +
-        formHTML +
-      '</div>';
-  });
-  el.innerHTML =
-    '<div class="zone-legend" style="justify-content:space-between">' +
-      '<div class="flex gap-3 flex-wrap">' +
-        '<span><div class="dot" style="background:#22C55E"></div>Babak 16 Besar</span>' +
-        '<span><div class="dot" style="background:#F97316"></div>Playoff 3rd</span>' +
-        '<span><div class="dot" style="background:#EF4444"></div>Tersingkir</span>' +
-      '</div>' +
-      '<div class="flex items-center gap-2.5 flex-shrink-0">' +
-        '<span class="flex items-center gap-1"><span class="form-dot form-w" style="width:8px;height:8px"></span><span class="text-[10px] text-white font-semibold">Win</span></span>' +
-        '<span class="flex items-center gap-1"><span class="form-dot form-d" style="width:8px;height:8px"></span><span class="text-[10px] text-white font-semibold">Draw</span></span>' +
-        '<span class="flex items-center gap-1"><span class="form-dot form-l" style="width:8px;height:8px"></span><span class="text-[10px] text-white font-semibold">Lose</span></span>' +
-      '</div>' +
-    '</div>' +
-    '<div class="w-full overflow-x-auto pb-2">' +
-      '<div class="mx-auto" style="min-width:640px;max-width:800px;">' +
-        '<div class="glass-static p-4" style="border-radius:16px;">' +
-          '<div class="stand-row stand-header" style="grid-template-columns:' + wcGrid + ';opacity:1;padding-bottom:10px;">' +
-            '<div>RANK</div><div class="cell-crest"></div><div>TIM</div>' +
-            '<div class="cell-mp text-white">P</div>' +
-            '<div class="cell-w text-white">W</div>' +
-            '<div class="cell-d text-white">D</div>' +
-            '<div class="cell-l text-white">L</div>' +
-            '<div class="cell-gf">GF</div>' +
-            '<div class="cell-ga">GA</div>' +
-            '<div class="text-center">GD</div>' +
-            '<div class="text-center">PTS</div>' +
-            '<div class="text-center text-white">LAST 3</div>' +
-          '</div>' +
-          '<div style="width:100%;height:2px;margin:-5px 0 10px 0;border-radius:2px;background:white;"></div>' +
-          rows +
-        '</div>' +
-      '</div>' +
-    '</div>';
-}
 
 var leagueOrder = [
   'ASEAN CHAMPIONSHIP 2026', 'SWEDEN ALLSVENSKAN', 'FINLAND VEIKKAUSLIIGA', 'DENMARK SUPER LEAGUE',
@@ -2720,57 +2241,62 @@ renderLeagueBars();
 renderPrediksi();
 renderSchedule(matches);
 renderManualTable('PL');
-renderWCGroup('A');
 
-    // ── Champion Box: populate when winner is known ──
-    // Panggil setChampion('Nama Tim', 'kode_bendera') untuk update juara
-    // Contoh: setChampion('Argentina', 'ar')
-    // Kode bendera mengikuti ISO 3166-1 alpha-2 (lowercase), sama dengan flagcdn.com
-    var wcChampFlagMap = {
-      'Morocco':'ma','France':'fr','Belgium':'be','Spain':'es',
-      'Norway':'no','England':'gb-eng','Switzerland':'ch','Argentina':'ar'
+    // ── Section Switching ──
+    const sectionMap = {
+      dashboard: { id: 'secDashboard', title: 'Dashboard', desc: 'Ringkasan Pertandingan & Spotlight Liga Top' },
+      jadwal:    { id: 'secJadwal',    title: 'Jadwal Pertandingan', desc: 'Jadwal Lengkap Pertandingan Sepak Bola' },
+      prediksi:  { id: 'secPrediksi',  title: 'Prediksi', desc: 'Prediksi & Analisis Pertandingan' },
+      klasemen:  { id: 'secKlasemen',  title: 'Klasemen', desc: 'Klasemen Liga Sepak Bola Terupdate' }
     };
 
-    function setChampion(teamName, flagCode) {
-      var nameEl = document.getElementById('championTeamName');
-      var flagWrap = document.getElementById('championFlagWrap');
-      var flagImg = document.getElementById('championFlagImg');
-      if (!teamName || teamName === 'TBD') {
-        nameEl.textContent = 'TBD';
-        flagWrap.style.display = 'none';
-        return;
-      }
-      nameEl.textContent = teamName;
-      var code = flagCode || wcChampFlagMap[teamName] || null;
-      if (code) {
-        flagImg.src = 'https://flagcdn.com/w160/' + code + '.png';
-        flagImg.alt = teamName;
-        flagImg.onerror = function() { this.style.display = 'none'; };
-        flagWrap.style.display = 'flex';
-      } else {
-        flagWrap.style.display = 'none';
-      }
+    // Hide all sections
+    function hideAllSections() {
+      const sections = document.querySelectorAll('[id^="sec"]');
+      sections.forEach(function(s) { s.style.display = 'none'; });
     }
 
-    // ═══════════════════════════════════════════════════════════
-    // CONTOH UPDATE CHAMPION:
-    // ========================
-    // Cukup ganti baris di bawah dengan nama pemenang + kode bendera.
-    // Saat Final belum dimainkan, biarkan 'TBD'.
-    //
-    // Contoh 1 — Argentina menang:
-    //   setChampion('Argentina', 'ar');
-    //
-    // Contoh 2 — Spain menang:
-    //   setChampion('Spain', 'es');
-    //
-    // Contoh 3 — Tanpa bendera (cukup nama):
-    //   setChampion('France', null);
-    // ═══════════════════════════════════════════════════════════
-    setChampion('TBD', null);
+    // Show target section
+    function showSection(key) {
+      var cfg = sectionMap[key];
+      if (!cfg) return;
+      hideAllSections();
+      var el = document.getElementById(cfg.id);
+      if (el) el.style.display = 'block';
+      document.getElementById('headerTitle').textContent = cfg.title;
+      document.getElementById('headerDesc').textContent = cfg.desc;
 
-    // Re-init Lucide so trophy SVG icon renders in champion box
-    lucide.createIcons();
+      // Update active nav
+      document.querySelectorAll('.nav-item').forEach(function(btn) {
+        btn.classList.remove('active');
+        if (btn.getAttribute('data-section') === key) {
+          btn.classList.add('active');
+        }
+      });
+
+      // Re-init lucide icons for newly visible section
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+
+      // Close mobile sidebar
+      document.getElementById('sidebar').classList.remove('open');
+      document.getElementById('sidebarOverlay').classList.remove('show');
+    }
+
+    // Bind nav items
+    document.querySelectorAll('.nav-item[data-section]').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        showSection(this.getAttribute('data-section'));
+      });
+    });
+
+    // Re-init icons on load
+    document.addEventListener('DOMContentLoaded', function() {
+      if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+      }
+    });
   </script>
 
 <script>
@@ -2851,577 +2377,6 @@ body { user-select: none; -webkit-user-select: none; -ms-user-select: none; }
     font-size: 16px !important;
   }
 }
-
-/* ══════════════════════════════════════════════════════════════════
-   BRACKET WORLD CUP 2026
-   ══════════════════════════════════════════════════════════════════ */
-
-.bracket-scroll {
-  overflow-x: auto;
-  overflow-y: visible;
-  padding-bottom: 20px;
-  -webkit-overflow-scrolling: touch;
-}
-.bracket-scroll::-webkit-scrollbar { height: 6px; }
-.bracket-scroll::-webkit-scrollbar-track { background: rgba(255,255,255,0.03); border-radius: 3px; }
-.bracket-scroll::-webkit-scrollbar-thumb { background: rgba(34,211,238,0.25); border-radius: 3px; }
-
-.bracket-grid {
-  display: flex;
-  align-items: stretch;
-  min-width: fit-content;
-}
-
-.bracket-round {
-  display: flex;
-  flex-direction: column;
-  flex-shrink: 0;
-}
-.bracket-round + .bracket-round {
-  margin-left: 40px;
-}
-
-.round-header {
-  text-align: center;
-  padding: 10px 0 14px;
-  font-size: 10px;
-  font-weight: 700;
-  color: rgba(34,211,238,0.75);
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  white-space: nowrap;
-  text-shadow: 0 0 10px rgba(34,211,238,0.3);
-}
-
-.round-body {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  width: 180px;
-}
-
-/* ── Match Pair ─────────────────────────────────────────────── */
-.match-pair {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: relative;
-}
-
-/* Connector: horizontal from match right edge to midpoint */
-.bracket-match::after {
-  content: '';
-  position: absolute;
-  right: -20px;
-  top: 50%;
-  width: 20px;
-  height: 1.5px;
-  background: rgba(34,211,238,0.22);
-  pointer-events: none;
-}
-
-/* Connector: vertical line between two matches in pair */
-.match-pair::after {
-  content: '';
-  position: absolute;
-  right: -20px;
-  top: 25%;
-  bottom: 25%;
-  width: 1.5px;
-  background: rgba(34,211,238,0.22);
-  pointer-events: none;
-}
-
-/* Connector: horizontal from vertical midpoint to next round */
-.match-pair::before {
-  content: '';
-  position: absolute;
-  right: -40px;
-  top: 50%;
-  width: 20px;
-  height: 1.5px;
-  background: rgba(34,211,238,0.22);
-  pointer-events: none;
-}
-
-/* Single match pair (Final) — hide pair connectors */
-.match-pair.single::after,
-.match-pair.single::before {
-  display: none !important;
-}
-
-/* Also hide bracket-match::after connector on final match */
-.round-final-col .bracket-match::after {
-  display: none !important;
-}
-
-/* ── Match Box (hover sama seperti .glass di dashboard) ─────── */
-.bracket-match {
-  width: 180px;
-  height: 50px;
-  border-radius: 10px;
-  overflow: hidden;
-  position: relative;
-  background: linear-gradient(
-    135deg,
-    rgba(255,255,255,0.09) 0%,
-    rgba(255,255,255,0.04) 60%,
-    rgba(255,255,255,0.02) 100%
-  );
-  border: 2px solid rgba(34, 211, 238, 0.35);
-  border-top-color: rgba(34, 211, 238, 0.50);
-  border-left-color: rgba(34, 211, 238, 0.40);
-  box-shadow:
-    0 0 12px rgba(34, 211, 238, 0.12),
-    0 0 30px rgba(34, 211, 238, 0.06),
-    0 1px 0   rgba(34, 211, 238, 0.20) inset,
-    0 -1px 0  rgba(0,0,0,0.30) inset,
-    0 6px 6px rgba(0,0,0,0.14),
-    0 16px 48px rgba(0,0,0,0.38);
-  display: flex;
-  flex-direction: column;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-/* top-edge shine pada match box */
-.bracket-match::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg,
-    transparent 0%,
-    rgba(255,255,255,0.28) 35%,
-    rgba(255,255,255,0.08) 65%,
-    transparent 100%);
-  pointer-events: none;
-  z-index: 2;
-}
-
-/* ═══ HOVER — identik dengan .glass:hover di dashboard ═══ */
-.bracket-match:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(0,0,0,0.55) 0%,
-    rgba(0,0,0,0.35) 60%,
-    rgba(0,0,0,0.25) 100%
-  );
-  border: 3px solid rgba(34, 211, 238, 1);
-  border-top-color: rgba(34, 211, 238, 1);
-  border-left-color: rgba(34, 211, 238, 1);
-  transform: translateY(-5px);
-  box-shadow:
-    0 0 8px rgba(34, 211, 238, 0.80),
-    0 0 25px rgba(34, 211, 238, 0.45),
-    0 0 35px rgba(34, 211, 238, 0.20),
-    0 0 60px rgba(34, 211, 238, 0.08),
-    0 -1px 0  rgba(0,0,0,0.2) inset,
-    0 8px 10px rgba(0,0,0,0.18),
-    0 24px 60px rgba(0,0,0,0.45);
-}
-
-/* ── Team Row ───────────────────────────────────────────────── */
-.team-row {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 0 10px;
-  font-size: 11px;
-  font-weight: 500;
-  gap: 4px;
-  transition: background 0.2s;
-  min-height: 0;
-  position: relative;
-  z-index: 1;
-}
-.team-row + .team-row {
-  border-top: 1px solid rgba(255,255,255,0.04);
-}
-
-.team-info {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  min-width: 0;
-  flex: 1;
-}
-
-.team-flag {
-  width: 18px;
-  height: 13px;
-  border-radius: 2px;
-  object-fit: cover;
-  flex-shrink: 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.35);
-  background: rgba(255,255,255,0.04);
-}
-
-.team-name {
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  color: rgba(255,255,255,0.72);
-  font-size: 10.5px;
-  line-height: 1;
-}
-
-.team-score {
-  font-weight: 700;
-  color: rgba(255,255,255,0.45);
-  font-size: 11px;
-  flex-shrink: 0;
-  min-width: 14px;
-  text-align: right;
-}
-
-/* ═══ WINNER — nama tetap hijau, SKOR jadi GOLD ═══ */
-.team-row.winner {
-  background: rgba(74,222,128,0.05);
-}
-.team-row.winner .team-name { color: #4ade80; }
-.team-row.winner .team-score {
-  color: #fbbf24;
-  text-shadow: 0 0 12px rgba(251,191,36,0.55), 0 0 24px rgba(251,191,36,0.20);
-}
-
-/* ═══ LOSER — nama redup, skor putih tidak terlalu terang ═══ */
-.team-row.loser .team-name { color: rgba(255,255,255,0.30); }
-.team-row.loser .team-score { color: rgba(255,255,255,0.28); }
-
-/* TBD */
-.team-row.tbd-row {
-  justify-content: center;
-  color: rgba(255,255,255,0.18);
-  font-size: 10px;
-  font-style: italic;
-  font-weight: 400;
-  letter-spacing: 0.04em;
-}
-
-.champion-box {
-  width: 120px;
-  padding: 16px 10px 14px;
-  border-radius: 14px;
-  text-align: center;
-  background: linear-gradient(
-    135deg,
-    rgba(251,191,36,0.14) 0%,
-    rgba(251,191,36,0.05) 60%,
-    rgba(251,191,36,0.02) 100%
-  );
-  border: 2px solid rgba(251,191,36,0.35);
-  border-top-color: rgba(251,191,36,0.50);
-  box-shadow:
-    0 0 16px rgba(251,191,36,0.12),
-    0 0 36px rgba(251,191,36,0.05),
-    0 1px 0 rgba(251,191,36,0.25) inset,
-    0 4px 12px rgba(0,0,0,0.25);
-  position: relative;
-  overflow: hidden;
-}
-.champion-box::before {
-  content: '';
-  position: absolute;
-  top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, rgba(251,191,36,0.50), transparent);
-  pointer-events: none;
-}
-
-.champion-trophy {
-  font-size: 26px;
-  margin-bottom: 4px;
-  filter: drop-shadow(0 0 6px rgba(251,191,36,0.5));
-}
-
-.champion-label {
-  font-size: 8px;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.18em;
-  color: rgba(251,191,36,0.75);
-  margin-bottom: 6px;
-}
-
-.champion-team {
-  font-size: 12px;
-  font-weight: 700;
-  color: #fbbf24;
-  text-shadow: 0 0 14px rgba(251,191,36,0.55);
-}    @keyframes champPulse {
-      0%,100% { box-shadow:0 0 20px rgba(251,191,36,0.25),0 0 48px rgba(251,191,36,0.10),0 1px 0 rgba(251,191,36,0.30) inset,0 4px 16px rgba(0,0,0,0.35); }
-      50%      { box-shadow:0 0 36px rgba(251,191,36,0.55),0 0 80px rgba(251,191,36,0.22),0 1px 0 rgba(251,191,36,0.40) inset,0 4px 16px rgba(0,0,0,0.35); }
-    }
-    @keyframes trophySpin {
-      0%   { transform:scale(1)   rotate(-4deg); filter:drop-shadow(0 0 8px rgba(251,191,36,0.80)); }
-      50%  { transform:scale(1.1) rotate( 4deg); filter:drop-shadow(0 0 18px rgba(251,191,36,1.00)); }
-      100% { transform:scale(1)   rotate(-4deg); filter:drop-shadow(0 0 8px rgba(251,191,36,0.80)); }
-    }
-    @keyframes raysRotate { from{transform:rotate(0deg)} to{transform:rotate(360deg)} }
-    @keyframes flagPop {
-      0%   { transform:scale(0.4); opacity:0; }
-      70%  { transform:scale(1.12); opacity:1; }
-      100% { transform:scale(1);   opacity:1; }
-    }
-
-    .champion-box {
-      width:160px; padding:20px 14px 18px; border-radius:18px; text-align:center;
-      background:linear-gradient(145deg,rgba(251,191,36,0.16) 0%,rgba(251,191,36,0.07) 55%,rgba(251,191,36,0.03) 100%);
-      border:2px solid rgba(251,191,36,0.45); border-top-color:rgba(251,191,36,0.65);
-      animation:champPulse 3s ease-in-out infinite;
-      position:relative; overflow:hidden; backdrop-filter:blur(12px);
-    }
-    .champion-box::before {
-      content:''; position:absolute; top:0; left:0; right:0; height:1.5px;
-      background:linear-gradient(90deg,transparent 0%,rgba(251,191,36,0.80) 40%,rgba(255,255,255,0.50) 50%,rgba(251,191,36,0.80) 60%,transparent 100%);
-      pointer-events:none;
-    }
-    .champion-box::after {
-      content:''; position:absolute; top:-30%; left:-20%; width:60%; height:80%;
-      background:linear-gradient(130deg,rgba(255,255,255,0.06) 0%,transparent 60%);
-      transform:skewX(-10deg); pointer-events:none;
-    }
-    .champion-trophy-wrap {
-      position:relative; width:56px; height:56px; margin:0 auto 10px;
-      display:flex; align-items:center; justify-content:center;
-    }
-    .champion-rays {
-      position:absolute; inset:0; border-radius:50%;
-      background:conic-gradient(from 0deg,transparent 0%,rgba(251,191,36,0.18) 10%,transparent 20%,rgba(251,191,36,0.12) 30%,transparent 40%,rgba(251,191,36,0.18) 50%,transparent 60%,rgba(251,191,36,0.12) 70%,transparent 80%,rgba(251,191,36,0.18) 90%,transparent 100%);
-      animation:raysRotate 8s linear infinite;
-    }
-    .champion-trophy-icon {
-      width:32px; height:32px; color:#fbbf24; position:relative; z-index:1;
-      animation:trophySpin 4s ease-in-out infinite;
-      filter:drop-shadow(0 0 10px rgba(251,191,36,0.90));
-    }
-    .champion-label {
-      font-size:8px; font-weight:800; text-transform:uppercase; letter-spacing:0.22em;
-      color:rgba(251,191,36,0.85); margin-bottom:10px;
-      text-shadow:0 0 12px rgba(251,191,36,0.50);
-    }
-    .champion-flag-wrap {
-      margin:0 auto 8px;
-      display:flex; align-items:center; justify-content:center;
-    }
-    .champion-flag-img {
-      width:72px; height:48px;
-      border-radius:8px; object-fit:cover;
-      box-shadow:0 0 18px rgba(251,191,36,0.35),0 2px 10px rgba(0,0,0,0.50),inset 0 1px 0 rgba(255,255,255,0.20);
-      border:1.5px solid rgba(251,191,36,0.40);
-      animation:flagPop 0.5s cubic-bezier(0.4,0,0.2,1) both;
-    }
-    .champion-team {
-      font-size:13px; font-weight:800; letter-spacing:0.02em;
-      color:#fff;
-      text-shadow:0 0 16px rgba(251,191,36,0.80),0 0 32px rgba(251,191,36,0.35);
-      line-height:1.2;
-    }  
-
-/* ══════════════════════════════════════════════════════════════════
-   CHAMPION CENTERED IN FINAL ROUND
-   ══════════════════════════════════════════════════════════════════ */
-
-/* Remove old champion-above styles (element removed from DOM) */
-.champion-above { display: none !important; }
-
-/* ═══ FINAL ROUND — Match centered, Champion between header & match ═══ */
-.final-body-center { position:relative; display:flex; flex-direction:column; justify-content:center; align-items:center; }
-
-/* The match-pair in final round: centered like other rounds */
-.final-body-center .match-pair.single { flex:0 0 auto; }
-
-/* ═══ Champion: centered between "Final" header and match box ═══
-   Position: absolute, sitting in the gap above the centered match
-*/
-.champion-float { position:absolute; bottom:50%; left:50%; transform:translateX(-50%); margin-bottom:28px; display:flex; flex-direction:column; align-items:center; gap:0; pointer-events:none; z-index:5; }
-.champion-float .champion-box { pointer-events:auto; margin-bottom:4px; }
-.champion-float .champion-connector { width:1.5px; height:20px; background:linear-gradient(to bottom,rgba(251,191,36,0.50),rgba(34,211,238,0.22)); }
-
-/* ═══ Light mode ═══ */
-body.light .champion-float .champion-connector { background:linear-gradient(to bottom,rgba(251,191,36,0.50),rgba(99,102,241,0.20)); }
-
-/* Hide old wrapper if any */
-.champion-center-wrapper { display: none !important; }
-
-/* ══════════════════════════════════════════════════════════════════
-   BRACKET MOBILE HINT
-   ══════════════════════════════════════════════════════════════════ */
-
-
-.bracket-mobile-hint {
-  display: none;
-  text-align: center;
-  padding: 0 0 6px;
-  font-size: 10px;
-  color: rgba(34,211,238,0.45);
-  letter-spacing: 0.05em;
-}
-@media (max-width: 1100px) {
-  .bracket-mobile-hint { display: block; }
-}
-
-/* ══════════════════════════════════════════════════════════════════
-   BRACKET — LIGHT MODE OVERRIDES
-   ══════════════════════════════════════════════════════════════════ */
-
-body.light .round-header {
-  color: rgba(79,70,229,0.70);
-  text-shadow: none;
-}
-
-/* ═══ Match Box Light — sama seperti .glass:hover light di dashboard ═══ */
-body.light .bracket-match {
-  background: linear-gradient(
-    135deg,
-    rgba(240,242,250,0.78) 0%,
-    rgba(230,233,245,0.58) 60%,
-    rgba(222,226,240,0.48) 100%
-  );
-  border: 2px solid rgba(99,102,241,0.18);
-  border-top-color: rgba(99,102,241,0.28);
-  border-left-color: rgba(99,102,241,0.22);
-  box-shadow:
-    0 0 8px rgba(99,102,241,0.06),
-    0 0 18px rgba(99,102,241,0.03),
-    0 1px 0 rgba(255,255,255,0.9) inset,
-    0 -1px 0 rgba(0,0,0,0.05) inset,
-    0 2px 4px rgba(0,0,0,0.04),
-    0 8px 24px rgba(0,0,0,0.08);
-}
-body.light .bracket-match::before {
-  background: linear-gradient(90deg,
-    transparent 0%, rgba(255,255,255,0.7) 35%,
-    rgba(255,255,255,0.25) 65%, transparent 100%);
-}
-
-/* ═══ HOVER Light — identik .glass:hover light di dashboard ═══ */
-body.light .bracket-match:hover {
-  background: linear-gradient(
-    135deg,
-    rgba(248,249,252,0.92) 0%,
-    rgba(238,240,248,0.82) 60%,
-    rgba(230,233,245,0.72) 100%
-  );
-  border: 2px solid rgba(99,102,241,0.55);
-  border-top-color: rgba(99,102,241,0.65);
-  border-left-color: rgba(99,102,241,0.60);
-  transform: translateY(-5px);
-  box-shadow:
-    0 0 8px rgba(99,102,241,0.25),
-    0 0 20px rgba(99,102,241,0.12),
-    0 0 35px rgba(99,102,241,0.06),
-    0 -1px 0 rgba(0,0,0,0.03) inset,
-    0 4px 8px rgba(0,0,0,0.06),
-    0 16px 40px rgba(0,0,0,0.10);
-}
-
-body.light .team-row + .team-row {
-  border-top-color: rgba(99,102,241,0.06);
-}
-
-body.light .team-name { color: rgba(30,27,58,0.65); }
-body.light .team-score { color: rgba(30,27,58,0.40); }
-
-/* ═══ WINNER Light — skor tetap gold ═══ */
-body.light .team-row.winner {
-  background: rgba(22,163,74,0.06);
-}
-body.light .team-row.winner .team-name { color: #15803d; }
-body.light .team-row.winner .team-score {
-  color: #d97706;
-  text-shadow: 0 0 8px rgba(217,119,6,0.30);
-}
-
-/* ═══ LOSER Light ═══ */
-body.light .team-row.loser .team-name { color: rgba(30,27,58,0.28); }
-body.light .team-row.loser .team-score { color: rgba(30,27,58,0.22); }
-
-body.light .team-row.tbd-row { color: rgba(30,27,58,0.18); }
-
-body.light .team-flag {
-  box-shadow: 0 1px 2px rgba(0,0,0,0.10);
-}
-
-/* Connectors */
-body.light .bracket-match::after,
-body.light .match-pair::after,
-body.light .match-pair::before {
-  background: rgba(99,102,241,0.18);
-}
-
-body.light .champion-box { background:linear-gradient(145deg,rgba(20,14,40,0.94) 0%,rgba(20,14,40,0.88) 55%,rgba(20,14,40,0.82) 100%); border-color:rgba(251,191,36,0.45); border-top-color:rgba(251,191,36,0.65); }
-body.light .champion-box::before { background:linear-gradient(90deg,transparent 0%,rgba(251,191,36,0.70) 40%,rgba(255,255,255,0.40) 50%,rgba(251,191,36,0.70) 60%,transparent 100%); }
-body.light .champion-label { color:rgba(251,191,36,0.90); text-shadow:0 0 10px rgba(251,191,36,0.40); }
-body.light .champion-team { color:#fff; text-shadow:0 0 14px rgba(251,191,36,0.70),0 0 28px rgba(251,191,36,0.30); }
-body.light .champion-flag-img { box-shadow:0 0 16px rgba(251,191,36,0.40),0 2px 8px rgba(0,0,0,0.30),inset 0 1px 0 rgba(255,255,255,0.20); }
-
-body.light .bracket-scroll::-webkit-scrollbar-track { background: rgba(99,102,241,0.04); }
-body.light .bracket-scroll::-webkit-scrollbar-thumb { background: rgba(99,102,241,0.20); }
-
-body.light .bracket-mobile-hint { color: rgba(79,70,229,0.40); }
 </style>
-
-  <script>
-    // ── Section Switching (tambahkan ke existing jika sudah ada) ──
-    const sectionMap = {
-      dashboard: { id: 'secDashboard', title: 'Dashboard', desc: 'Ringkasan Pertandingan & Spotlight Liga Top' },
-      jadwal:    { id: 'secJadwal',    title: 'Jadwal Pertandingan', desc: 'Jadwal Lengkap Pertandingan Sepak Bola' },
-      prediksi:  { id: 'secPrediksi',  title: 'Prediksi', desc: 'Prediksi & Analisis Pertandingan' },
-      klasemen:  { id: 'secKlasemen',  title: 'Klasemen', desc: 'Klasemen Liga Sepak Bola Terupdate' },
-      worldcup:  { id: 'secWorldcup',  title: 'World Cup 2026', desc: 'Informasi Lengkap World Cup 2026' },
-      bracket:   { id: 'secBracket',   title: 'Bracket WC 2026', desc: 'Bagan Turnamen World Cup 2026' }
-    };
-
-    // Hide all sections
-    function hideAllSections() {
-      const sections = document.querySelectorAll('[id^="sec"]');
-      sections.forEach(function(s) { s.style.display = 'none'; });
-    }
-
-    // Show target section
-    function showSection(key) {
-      var cfg = sectionMap[key];
-      if (!cfg) return;
-      hideAllSections();
-      var el = document.getElementById(cfg.id);
-      if (el) el.style.display = 'block';
-      document.getElementById('headerTitle').textContent = cfg.title;
-      document.getElementById('headerDesc').textContent = cfg.desc;
-
-      // Update active nav
-      document.querySelectorAll('.nav-item').forEach(function(btn) {
-        btn.classList.remove('active');
-        if (btn.getAttribute('data-section') === key) {
-          btn.classList.add('active');
-        }
-      });
-
-      // Re-init lucide icons for newly visible section
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
-
-      // Close mobile sidebar
-      document.getElementById('sidebar').classList.remove('open');
-      document.getElementById('sidebarOverlay').classList.remove('show');
-    }
-
-    // Bind nav items
-    document.querySelectorAll('.nav-item[data-section]').forEach(function(btn) {
-      btn.addEventListener('click', function() {
-        showSection(this.getAttribute('data-section'));
-      });
-    });
-
-    // Re-init icons on load
-    document.addEventListener('DOMContentLoaded', function() {
-      if (typeof lucide !== 'undefined') {
-        lucide.createIcons();
-      }
-    });
-  </script>
 </body>
 </html>
